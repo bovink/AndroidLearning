@@ -1,6 +1,7 @@
 package com.bovink.androidlearning;
 
 import android.graphics.Bitmap;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +17,7 @@ import butterknife.BindColor;
 import butterknife.BindDimen;
 import butterknife.BindDrawable;
 import butterknife.BindFloat;
+import butterknife.BindFont;
 import butterknife.BindInt;
 import butterknife.BindString;
 import butterknife.BindView;
@@ -54,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
 
     @BindString(R.string.app_name)
     String appName;
+
+    @BindFont(R.font.pianpianti)
+    Typeface typeface;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +77,11 @@ public class MainActivity extends AppCompatActivity {
         testBindFloat();
         testBindInt();
         testBindString();
+        testBindFont();
+    }
+
+    private void testBindFont() {
+        helloTextView.setTypeface(typeface);
     }
 
     private void testBindString() {
