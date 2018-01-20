@@ -1,6 +1,7 @@
 package com.bovink.androidlearning;
 
 import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
@@ -13,6 +14,10 @@ import butterknife.BindBitmap;
 import butterknife.BindBool;
 import butterknife.BindColor;
 import butterknife.BindDimen;
+import butterknife.BindDrawable;
+import butterknife.BindFloat;
+import butterknife.BindInt;
+import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -36,8 +41,19 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.tv_hello)
     TextView helloTextView;
 
+    @BindDrawable(R.mipmap.ic_launcher)
+    Drawable iconDrawable;
+
     @BindDimen(R.dimen.test)
     int textSize;
+
+    @BindFloat(R.dimen.whatever)
+    float whatever;
+    @BindInt(R.integer.time)
+    int time;
+
+    @BindString(R.string.app_name)
+    String appName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +67,27 @@ public class MainActivity extends AppCompatActivity {
         testBindColor();
         testBindBool();
         testBindDimen();
+        testBindDrawable();
+        testBindFloat();
+        testBindInt();
+        testBindString();
+    }
+
+    private void testBindString() {
+       helloTextView.setText(appName);
+    }
+
+    private void testBindInt() {
+
+        helloTextView.setTextSize(time);
+    }
+
+    private void testBindFloat() {
+
+        helloTextView.setText(String.valueOf(whatever));
+    }
+    private void testBindDrawable() {
+        helloTextView.setBackground(iconDrawable);
     }
 
     private void testBindDimen() {
