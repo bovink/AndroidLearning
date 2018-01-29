@@ -1,13 +1,21 @@
 package com.bovink.androidlearning;
 
+import android.app.ListActivity;
 import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.animation.Animation;
 import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import butterknife.BindAnim;
 import butterknife.BindArray;
@@ -23,7 +31,7 @@ import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends ListActivity {
 
     @BindAnim(R.anim.anim_fade_in)
     Animation animation;
@@ -78,6 +86,54 @@ public class MainActivity extends AppCompatActivity {
         testBindInt();
         testBindString();
         testBindFont();
+
+        List<Map<String, String>> mapList = generateList();
+
+
+        SimpleAdapter simpleAdapter = new SimpleAdapter(this,
+                mapList,
+                R.layout.item_list_activity,
+                new String[]{"name"},
+                new int[]{R.id.tv_name}
+        );
+
+        setListAdapter(simpleAdapter);
+
+
+
+
+    }
+
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+        System.out.println("position = " + position);
+        super.onListItemClick(l, v, position, id);
+    }
+
+    private List<Map<String, String>> generateList() {
+
+        List<Map<String, String>> mapList = new ArrayList<>();
+        Map<String, String> map;
+
+        map = new HashMap<>();
+        map.put("name", "BindAnim.class");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "BindAnim.class");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "BindAnim.class");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "BindAnim.class");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "BindAnim.class");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "BindAnim.class");
+        mapList.add(map);
+        return mapList;
     }
 
     private void testBindFont() {
@@ -85,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void testBindString() {
-       helloTextView.setText(appName);
+        helloTextView.setText(appName);
     }
 
     private void testBindInt() {
@@ -97,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
 
         helloTextView.setText(String.valueOf(whatever));
     }
+
     private void testBindDrawable() {
         helloTextView.setBackground(iconDrawable);
     }
@@ -104,9 +161,11 @@ public class MainActivity extends AppCompatActivity {
     private void testBindDimen() {
         helloTextView.setTextSize(textSize);
     }
+
     private void testBindColor() {
         helloTextView.setTextColor(accentColor);
     }
+
     private void testBindBool() {
         if (isRight) {
             System.out.println("MainActivity.testBindBool");

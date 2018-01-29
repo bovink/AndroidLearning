@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidLearning</string>
+    <string name="list_item_name">名字</string>
 </resources>
