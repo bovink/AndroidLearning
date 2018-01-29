@@ -16,6 +16,40 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".butterknife.BindAnimActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".butterknife.BindArrayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".butterknife.BindBitmapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".butterknife.BindBoolActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".butterknife.BindColorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".butterknife.BindDimenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".butterknife.BindDrawableActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".butterknife.BindFloatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".butterknife.BindFontActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".butterknife.BindIntActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".butterknife.BindStringActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
