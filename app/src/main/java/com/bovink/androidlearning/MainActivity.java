@@ -12,14 +12,14 @@ import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends ListActivity {
+    List<Map<String, String>> mapList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        List<Map<String, String>> mapList = generateList();
-
+        mapList = generateList();
 
         SimpleAdapter simpleAdapter = new SimpleAdapter(this,
                 mapList,
@@ -34,8 +34,16 @@ public class MainActivity extends ListActivity {
 
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
-        System.out.println("position = " + position);
-        super.onListItemClick(l, v, position, id);
+        String test = mapList.get(position).get("name");
+
+//        try {
+//            Class clazz = Class.forName(getPackageName() + "." + getLocalClassName());
+//            Intent intent = new Intent(this, clazz);
+//            startActivity(intent);
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        }
+        System.out.println("test = " + test);
     }
 
     private List<Map<String, String>> generateList() {
@@ -44,23 +52,39 @@ public class MainActivity extends ListActivity {
         Map<String, String> map;
 
         map = new HashMap<>();
-        map.put("name", "BindAnim.class");
+        map.put("name", "BindAnimActivity");
         mapList.add(map);
         map = new HashMap<>();
-        map.put("name", "BindAnim.class");
+        map.put("name", "BindArrayActivity");
         mapList.add(map);
         map = new HashMap<>();
-        map.put("name", "BindAnim.class");
+        map.put("name", "BindBitmapActivity");
         mapList.add(map);
         map = new HashMap<>();
-        map.put("name", "BindAnim.class");
+        map.put("name", "BindBoolActivity");
         mapList.add(map);
         map = new HashMap<>();
-        map.put("name", "BindAnim.class");
+        map.put("name", "BindColorActivity");
         mapList.add(map);
         map = new HashMap<>();
-        map.put("name", "BindAnim.class");
+        map.put("name", "BindDimenActivity");
         mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "BindDrawableActivity");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "BindFloatActivity");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "BindFontActivity");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "BindIntActivity");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "BindStringActivity");
+        mapList.add(map);
+
         return mapList;
     }
 
