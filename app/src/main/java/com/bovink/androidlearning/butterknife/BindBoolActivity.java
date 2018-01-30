@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.bovink.androidlearning.R;
 
+import butterknife.BindBool;
+import butterknife.ButterKnife;
+
 /**
  * com.bovink.androidlearning.butterknife
  *
@@ -15,9 +18,19 @@ import com.bovink.androidlearning.R;
 
 public class BindBoolActivity extends AppCompatActivity {
 
+    @BindBool(R.bool.is_right)
+    boolean isRight;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_butterknife);
+        ButterKnife.bind(this);
+    }
+
+    private void testBindBool() {
+        if (isRight) {
+            System.out.println("MainActivity.testBindBool");
+        }
     }
 }
