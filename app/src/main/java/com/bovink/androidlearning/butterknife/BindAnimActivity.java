@@ -32,6 +32,8 @@ public class BindAnimActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_butterknife);
         ButterKnife.bind(this);
+
+        testBindAnim();
     }
 
     private void testBindAnim() {

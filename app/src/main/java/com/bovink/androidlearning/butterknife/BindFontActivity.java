@@ -32,6 +32,8 @@ public class BindFontActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_butterknife);
         ButterKnife.bind(this);
+
+        testBindFont();
     }
 
     private void testBindFont() {

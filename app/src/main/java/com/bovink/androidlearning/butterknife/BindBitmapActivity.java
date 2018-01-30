@@ -28,6 +28,8 @@ public class BindBitmapActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_butterknife);
         ButterKnife.bind(this);
+
+        testBindBitmap();
     }
 
     private void testBindBitmap() {

@@ -26,11 +26,17 @@ public class BindBoolActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_butterknife);
         ButterKnife.bind(this);
+
+        testBindBool();
     }
 
     private void testBindBool() {
         if (isRight) {
-            System.out.println("MainActivity.testBindBool");
+
+            System.out.println("true");
+        } else {
+
+            System.out.println("false");
         }
     }
 }

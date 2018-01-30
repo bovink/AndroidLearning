@@ -31,6 +31,8 @@ public class BindStringActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_butterknife);
         ButterKnife.bind(this);
+
+        testBindString();
     }
 
     private void testBindString() {

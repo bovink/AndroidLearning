@@ -30,6 +30,8 @@ public class BindColorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_butterknife);
         ButterKnife.bind(this);
+
+        testBindColor();
     }
 
     private void testBindColor() {

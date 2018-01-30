@@ -30,6 +30,8 @@ public class BindDimenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_butterknife);
         ButterKnife.bind(this);
+
+        testBindDimen();
     }
 
     private void testBindDimen() {

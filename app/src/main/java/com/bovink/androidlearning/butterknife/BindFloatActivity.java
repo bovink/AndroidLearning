@@ -31,6 +31,8 @@ public class BindFloatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_butterknife);
         ButterKnife.bind(this);
+
+        testBindFloat();
     }
 
     private void testBindFloat() {

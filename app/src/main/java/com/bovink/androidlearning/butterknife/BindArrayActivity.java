@@ -26,6 +26,8 @@ public class BindArrayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_butterknife);
         ButterKnife.bind(this);
+
+        testBindArray();
     }
 
     private void testBindArray() {
