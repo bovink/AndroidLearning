@@ -1,6 +1,7 @@
 package com.bovink.androidlearning;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
@@ -36,14 +37,13 @@ public class MainActivity extends ListActivity {
     protected void onListItemClick(ListView l, View v, int position, long id) {
         String test = mapList.get(position).get("name");
 
-//        try {
-//            Class clazz = Class.forName(getPackageName() + "." + getLocalClassName());
-//            Intent intent = new Intent(this, clazz);
-//            startActivity(intent);
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
-//        }
-        System.out.println("test = " + test);
+        try {
+            Class clazz = Class.forName("com.bovink.androidlearning.butterknife." + test);
+            Intent intent = new Intent(this, clazz);
+            startActivity(intent);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     private List<Map<String, String>> generateList() {
