@@ -4,6 +4,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bovink.androidlearning.R;
@@ -24,8 +25,14 @@ public class BindDrawableActivity extends AppCompatActivity {
     @BindDrawable(R.mipmap.ic_launcher)
     Drawable iconDrawable;
 
+    @BindDrawable(value = R.mipmap.ic_launcher, tint = R.attr.colorAccent)
+    Drawable iconDrawable2;
+
     @BindView(R.id.tv_text1)
     TextView helloTextView;
+
+    @BindView(R.id.iv_image2)
+    ImageView imageView2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,6 +41,8 @@ public class BindDrawableActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         testBindDrawable();
+
+        imageView2.setBackground(iconDrawable2);
     }
 
     private void testBindDrawable() {
