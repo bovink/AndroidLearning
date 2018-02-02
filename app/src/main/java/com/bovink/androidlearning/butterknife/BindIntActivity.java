@@ -23,7 +23,7 @@ public class BindIntActivity extends AppCompatActivity {
     @BindInt(R.integer.time)
     int time;
 
-    @BindView(R.id.tv_hello)
+    @BindView(R.id.tv_text1)
     TextView helloTextView;
 
     @Override

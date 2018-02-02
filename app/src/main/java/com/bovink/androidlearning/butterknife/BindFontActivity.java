@@ -24,7 +24,7 @@ public class BindFontActivity extends AppCompatActivity {
     @BindFont(R.font.pianpianti)
     Typeface typeface;
 
-    @BindView(R.id.tv_hello)
+    @BindView(R.id.tv_text1)
     TextView helloTextView;
 
     @Override

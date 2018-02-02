@@ -22,7 +22,7 @@ public class BindColorActivity extends AppCompatActivity {
 
     @BindColor(R.color.colorAccent)
     int accentColor;
-    @BindView(R.id.tv_hello)
+    @BindView(R.id.tv_text1)
     TextView helloTextView;
 
     @Override

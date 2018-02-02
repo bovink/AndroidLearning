@@ -24,7 +24,7 @@ public class BindAnimActivity extends AppCompatActivity {
     @BindAnim(R.anim.anim_fade_in)
     Animation animation;
 
-    @BindView(R.id.tv_hello)
+    @BindView(R.id.tv_text1)
     TextView helloTextView;
 
     @Override

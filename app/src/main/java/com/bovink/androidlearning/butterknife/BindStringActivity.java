@@ -23,7 +23,7 @@ public class BindStringActivity extends AppCompatActivity {
     @BindString(R.string.app_name)
     String appName;
 
-    @BindView(R.id.tv_hello)
+    @BindView(R.id.tv_text1)
     TextView helloTextView;
 
     @Override

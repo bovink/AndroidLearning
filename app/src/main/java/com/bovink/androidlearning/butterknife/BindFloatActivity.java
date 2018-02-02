@@ -23,7 +23,7 @@ public class BindFloatActivity extends AppCompatActivity {
     @BindFloat(R.dimen.whatever)
     float whatever;
 
-    @BindView(R.id.tv_hello)
+    @BindView(R.id.tv_text1)
     TextView helloTextView;
 
     @Override

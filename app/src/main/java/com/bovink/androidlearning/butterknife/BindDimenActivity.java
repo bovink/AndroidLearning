@@ -22,7 +22,7 @@ public class BindDimenActivity extends AppCompatActivity {
 
     @BindDimen(R.dimen.test)
     int textSize;
-    @BindView(R.id.tv_hello)
+    @BindView(R.id.tv_text1)
     TextView helloTextView;
 
     @Override

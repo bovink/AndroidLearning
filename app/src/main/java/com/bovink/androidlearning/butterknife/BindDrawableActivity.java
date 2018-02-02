@@ -24,7 +24,7 @@ public class BindDrawableActivity extends AppCompatActivity {
     @BindDrawable(R.mipmap.ic_launcher)
     Drawable iconDrawable;
 
-    @BindView(R.id.tv_hello)
+    @BindView(R.id.tv_text1)
     TextView helloTextView;
 
     @Override
