@@ -8,8 +8,10 @@ import android.widget.TextView;
 
 import com.bovink.androidlearning.R;
 
+import java.util.List;
+
 import butterknife.BindArray;
-import butterknife.BindView;
+import butterknife.BindViews;
 import butterknife.ButterKnife;
 
 /**
@@ -30,11 +32,11 @@ public class BindArrayActivity extends AppCompatActivity {
     @BindArray(R.array.week)
     CharSequence[] charSequences;
 
-    @BindArray(R.array.colors)
+    @BindArray(R.array.color)
     TypedArray colors;
 
-    @BindView(R.id.tv_text1)
-    TextView helloTextView;
+    @BindViews({R.id.tv_text1, R.id.tv_text2, R.id.tv_text3})
+    List<TextView> textViews;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,9 +45,12 @@ public class BindArrayActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         testBindArray();
-        int index = 0;
-        int color = colors.getColor(index, 0);
-        helloTextView.setTextColor(color);
+
+        for (int i = 0; i < colors.length(); i++) {
+
+            int color = colors.getColor(i, 0);
+            textViews.get(i).setTextColor(color);
+        }
     }
 
     private void testBindArray() {
@@ -56,7 +61,10 @@ public class BindArrayActivity extends AppCompatActivity {
 
         for (int month : months) {
             System.out.println("month = " + month);
+        }
 
+        for (CharSequence ch : charSequences) {
+            System.out.println("ch = " + ch);
         }
     }
 }
