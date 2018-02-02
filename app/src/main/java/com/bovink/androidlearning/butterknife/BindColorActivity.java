@@ -4,7 +4,6 @@ import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.TextView;
 
 import com.bovink.androidlearning.R;
@@ -41,12 +40,6 @@ public class BindColorActivity extends AppCompatActivity {
         textView1.setTextColor(accentColor);
 
         textView2.setClickable(true);
-        textView2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
         textView2.setTextColor(textClickColorStateList);
     }
 }
