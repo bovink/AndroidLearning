@@ -22,6 +22,8 @@ public class BindDimenActivity extends AppCompatActivity {
 
     @BindDimen(R.dimen.test)
     int textSize;
+    @BindDimen(R.dimen.exact_amount)
+    float exact_amount;
     @BindView(R.id.tv_text1)
     TextView helloTextView;
 
@@ -31,6 +33,8 @@ public class BindDimenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_butterknife);
         ButterKnife.bind(this);
 
+        System.out.println("exact_amount = " + exact_amount);
+        System.out.println("textSize = " + textSize);
         testBindDimen();
     }
 
