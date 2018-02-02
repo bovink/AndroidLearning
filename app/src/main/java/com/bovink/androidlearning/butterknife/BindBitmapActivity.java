@@ -20,7 +20,7 @@ import butterknife.ButterKnife;
 
 public class BindBitmapActivity extends AppCompatActivity {
 
-    @BindBitmap(R.mipmap.ic_launcher_round)
+    @BindBitmap(R.drawable.all)
     Bitmap bitmap;
 
     @Override
