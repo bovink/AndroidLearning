@@ -20,7 +20,7 @@ public class OnItemSelectedActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bindevent_ontextchanged);
+        setContentView(R.layout.bindevent_onitemselected);
         ButterKnife.bind(this);
     }
 
