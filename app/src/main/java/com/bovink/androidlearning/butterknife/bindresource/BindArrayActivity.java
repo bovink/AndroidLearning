@@ -1,4 +1,4 @@
-package com.bovink.androidlearning.butterknife;
+package com.bovink.androidlearning.butterknife.bindresource;
 
 import android.content.res.TypedArray;
 import android.os.Bundle;

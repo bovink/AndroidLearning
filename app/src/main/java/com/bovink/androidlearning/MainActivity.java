@@ -38,7 +38,7 @@ public class MainActivity extends ListActivity {
         String test = mapList.get(position).get("name");
 
         try {
-            Class clazz = Class.forName("com.bovink.androidlearning.butterknife." + test);
+            Class clazz = Class.forName("com.bovink.androidlearning.butterknife.bindresource." + test);
             Intent intent = new Intent(this, clazz);
             startActivity(intent);
         } catch (ClassNotFoundException e) {

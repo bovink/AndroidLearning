@@ -1,4 +1,4 @@
-package com.bovink.androidlearning.butterknife;
+package com.bovink.androidlearning.butterknife.bindresource;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

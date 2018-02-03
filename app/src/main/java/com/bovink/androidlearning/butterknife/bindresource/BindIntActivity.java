@@ -1,12 +1,14 @@
-package com.bovink.androidlearning.butterknife;
+package com.bovink.androidlearning.butterknife.bindresource;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
 import com.bovink.androidlearning.R;
 
-import butterknife.BindBool;
+import butterknife.BindInt;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -16,10 +18,13 @@ import butterknife.ButterKnife;
  * @since 2018/1/29
  */
 
-public class BindBoolActivity extends AppCompatActivity {
+public class BindIntActivity extends AppCompatActivity {
 
-    @BindBool(R.bool.is_right)
-    boolean isRight;
+    @BindInt(R.integer.time)
+    int time;
+
+    @BindView(R.id.tv_text1)
+    TextView helloTextView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,16 +32,11 @@ public class BindBoolActivity extends AppCompatActivity {
         setContentView(R.layout.activity_butterknife);
         ButterKnife.bind(this);
 
-        testBindBool();
+        testBindInt();
     }
 
-    private void testBindBool() {
-        if (isRight) {
+    private void testBindInt() {
 
-            System.out.println("true");
-        } else {
-
-            System.out.println("false");
-        }
+        helloTextView.setTextSize(time);
     }
 }

@@ -1,4 +1,4 @@
-package com.bovink.androidlearning.butterknife;
+package com.bovink.androidlearning.butterknife.bindresource;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.bovink.androidlearning.R;
 
-import butterknife.BindString;
+import butterknife.BindDimen;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -18,11 +18,12 @@ import butterknife.ButterKnife;
  * @since 2018/1/29
  */
 
-public class BindStringActivity extends AppCompatActivity {
+public class BindDimenActivity extends AppCompatActivity {
 
-    @BindString(R.string.app_name)
-    String appName;
-
+    @BindDimen(R.dimen.test)
+    int textSize;
+    @BindDimen(R.dimen.exact_amount)
+    float exact_amount;
     @BindView(R.id.tv_text1)
     TextView helloTextView;
 
@@ -32,10 +33,12 @@ public class BindStringActivity extends AppCompatActivity {
         setContentView(R.layout.activity_butterknife);
         ButterKnife.bind(this);
 
-        testBindString();
+        System.out.println("exact_amount = " + exact_amount);
+        System.out.println("textSize = " + textSize);
+        testBindDimen();
     }
 
-    private void testBindString() {
-        helloTextView.setText(appName);
+    private void testBindDimen() {
+        helloTextView.setTextSize(textSize);
     }
 }

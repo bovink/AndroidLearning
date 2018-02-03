@@ -1,6 +1,5 @@
-package com.bovink.androidlearning.butterknife;
+package com.bovink.androidlearning.butterknife.bindresource;
 
-import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +7,7 @@ import android.widget.TextView;
 
 import com.bovink.androidlearning.R;
 
-import butterknife.BindColor;
+import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -19,17 +18,13 @@ import butterknife.ButterKnife;
  * @since 2018/1/29
  */
 
-public class BindColorActivity extends AppCompatActivity {
+public class BindStringActivity extends AppCompatActivity {
 
-    @BindColor(R.color.colorAccent)
-    int accentColor;
-    @BindColor(R.color.text_click)
-    ColorStateList textClickColorStateList;
+    @BindString(R.string.app_name)
+    String appName;
 
     @BindView(R.id.tv_text1)
-    TextView textView1;
-    @BindView(R.id.tv_text2)
-    TextView textView2;
+    TextView helloTextView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,9 +32,10 @@ public class BindColorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_butterknife);
         ButterKnife.bind(this);
 
-        textView1.setTextColor(accentColor);
+        testBindString();
+    }
 
-        textView2.setClickable(true);
-        textView2.setTextColor(textClickColorStateList);
+    private void testBindString() {
+        helloTextView.setText(appName);
     }
 }

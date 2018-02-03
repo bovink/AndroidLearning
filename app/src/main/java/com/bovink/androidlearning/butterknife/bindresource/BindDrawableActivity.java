@@ -1,13 +1,15 @@
-package com.bovink.androidlearning.butterknife;
+package com.bovink.androidlearning.butterknife.bindresource;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bovink.androidlearning.R;
 
-import butterknife.BindDimen;
+import butterknife.BindDrawable;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -18,14 +20,19 @@ import butterknife.ButterKnife;
  * @since 2018/1/29
  */
 
-public class BindDimenActivity extends AppCompatActivity {
+public class BindDrawableActivity extends AppCompatActivity {
 
-    @BindDimen(R.dimen.test)
-    int textSize;
-    @BindDimen(R.dimen.exact_amount)
-    float exact_amount;
+    @BindDrawable(R.mipmap.ic_launcher)
+    Drawable iconDrawable;
+
+    @BindDrawable(value = R.mipmap.ic_launcher, tint = R.attr.colorAccent)
+    Drawable iconDrawable2;
+
     @BindView(R.id.tv_text1)
     TextView helloTextView;
+
+    @BindView(R.id.iv_image2)
+    ImageView imageView2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,12 +40,13 @@ public class BindDimenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_butterknife);
         ButterKnife.bind(this);
 
-        System.out.println("exact_amount = " + exact_amount);
-        System.out.println("textSize = " + textSize);
-        testBindDimen();
+        testBindDrawable();
+
+        imageView2.setBackground(iconDrawable2);
     }
 
-    private void testBindDimen() {
-        helloTextView.setTextSize(textSize);
+    private void testBindDrawable() {
+        helloTextView.setBackground(iconDrawable);
     }
+
 }

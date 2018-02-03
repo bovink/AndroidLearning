@@ -18,37 +18,37 @@
         </activity>
 
         <activity
-            android:name=".butterknife.BindAnimActivity"
+            android:name=".butterknife.bindresource.BindAnimActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".butterknife.BindArrayActivity"
+            android:name=".butterknife.bindresource.BindArrayActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".butterknife.BindBitmapActivity"
+            android:name=".butterknife.bindresource.BindBitmapActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".butterknife.BindBoolActivity"
+            android:name=".butterknife.bindresource.BindBoolActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".butterknife.BindColorActivity"
+            android:name=".butterknife.bindresource.BindColorActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".butterknife.BindDimenActivity"
+            android:name=".butterknife.bindresource.BindDimenActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".butterknife.BindDrawableActivity"
+            android:name=".butterknife.bindresource.BindDrawableActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".butterknife.BindFloatActivity"
+            android:name=".butterknife.bindresource.BindFloatActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".butterknife.BindFontActivity"
+            android:name=".butterknife.bindresource.BindFontActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".butterknife.BindIntActivity"
+            android:name=".butterknife.bindresource.BindIntActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".butterknife.BindStringActivity"
+            android:name=".butterknife.bindresource.BindStringActivity"
             android:screenOrientation="portrait" />
     </application>
 

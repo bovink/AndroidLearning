@@ -1,15 +1,12 @@
-package com.bovink.androidlearning.butterknife;
+package com.bovink.androidlearning.butterknife.bindresource;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.view.animation.Animation;
-import android.widget.TextView;
 
 import com.bovink.androidlearning.R;
 
-import butterknife.BindAnim;
-import butterknife.BindView;
+import butterknife.BindBool;
 import butterknife.ButterKnife;
 
 /**
@@ -19,13 +16,10 @@ import butterknife.ButterKnife;
  * @since 2018/1/29
  */
 
-public class BindAnimActivity extends AppCompatActivity {
+public class BindBoolActivity extends AppCompatActivity {
 
-    @BindAnim(R.anim.anim_fade_in)
-    Animation animation;
-
-    @BindView(R.id.tv_text1)
-    TextView helloTextView;
+    @BindBool(R.bool.is_right)
+    boolean isRight;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,12 +27,16 @@ public class BindAnimActivity extends AppCompatActivity {
         setContentView(R.layout.activity_butterknife);
         ButterKnife.bind(this);
 
-        testBindAnim();
+        testBindBool();
     }
 
-    private void testBindAnim() {
+    private void testBindBool() {
+        if (isRight) {
 
-        helloTextView.startAnimation(animation);
+            System.out.println("true");
+        } else {
+
+            System.out.println("false");
+        }
     }
-
 }
