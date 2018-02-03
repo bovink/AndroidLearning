@@ -50,6 +50,11 @@
         <activity
             android:name=".butterknife.bindresource.BindStringActivity"
             android:screenOrientation="portrait" />
+
+        <!--bind event 绑定事件-->
+        <activity
+            android:name=".butterknife.bindevent.OnTextChangedActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

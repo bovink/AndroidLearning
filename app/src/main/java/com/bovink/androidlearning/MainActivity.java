@@ -38,7 +38,7 @@ public class MainActivity extends ListActivity {
         String test = mapList.get(position).get("name");
 
         try {
-            Class clazz = Class.forName("com.bovink.androidlearning.butterknife.bindresource." + test);
+            Class clazz = Class.forName("com.bovink.androidlearning.butterknife.bindevent." + test);
             Intent intent = new Intent(this, clazz);
             startActivity(intent);
         } catch (ClassNotFoundException e) {
@@ -52,7 +52,7 @@ public class MainActivity extends ListActivity {
         Map<String, String> map;
 
         map = new HashMap<>();
-        map.put("name", "BindAnimActivity");
+        map.put("name", "OnTextChangedActivity");
         mapList.add(map);
         map = new HashMap<>();
         map.put("name", "BindArrayActivity");
