@@ -52,7 +52,7 @@ public class MainActivity extends ListActivity {
         Map<String, String> map;
 
         map = new HashMap<>();
-        map.put("name", "BindAnimActivity");
+        map.put("name", "TestActivity");
         mapList.add(map);
         map = new HashMap<>();
         map.put("name", "BindArrayActivity");

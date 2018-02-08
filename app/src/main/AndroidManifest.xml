@@ -50,6 +50,9 @@
         <activity
             android:name=".butterknife.BindStringActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".butterknife.TestActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
