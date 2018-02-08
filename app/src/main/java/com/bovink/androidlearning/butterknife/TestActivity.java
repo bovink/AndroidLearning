@@ -3,14 +3,18 @@ package com.bovink.androidlearning.butterknife;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bovink.androidlearning.R;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
+import butterknife.OnFocusChange;
 
 /**
  * @author fox
@@ -18,6 +22,11 @@ import butterknife.OnClick;
  */
 
 public class TestActivity extends AppCompatActivity {
+
+    @BindView(R.id.et_test1)
+    EditText testEditText1;
+    @BindView(R.id.et_test2)
+    EditText testEditText2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,6 +39,37 @@ public class TestActivity extends AppCompatActivity {
     void clickBtn() {
 
         System.out.println("TestActivity.clickBtn");
+    }
+
+    @OnClick(R.id.tv_test1)
+    void clickText1(TextView view) {
+
+        System.out.println("TestActivity.clickText1");
+        testEditText1.requestFocus();
+
+    }
+
+    @OnClick(R.id.tv_test2)
+    void clickText2(TextView view) {
+
+        System.out.println("TestActivity.clickText2");
+        testEditText2.requestFocus();
+    }
+
+    @OnFocusChange({R.id.et_test1, R.id.et_test2})
+    void TextOnFocusChange(TextView textView, boolean focus) {
+
+        switch (textView.getId()) {
+            case R.id.et_test1:
+
+                Toast.makeText(this, focus ? "test1 focused" : "test1 not focused", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.et_test2:
+                Toast.makeText(this, focus ? "test2 focused" : "test2 not focused", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                break;
+        }
     }
 
     @OnCheckedChanged(R.id.tb_test)

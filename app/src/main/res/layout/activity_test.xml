@@ -48,12 +48,30 @@
             android:layout_height="wrap_content"
             android:text="button" />
 
-        <TextView
-            android:id="@+id/tv_test"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="text" />
+        <EditText
+            android:id="@+id/et_test1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_test2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/tv_test1"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="text1" />
+
+    <TextView
+        android:id="@+id/tv_test2"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_height="wrap_content"
+        android:text="text2" />
 
 </FrameLayout>
