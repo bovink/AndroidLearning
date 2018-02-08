@@ -3,6 +3,7 @@ package com.bovink.androidlearning.butterknife;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -15,6 +16,7 @@ import butterknife.ButterKnife;
 import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 import butterknife.OnFocusChange;
+import butterknife.OnLongClick;
 
 /**
  * @author fox
@@ -54,6 +56,20 @@ public class TestActivity extends AppCompatActivity {
 
         System.out.println("TestActivity.clickText2");
         testEditText2.requestFocus();
+    }
+
+    @OnLongClick({R.id.tv_test1,R.id.tv_test2})
+    boolean longClickText1(View view) {
+
+        if (view.getId() == R.id.tv_test1) {
+
+            System.out.println("TestActivity.longClickText1");
+            return true;
+        }else {
+
+            System.out.println("TestActivity.longClickText2");
+            return true;
+        }
     }
 
     @OnFocusChange({R.id.et_test1, R.id.et_test2})
