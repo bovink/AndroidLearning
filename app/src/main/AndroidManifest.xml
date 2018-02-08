@@ -85,6 +85,9 @@
         <activity
             android:name=".butterknife.bindevent.OnTouchActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".butterknife.TestActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
