@@ -8,6 +8,40 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <ToggleButton
+            android:id="@+id/tb_test"
+            android:layout_width="50dp"
+            android:layout_height="40dp" />
+
+        <RadioGroup
+            android:id="@+id/rg_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb_test1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="yes" />
+
+            <RadioButton
+                android:id="@+id/rb_test2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="no" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/cb_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="同意协议" />
+
+        <Switch
+            android:id="@+id/switch_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
         <Button
             android:id="@+id/btn_test"
             android:layout_width="wrap_content"
