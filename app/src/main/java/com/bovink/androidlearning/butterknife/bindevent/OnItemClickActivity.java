@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -18,6 +19,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnItemClick;
 
 /**
  * com.bovink.androidlearning.butterknife.bindevent
@@ -64,7 +66,7 @@ public class OnItemClickActivity extends AppCompatActivity {
 
         @Override
         public long getItemId(int position) {
-            return position;
+            return position + 100;
         }
 
         @Override
@@ -93,4 +95,13 @@ public class OnItemClickActivity extends AppCompatActivity {
         }
     }
 
+    @OnItemClick(R.id.lv_test)
+    void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+        TextView textView = view.findViewById(R.id.tv_name);
+
+        System.out.println("textView.getText() = " + textView.getText());
+        System.out.println("position = " + position);
+        System.out.println("id = " + id);
+    }
 }
