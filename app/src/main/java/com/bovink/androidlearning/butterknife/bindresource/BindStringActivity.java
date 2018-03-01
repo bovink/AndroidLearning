@@ -21,10 +21,10 @@ import butterknife.ButterKnife;
 public class BindStringActivity extends AppCompatActivity {
 
     @BindString(R.string.app_name)
-    String appName;
+    String mAppName;
 
-    @BindView(R.id.tv_text1)
-    TextView helloTextView;
+    @BindView(R.id.tv_test)
+    TextView testTextView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,6 +36,6 @@ public class BindStringActivity extends AppCompatActivity {
     }
 
     private void testBindString() {
-        helloTextView.setText(appName);
+        testTextView.setText(mAppName);
     }
 }
