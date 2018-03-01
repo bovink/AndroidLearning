@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import com.bovink.androidlearning.R;
 
 import butterknife.BindBitmap;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -22,6 +23,8 @@ public class BindBitmapActivity extends AppCompatActivity {
 
     @BindBitmap(R.drawable.all)
     Bitmap bitmap;
+    @BindView(R.id.iv_test)
+    ImageView testImageView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,7 +37,6 @@ public class BindBitmapActivity extends AppCompatActivity {
 
     private void testBindBitmap() {
 
-        ImageView imageView = findViewById(R.id.iv_bitmap);
-        imageView.setImageBitmap(bitmap);
+        testImageView.setImageBitmap(bitmap);
     }
 }
