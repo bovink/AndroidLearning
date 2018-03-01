@@ -26,10 +26,10 @@ public class BindColorActivity extends AppCompatActivity {
     @BindColor(R.color.text_click)
     ColorStateList textClickColorStateList;
 
-    @BindView(R.id.tv_text1)
-    TextView textView1;
-    @BindView(R.id.tv_text2)
-    TextView textView2;
+    @BindView(R.id.tv_test1)
+    TextView testTextView1;
+    @BindView(R.id.tv_test2)
+    TextView testTextView2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,9 +37,10 @@ public class BindColorActivity extends AppCompatActivity {
         setContentView(R.layout.bindresource_color);
         ButterKnife.bind(this);
 
-        textView1.setTextColor(accentColor);
+        testTextView1.setTextColor(accentColor);
 
-        textView2.setClickable(true);
-        textView2.setTextColor(textClickColorStateList);
+        // 设置可点击才会有点击变色效果
+        testTextView2.setClickable(true);
+        testTextView2.setTextColor(textClickColorStateList);
     }
 }
