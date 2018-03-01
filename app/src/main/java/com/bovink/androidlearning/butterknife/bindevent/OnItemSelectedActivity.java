@@ -1,21 +1,15 @@
 package com.bovink.androidlearning.butterknife.bindevent;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.BaseAdapter;
-import android.widget.ListView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.bovink.androidlearning.R;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,11 +24,8 @@ import butterknife.OnItemSelected;
 
 public class OnItemSelectedActivity extends AppCompatActivity {
 
-    private Context mContext;
-    private List<String> stringList = new ArrayList<>();
-
-    @BindView(R.id.lv_test)
-    ListView testListView;
+    @BindView(R.id.spinner_test)
+    Spinner testSpinner;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,71 +33,28 @@ public class OnItemSelectedActivity extends AppCompatActivity {
         setContentView(R.layout.bindevent_onitemselected);
         ButterKnife.bind(this);
 
-        mContext = this;
-        stringList.add("one");
-        stringList.add("two");
-        stringList.add("three");
-        stringList.add("four");
-        stringList.add("five");
+        ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(this,
+                R.array.week, android.R.layout.simple_spinner_item);
 
-        testListView.setAdapter(new TextAdapter());
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        testSpinner.setAdapter(arrayAdapter);
     }
 
-    private class TextAdapter extends BaseAdapter {
-
-        @Override
-        public int getCount() {
-            return stringList.size();
-        }
-
-        @Override
-        public String getItem(int position) {
-            return stringList.get(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position + 100;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            ViewHolder viewHolder;
-
-            if (convertView == null) {
-                viewHolder = new ViewHolder();
-
-                convertView = LayoutInflater.from(mContext).inflate(R.layout.item_list_activity, null);
-                viewHolder.nameTextView = convertView.findViewById(R.id.tv_name);
-
-                convertView.setTag(viewHolder);
-            } else {
-
-                viewHolder = (ViewHolder) convertView.getTag();
-            }
-
-            viewHolder.nameTextView.setText(stringList.get(position));
-
-            return convertView;
-        }
-
-        private class ViewHolder {
-            TextView nameTextView;
-        }
-    }
-
-    @OnItemSelected(value = R.id.lv_test, callback = OnItemSelected.Callback.ITEM_SELECTED)
+    @OnItemSelected(value = R.id.spinner_test, callback = OnItemSelected.Callback.ITEM_SELECTED)
     void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-        TextView textView = view.findViewById(R.id.tv_name);
+        TextView textView = (TextView) view;
 
         System.out.println("textView.getText() = " + textView.getText());
         System.out.println("position = " + position);
         System.out.println("id = " + id);
     }
 
-    @OnItemSelected(value = R.id.lv_test, callback = OnItemSelected.Callback.NOTHING_SELECTED)
+    @OnItemSelected(value = R.id.spinner_test, callback = OnItemSelected.Callback.NOTHING_SELECTED)
     void onNothingSelected(AdapterView<?> parent) {
 
+        System.out.println("OnItemSelectedActivity.onNothingSelected");
     }
+
 }
