@@ -28,11 +28,11 @@ public class BindDrawableActivity extends AppCompatActivity {
     @BindDrawable(value = R.mipmap.ic_launcher, tint = R.attr.colorAccent)
     Drawable iconDrawable2;
 
-    @BindView(R.id.tv_text1)
-    TextView helloTextView;
+    @BindView(R.id.tv_test)
+    TextView testTextView;
 
-    @BindView(R.id.iv_image2)
-    ImageView imageView2;
+    @BindView(R.id.iv_test)
+    ImageView testImageView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,11 +42,11 @@ public class BindDrawableActivity extends AppCompatActivity {
 
         testBindDrawable();
 
-        imageView2.setBackground(iconDrawable2);
     }
 
     private void testBindDrawable() {
-        helloTextView.setBackground(iconDrawable);
+        testTextView.setBackground(iconDrawable);
+        testImageView.setBackground(iconDrawable2);
     }
 
 }
