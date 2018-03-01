@@ -20,11 +20,11 @@ import butterknife.ButterKnife;
 
 public class BindIntActivity extends AppCompatActivity {
 
-    @BindInt(R.integer.time)
-    int time;
+    @BindInt(R.integer.text_size)
+    int mTextSize;
 
-    @BindView(R.id.tv_text1)
-    TextView helloTextView;
+    @BindView(R.id.tv_test)
+    TextView testTextView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,6 +37,6 @@ public class BindIntActivity extends AppCompatActivity {
 
     private void testBindInt() {
 
-        helloTextView.setTextSize(time);
+        testTextView.setTextSize(mTextSize);
     }
 }
