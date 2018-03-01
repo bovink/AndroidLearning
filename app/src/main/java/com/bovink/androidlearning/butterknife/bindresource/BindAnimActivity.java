@@ -21,11 +21,11 @@ import butterknife.ButterKnife;
 
 public class BindAnimActivity extends AppCompatActivity {
 
-    @BindAnim(R.anim.anim_fade_in)
+    @BindAnim(R.anim.anim_text_in)
     Animation animation;
 
-    @BindView(R.id.tv_text1)
-    TextView helloTextView;
+    @BindView(R.id.tv_test)
+    TextView testTextView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,7 +38,7 @@ public class BindAnimActivity extends AppCompatActivity {
 
     private void testBindAnim() {
 
-        helloTextView.startAnimation(animation);
+        testTextView.startAnimation(animation);
     }
 
 }
