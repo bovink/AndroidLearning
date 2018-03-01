@@ -28,6 +28,11 @@ public class OnTextChangedActivity extends AppCompatActivity {
 
     /**
      * 默认callback是TEXT_CHANGED
+     *
+     * @param s      输入后的字符串
+     * @param start  被替换的字符前面的字符数量
+     * @param before 被替换的字符的数量
+     * @param count  替换的字符的数量
      */
     @OnTextChanged(value = R.id.et_test, callback = OnTextChanged.Callback.TEXT_CHANGED)
     void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -39,6 +44,12 @@ public class OnTextChangedActivity extends AppCompatActivity {
         System.out.println("count = " + count);
     }
 
+    /**
+     * @param s     字符串改变前的内容
+     * @param start 被替换的字符前面的字符数量
+     * @param count 被替换的字符的数量
+     * @param after 替换的字符的数量
+     */
     @OnTextChanged(value = R.id.et_test, callback = OnTextChanged.Callback.BEFORE_TEXT_CHANGED)
     void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -49,9 +60,12 @@ public class OnTextChangedActivity extends AppCompatActivity {
         System.out.println("after = " + after);
     }
 
+    /**
+     * @param s 输入后的字符串
+     */
     @OnTextChanged(value = R.id.et_test, callback = OnTextChanged.Callback.AFTER_TEXT_CHANGED)
     void afterTextChanged(Editable s) {
-        
+
         System.out.println("OnTextChangedActivity.afterTextChanged");
         System.out.println("s.toString() = " + s.toString());
     }
