@@ -35,7 +35,7 @@ public class BindArrayActivity extends AppCompatActivity {
     @BindArray(R.array.color)
     TypedArray colors;
 
-    @BindViews({R.id.tv_text1, R.id.tv_text2, R.id.tv_text3})
+    @BindViews({R.id.tv_test1, R.id.tv_test2, R.id.tv_test3})
     List<TextView> textViews;
 
     @Override
