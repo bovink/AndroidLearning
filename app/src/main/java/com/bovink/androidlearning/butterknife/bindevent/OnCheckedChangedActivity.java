@@ -27,29 +27,37 @@ public class OnCheckedChangedActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnCheckedChanged(R.id.rb_test1)
-    void checkRadio1(RadioButton rb, boolean checked) {
+    @OnCheckedChanged(R.id.tb_test)
+    void checkToggle(boolean checked) {
 
-        if (checked) {
+        Toast.makeText(this, checked ? "toggle checked" : "toggle not checked", Toast.LENGTH_SHORT).show();
+    }
 
-            Toast.makeText(this, "1 checked", Toast.LENGTH_SHORT).show();
-        } else {
+    /**
+     * 由于是判断CheckBox的Check状态，所以不论选中还是取消选中都会触发事件
+     */
+    @OnCheckedChanged({R.id.rb_test1, R.id.rb_test2})
+    void checkRadio(RadioButton rb, boolean checked) {
 
-            Toast.makeText(this, "1 not checked", Toast.LENGTH_SHORT).show();
+        if (rb.getId() == R.id.rb_test1) {
+
+            Toast.makeText(this, checked ? "rb1 checked" : "rb1 not checked", Toast.LENGTH_SHORT).show();
+        } else if (rb.getId() == R.id.rb_test2) {
+
+            Toast.makeText(this, checked ? "rb2 checked" : "rb2 not checked", Toast.LENGTH_SHORT).show();
         }
 
     }
 
-    @OnCheckedChanged(R.id.rb_test2)
-    void checkRadio2(RadioButton rb, boolean checked) {
+    @OnCheckedChanged(R.id.cb_test)
+    void checkBox(boolean checked) {
 
-        if (checked) {
+        Toast.makeText(this, checked ? "box checked" : "box not checked", Toast.LENGTH_SHORT).show();
+    }
 
-            Toast.makeText(this, "2 checked", Toast.LENGTH_SHORT).show();
-        } else {
+    @OnCheckedChanged(R.id.switch_test)
+    void checkSwitch(boolean checked) {
 
-            Toast.makeText(this, "2 not checked", Toast.LENGTH_SHORT).show();
-        }
-
+        Toast.makeText(this, checked ? "switch checked" : "switch not checked", Toast.LENGTH_SHORT).show();
     }
 }
