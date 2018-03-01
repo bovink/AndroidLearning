@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 import com.bovink.androidlearning.R;
 
-import butterknife.BindColor;
 import butterknife.BindFont;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,14 +27,11 @@ public class BindFontActivity extends AppCompatActivity {
     @BindFont(value = R.font.pianpianti, style = Typeface.ITALIC)
     Typeface typeface2;
 
-    @BindColor(R.color.colorAccent)
-    int color;
+    @BindView(R.id.tv_test1)
+    TextView testTextView1;
 
-    @BindView(R.id.tv_text1)
-    TextView textView1;
-
-    @BindView(R.id.tv_text2)
-    TextView textView2;
+    @BindView(R.id.tv_test2)
+    TextView testTextView2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -47,11 +43,9 @@ public class BindFontActivity extends AppCompatActivity {
     }
 
     private void testBindFont() {
-        textView1.setTextColor(color);
-        textView1.setTypeface(typeface1);
 
-        textView2.setTextColor(color);
-        textView2.setTypeface(typeface2);
+        testTextView1.setTypeface(typeface1);
+        testTextView2.setTypeface(typeface2);
     }
 
 }
