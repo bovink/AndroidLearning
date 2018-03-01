@@ -13,6 +13,10 @@ import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends ListActivity {
+    /**
+     * 包名
+     */
+    private String mPackageName;
     List<Map<String, String>> mapList;
 
     @Override
@@ -20,7 +24,21 @@ public class MainActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mapList = generateList();
+        int type = getIntent().getIntExtra("type", 0);
+
+        if (type == 1) {// 绑定资源
+
+            mapList = generateResourceList();
+            mPackageName = "com.bovink.androidlearning.butterknife.bindresource.";
+        } else if (type == 2) {// 绑定事件
+
+            mapList = generateEventList();
+            mPackageName = "com.bovink.androidlearning.butterknife.bindevent.";
+        } else {// 选择绑定资源或是绑定事件
+
+            mapList = generateBindList();
+            mPackageName = "com.bovink.androidlearning.";
+        }
 
         SimpleAdapter simpleAdapter = new SimpleAdapter(this,
                 mapList,
@@ -35,18 +53,46 @@ public class MainActivity extends ListActivity {
 
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
-        String test = mapList.get(position).get("name");
+        String activityName = mapList.get(position).get("name");
+        if (activityName.contains(".")) {
+            System.out.println("activityName = " + activityName);
+            activityName= activityName.split("\\.")[0];
+        }
 
         try {
-            Class clazz = Class.forName("com.bovink.androidlearning.butterknife.bindresource." + test);
+            Class clazz = Class.forName(mPackageName + activityName);
             Intent intent = new Intent(this, clazz);
+            if (activityName.equals("MainActivity")) {
+                intent.putExtra("type", position + 1);
+            }
             startActivity(intent);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
 
-    private List<Map<String, String>> generateList() {
+    /**
+     * 生成绑定列表
+     */
+    private List<Map<String, String>> generateBindList() {
+
+        List<Map<String, String>> mapList = new ArrayList<>();
+        Map<String, String> map;
+
+        map = new HashMap<>();
+        map.put("name", "MainActivity.BindResource");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "MainActivity.BindEvent");
+        mapList.add(map);
+
+        return mapList;
+    }
+
+    /**
+     * 生成绑定资源列表
+     */
+    private List<Map<String, String>> generateResourceList() {
 
         List<Map<String, String>> mapList = new ArrayList<>();
         Map<String, String> map;
@@ -83,6 +129,51 @@ public class MainActivity extends ListActivity {
         mapList.add(map);
         map = new HashMap<>();
         map.put("name", "BindStringActivity");
+        mapList.add(map);
+
+        return mapList;
+    }
+
+    /**
+     * 生成绑定事件列表
+     */
+    private List<Map<String, String>> generateEventList() {
+
+        List<Map<String, String>> mapList = new ArrayList<>();
+        Map<String, String> map;
+
+        map = new HashMap<>();
+        map.put("name", "OnCheckedChangedActivity");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "OnClickActivity");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "OnEditorActionActivity");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "OnFocusChangeActivity");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "OnItemClickActivity");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "OnItemLongClickActivity");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "OnItemSelectedActivity");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "OnLongClickActivity");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "OnPageChangeActivity");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "OnTextChangedActivity");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "OnTouchActivity");
         mapList.add(map);
 
         return mapList;
