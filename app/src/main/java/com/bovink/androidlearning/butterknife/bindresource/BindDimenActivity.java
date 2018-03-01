@@ -24,8 +24,8 @@ public class BindDimenActivity extends AppCompatActivity {
     int textSize;
     @BindDimen(R.dimen.exact_amount)
     float exact_amount;
-    @BindView(R.id.tv_text1)
-    TextView helloTextView;
+    @BindView(R.id.tv_test)
+    TextView testTextView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,6 +39,6 @@ public class BindDimenActivity extends AppCompatActivity {
     }
 
     private void testBindDimen() {
-        helloTextView.setTextSize(textSize);
+        testTextView.setTextSize(textSize);
     }
 }
