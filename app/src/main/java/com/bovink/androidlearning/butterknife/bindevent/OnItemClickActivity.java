@@ -1,11 +1,22 @@
 package com.bovink.androidlearning.butterknife.bindevent;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import com.bovink.androidlearning.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -17,11 +28,69 @@ import butterknife.ButterKnife;
 
 public class OnItemClickActivity extends AppCompatActivity {
 
+    private Context mContext;
+    private List<String> stringList = new ArrayList<>();
+
+    @BindView(R.id.lv_test)
+    ListView testListView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bindevent_onitemclick);
         ButterKnife.bind(this);
+
+        mContext = this;
+        stringList.add("one");
+        stringList.add("two");
+        stringList.add("three");
+        stringList.add("four");
+        stringList.add("five");
+
+        testListView.setAdapter(new TextAdapter());
+    }
+
+    private class TextAdapter extends BaseAdapter {
+
+        @Override
+        public int getCount() {
+            return stringList.size();
+        }
+
+        @Override
+        public String getItem(int position) {
+            return stringList.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            ViewHolder viewHolder;
+
+            if (convertView == null) {
+                viewHolder = new ViewHolder();
+
+                convertView = LayoutInflater.from(mContext).inflate(R.layout.item_list_activity, null);
+                viewHolder.nameTextView = convertView.findViewById(R.id.tv_name);
+
+                convertView.setTag(viewHolder);
+            } else {
+
+                viewHolder = (ViewHolder) convertView.getTag();
+            }
+
+            viewHolder.nameTextView.setText(stringList.get(position));
+
+            return convertView;
+        }
+
+        private class ViewHolder {
+            TextView nameTextView;
+        }
     }
 
 }
