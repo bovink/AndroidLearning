@@ -3,10 +3,13 @@ package com.bovink.androidlearning.butterknife.bindevent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Toast;
 
 import com.bovink.androidlearning.R;
 
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * com.bovink.androidlearning.butterknife.bindevent
@@ -24,4 +27,19 @@ public class OnClickActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
+    @OnClick({R.id.btn_test, R.id.tv_test, R.id.iv_test})
+    void clickView(View view) {
+
+        if (view.getId() == R.id.btn_test) {
+
+            Toast.makeText(this, "click button", Toast.LENGTH_SHORT).show();
+        } else if (view.getId() == R.id.tv_test) {
+
+            Toast.makeText(this, "click text", Toast.LENGTH_SHORT).show();
+        } else if (view.getId() == R.id.iv_test) {
+
+            Toast.makeText(this, "click image", Toast.LENGTH_SHORT).show();
+        }
+    }
 }
+
