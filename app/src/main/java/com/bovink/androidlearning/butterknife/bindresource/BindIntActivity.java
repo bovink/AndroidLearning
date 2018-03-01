@@ -29,7 +29,7 @@ public class BindIntActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_butterknife);
+        setContentView(R.layout.bindresource_int);
         ButterKnife.bind(this);
 
         testBindInt();
