@@ -16,6 +16,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnPageChange;
 
 /**
  * com.bovink.androidlearning.butterknife.bindevent
@@ -66,4 +67,32 @@ public class OnPageChangeActivity extends AppCompatActivity {
         }
     }
 
+    @OnPageChange(value = R.id.vp_test, callback = OnPageChange.Callback.PAGE_SELECTED)
+    void onPageSelected(int position) {
+
+        System.out.println("position = " + position);
+    }
+
+    @OnPageChange(value = R.id.vp_test, callback = OnPageChange.Callback.PAGE_SCROLLED)
+    void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+        System.out.println("position = " + position);
+        System.out.println("positionOffset = " + positionOffset);
+        System.out.println("positionOffsetPixels = " + positionOffsetPixels);
+    }
+
+    @OnPageChange(value = R.id.vp_test, callback = OnPageChange.Callback.PAGE_SCROLL_STATE_CHANGED)
+    void onPageScrollStateChanged(int state) {
+
+        if (state == ViewPager.SCROLL_STATE_IDLE) {
+
+            System.out.println("SCROLL_STATE_IDLE");
+        } else if (state == ViewPager.SCROLL_STATE_DRAGGING) {
+
+            System.out.println("SCROLL_STATE_DRAGGING");
+        } else if (state == ViewPager.SCROLL_STATE_SETTLING) {
+
+            System.out.println("SCROLL_STATE_SETTLING");
+        }
+    }
 }
