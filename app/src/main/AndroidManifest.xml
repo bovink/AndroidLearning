@@ -17,13 +17,17 @@
             </intent-filter>
         </activity>
 
+        <!--bind view 绑定单个视图-->
         <activity
             android:name=".butterknife.bindview.BindViewActivity"
             android:screenOrientation="portrait" />
+
+        <!--bind views 绑定多个视图-->
         <activity
             android:name=".butterknife.bindviews.BindViewsActivity"
             android:screenOrientation="portrait" />
 
+        <!--bind resource 绑定资源-->
         <activity
             android:name=".butterknife.bindresource.BindAnimActivity"
             android:screenOrientation="portrait" />
