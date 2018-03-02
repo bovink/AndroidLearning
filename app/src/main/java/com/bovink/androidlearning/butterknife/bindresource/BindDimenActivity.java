@@ -3,6 +3,7 @@ package com.bovink.androidlearning.butterknife.bindresource;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.bovink.androidlearning.R;
@@ -20,10 +21,13 @@ import butterknife.ButterKnife;
 
 public class BindDimenActivity extends AppCompatActivity {
 
-    @BindDimen(R.dimen.test)
+    @BindDimen(R.dimen.text_size)
     int textSize;
-    @BindDimen(R.dimen.exact_amount)
-    float exact_amount;
+    @BindDimen(R.dimen.text_margin_top)
+    int textMarginTop;
+    @BindDimen(R.dimen.text_margin_left)
+    float textMarginLeft;
+
     @BindView(R.id.tv_test)
     TextView testTextView;
 
@@ -33,12 +37,19 @@ public class BindDimenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bindresource_dimen);
         ButterKnife.bind(this);
 
-        System.out.println("exact_amount = " + exact_amount);
         System.out.println("textSize = " + textSize);
+        System.out.println("textMarginTop = " + textMarginTop);
+        System.out.println("textMarginLeft = " + textMarginLeft);
+
         testBindDimen();
     }
 
     private void testBindDimen() {
+
         testTextView.setTextSize(textSize);
+
+        FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) testTextView.getLayoutParams();
+        params.topMargin = textMarginTop;
+        testTextView.setLayoutParams(params);
     }
 }
