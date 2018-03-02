@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 import com.bovink.androidlearning.R;
@@ -33,12 +34,23 @@ public class BindViewsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bindviews);
         ButterKnife.bind(this);
 
+        // single action
         ButterKnife.apply(textViewList, SET_TEXT_SIZE_TO_20);
+        ButterKnife.apply(textViewArray, SET_TEXT_SIZE_TO_20);
 
+        // multiple action
+        ButterKnife.apply(textViewList, SET_TEXT_COLOR_TO_BLACK, SET_TEXT_SIZE_TO_20);
+        ButterKnife.apply(textViewArray, SET_TEXT_COLOR_TO_BLACK, SET_TEXT_SIZE_TO_20);
+
+        // setter
         int blue = Color.parseColor("#66CCFF");
         int gray = Color.parseColor("#CCCCCC");
         ButterKnife.apply(textViewList, SET_TEXT_COLOR, blue);
-        ButterKnife.apply(textViewArray, SET_TEXT_COLOR_TO_BLACK, SET_TEXT_SIZE_TO_20);
+        ButterKnife.apply(textViewArray, SET_TEXT_COLOR, gray);
+
+        // property
+        ButterKnife.apply(textViewList, View.SCALE_Y,2.0f);
+        ButterKnife.apply(textViewArray, View.SCALE_X,2.0f);
     }
 
     static final ButterKnife.Action<TextView> SET_TEXT_SIZE_TO_20 = new ButterKnife.Action<TextView>() {
