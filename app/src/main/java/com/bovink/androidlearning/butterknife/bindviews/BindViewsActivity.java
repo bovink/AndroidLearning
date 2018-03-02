@@ -25,7 +25,7 @@ public class BindViewsActivity extends AppCompatActivity {
     List<TextView> textViewList;
 
     @BindViews({R.id.tv_test4, R.id.tv_test5, R.id.tv_test6})
-    TextView[] textViews;
+    TextView[] textViewArray;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,7 +38,7 @@ public class BindViewsActivity extends AppCompatActivity {
         int blue = Color.parseColor("#66CCFF");
         int gray = Color.parseColor("#CCCCCC");
         ButterKnife.apply(textViewList, SET_TEXT_COLOR, blue);
-        ButterKnife.apply(textViews, SET_TEXT_COLOR_TO_BLACK, SET_TEXT_SIZE_TO_20);
+        ButterKnife.apply(textViewArray, SET_TEXT_COLOR_TO_BLACK, SET_TEXT_SIZE_TO_20);
     }
 
     static final ButterKnife.Action<TextView> SET_TEXT_SIZE_TO_20 = new ButterKnife.Action<TextView>() {
