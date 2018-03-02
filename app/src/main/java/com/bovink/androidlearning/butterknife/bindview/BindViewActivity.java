@@ -17,7 +17,7 @@ import butterknife.ButterKnife;
 
 public class BindViewActivity extends AppCompatActivity {
 
-    @BindView(R.id.tv_test)
+    @BindView(R.id.tv_test1)
     TextView testTextView;
 
     @Override
@@ -27,7 +27,7 @@ public class BindViewActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        testTextView.setText("bind view successfully");
+        testTextView.setText("bind view from activity");
 
         BindViewFragment fragment = BindViewFragment.newInstance();
 

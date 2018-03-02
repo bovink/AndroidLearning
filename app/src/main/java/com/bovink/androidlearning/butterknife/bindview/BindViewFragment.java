@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bovink.androidlearning.R;
 
@@ -35,6 +36,20 @@ public class BindViewFragment extends Fragment {
         ButterKnife.bind(this, root);
 
         testImageView.setImageResource(R.drawable.all);
+
+        ActivityView activityView = new ActivityView();
+
+        ButterKnife.bind(activityView, getActivity());
+
+        activityView.testTextView.setText("bind from fragment");
+
         return root;
+    }
+
+    public class ActivityView {
+
+        @BindView(R.id.tv_test2)
+        TextView testTextView;
+
     }
 }
