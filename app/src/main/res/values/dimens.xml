@@ -2,7 +2,6 @@
 <resources>
     <dimen name="exact_amount">123.22px</dimen>
     <dimen name="text_size">16sp</dimen>
-    <dimen name="origin">12sp</dimen>
     <dimen name="test">16sp</dimen>
     <item name="whatever" format="float" type="dimen">1.1</item>
 </resources>
