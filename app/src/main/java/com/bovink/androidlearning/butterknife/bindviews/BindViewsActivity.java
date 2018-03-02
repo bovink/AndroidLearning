@@ -24,6 +24,9 @@ public class BindViewsActivity extends AppCompatActivity {
     @BindViews({R.id.tv_test1, R.id.tv_test2, R.id.tv_test3})
     List<TextView> textViewList;
 
+    @BindViews({R.id.tv_test4, R.id.tv_test5, R.id.tv_test6})
+    TextView[] textViews;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,8 +35,10 @@ public class BindViewsActivity extends AppCompatActivity {
 
         ButterKnife.apply(textViewList, SET_TEXT_SIZE_TO_20);
 
-        int color = Color.parseColor("#66CCFF");
-        ButterKnife.apply(textViewList, SET_TEXT_COLOR, color);
+        int blue = Color.parseColor("#66CCFF");
+        int gray = Color.parseColor("#CCCCCC");
+        ButterKnife.apply(textViewList, SET_TEXT_COLOR, blue);
+        ButterKnife.apply(textViews, SET_TEXT_COLOR_TO_BLACK, SET_TEXT_SIZE_TO_20);
     }
 
     static final ButterKnife.Action<TextView> SET_TEXT_SIZE_TO_20 = new ButterKnife.Action<TextView>() {
@@ -41,6 +46,15 @@ public class BindViewsActivity extends AppCompatActivity {
         public void apply(@NonNull TextView view, int index) {
 
             view.setTextSize(20);
+        }
+    };
+
+    static final ButterKnife.Action<TextView> SET_TEXT_COLOR_TO_BLACK = new ButterKnife.Action<TextView>() {
+        @Override
+        public void apply(@NonNull TextView view, int index) {
+
+            int black = Color.parseColor("#000000");
+            view.setTextColor(black);
         }
     };
 
