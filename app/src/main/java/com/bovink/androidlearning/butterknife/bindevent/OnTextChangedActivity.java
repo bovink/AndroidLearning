@@ -22,7 +22,7 @@ public class OnTextChangedActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bindevent_ontextchanged);
+        setContentView(R.layout.activity_bindevent_ontextchanged);
         ButterKnife.bind(this);
     }
 

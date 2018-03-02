@@ -37,7 +37,7 @@ public class BindDrawableActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bindresource_drawable);
+        setContentView(R.layout.activity_bindresource_drawable);
         ButterKnife.bind(this);
 
         testBindDrawable();

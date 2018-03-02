@@ -23,7 +23,7 @@ public class OnFocusChangeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bindevent_onfocuschange);
+        setContentView(R.layout.activity_bindevent_onfocuschange);
         ButterKnife.bind(this);
     }
 

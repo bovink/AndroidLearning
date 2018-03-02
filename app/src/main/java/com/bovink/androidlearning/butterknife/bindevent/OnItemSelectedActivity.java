@@ -30,7 +30,7 @@ public class OnItemSelectedActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bindevent_onitemselected);
+        setContentView(R.layout.activity_bindevent_onitemselected);
         ButterKnife.bind(this);
 
         ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(this,

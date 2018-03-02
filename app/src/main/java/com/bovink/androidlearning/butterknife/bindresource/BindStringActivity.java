@@ -29,7 +29,7 @@ public class BindStringActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bindresource_string);
+        setContentView(R.layout.activity_bindresource_string);
         ButterKnife.bind(this);
 
         testBindString();

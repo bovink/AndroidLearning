@@ -26,7 +26,7 @@ public class OnEditorActionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bindevent_oneditoraction);
+        setContentView(R.layout.activity_bindevent_oneditoraction);
         ButterKnife.bind(this);
     }
 

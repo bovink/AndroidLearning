@@ -29,7 +29,7 @@ public class OnTouchActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bindevent_ontouch);
+        setContentView(R.layout.activity_bindevent_ontouch);
         ButterKnife.bind(this);
 
         // 不设置可点击的话，就不会触发手指抬起事件

@@ -34,7 +34,7 @@ public class BindColorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bindresource_color);
+        setContentView(R.layout.activity_bindresource_color);
         ButterKnife.bind(this);
 
         testTextView1.setTextColor(accentColor);

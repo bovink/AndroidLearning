@@ -35,7 +35,7 @@ public class OnPageChangeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bindevent_onpagechange);
+        setContentView(R.layout.activity_bindevent_onpagechange);
         ButterKnife.bind(this);
 
         TextFragment textFragment;
