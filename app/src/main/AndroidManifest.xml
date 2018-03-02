@@ -18,6 +18,13 @@
         </activity>
 
         <activity
+            android:name=".butterknife.bindview.BindViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".butterknife.bindviews.BindViewsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".butterknife.bindresource.BindAnimActivity"
             android:screenOrientation="portrait" />
         <activity
