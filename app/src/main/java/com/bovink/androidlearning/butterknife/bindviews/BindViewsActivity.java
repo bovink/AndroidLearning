@@ -30,12 +30,13 @@ public class BindViewsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bindviews);
         ButterKnife.bind(this);
 
-        ButterKnife.apply(textViewList, SET_TEXT_SIZE);
+        ButterKnife.apply(textViewList, SET_TEXT_SIZE_TO_20);
+
         int color = Color.parseColor("#66CCFF");
         ButterKnife.apply(textViewList, SET_TEXT_COLOR, color);
     }
 
-    static final ButterKnife.Action<TextView> SET_TEXT_SIZE = new ButterKnife.Action<TextView>() {
+    static final ButterKnife.Action<TextView> SET_TEXT_SIZE_TO_20 = new ButterKnife.Action<TextView>() {
         @Override
         public void apply(@NonNull TextView view, int index) {
 
