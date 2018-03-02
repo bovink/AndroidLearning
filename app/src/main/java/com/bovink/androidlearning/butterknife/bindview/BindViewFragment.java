@@ -6,9 +6,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.bovink.androidlearning.R;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -18,11 +20,21 @@ import butterknife.ButterKnife;
 
 public class BindViewFragment extends Fragment {
 
+    @BindView(R.id.iv_test)
+    ImageView testImageView;
+
+    public static BindViewFragment newInstance() {
+        return new BindViewFragment();
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_bindview, container, false);
+
         ButterKnife.bind(this, root);
+
+        testImageView.setImageResource(R.drawable.all);
         return root;
     }
 }
