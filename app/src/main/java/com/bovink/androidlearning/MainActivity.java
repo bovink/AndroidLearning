@@ -50,7 +50,7 @@ public class MainActivity extends ListActivity {
 
         SimpleAdapter simpleAdapter = new SimpleAdapter(this,
                 mapList,
-                R.layout.item_list_activity,
+                R.layout.list_item_activity,
                 new String[]{"name"},
                 new int[]{R.id.tv_name}
         );

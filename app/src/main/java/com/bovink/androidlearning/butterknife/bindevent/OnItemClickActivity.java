@@ -76,7 +76,7 @@ public class OnItemClickActivity extends AppCompatActivity {
             if (convertView == null) {
                 viewHolder = new ViewHolder();
 
-                convertView = LayoutInflater.from(mContext).inflate(R.layout.item_list_activity, null);
+                convertView = LayoutInflater.from(mContext).inflate(R.layout.list_item_activity, null);
                 viewHolder.nameTextView = convertView.findViewById(R.id.tv_name);
 
                 convertView.setTag(viewHolder);
