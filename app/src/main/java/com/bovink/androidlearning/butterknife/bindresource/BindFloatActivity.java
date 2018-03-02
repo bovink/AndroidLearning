@@ -20,8 +20,8 @@ import butterknife.ButterKnife;
 
 public class BindFloatActivity extends AppCompatActivity {
 
-    @BindFloat(R.dimen.whatever)
-    float whatever;
+    @BindFloat(R.dimen.text_size_float)
+    float textSize;
 
     @BindView(R.id.tv_test)
     TextView testTextView;
@@ -37,6 +37,6 @@ public class BindFloatActivity extends AppCompatActivity {
 
     private void testBindFloat() {
 
-        testTextView.setText(String.valueOf(whatever));
+        testTextView.setTextSize(textSize);
     }
 }
