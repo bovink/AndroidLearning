@@ -34,6 +34,14 @@ public class MainActivity extends ListActivity {
 
             mapList = generateEventList();
             mPackageName = "com.bovink.androidlearning.butterknife.bindevent.";
+        } else if (type == 3) {// 绑定单个视图
+
+            mapList = generateViewList();
+            mPackageName = "com.bovink.androidlearning.butterknife.bindview.";
+        } else if (type == 4) {// 绑定多个视图
+
+            mapList = generateViewsList();
+            mPackageName = "com.bovink.androidlearning.butterknife.bindviews.";
         } else {// 选择绑定资源或是绑定事件
 
             mapList = generateBindList();
@@ -56,7 +64,7 @@ public class MainActivity extends ListActivity {
         String activityName = mapList.get(position).get("name");
         if (activityName.contains(".")) {
             System.out.println("activityName = " + activityName);
-            activityName= activityName.split("\\.")[0];
+            activityName = activityName.split("\\.")[0];
         }
 
         try {
@@ -84,6 +92,12 @@ public class MainActivity extends ListActivity {
         mapList.add(map);
         map = new HashMap<>();
         map.put("name", "MainActivity.BindEvent");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "MainActivity.BindView");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "MainActivity.BindViews");
         mapList.add(map);
 
         return mapList;
@@ -179,4 +193,33 @@ public class MainActivity extends ListActivity {
         return mapList;
     }
 
+    /**
+     * 生成绑定单个视图列表
+     */
+    private List<Map<String, String>> generateViewList() {
+
+        List<Map<String, String>> mapList = new ArrayList<>();
+        Map<String, String> map;
+
+        map = new HashMap<>();
+        map.put("name", "BindViewActivity");
+        mapList.add(map);
+
+        return mapList;
+    }
+
+    /**
+     * 生成绑定多个视图列表
+     */
+    private List<Map<String, String>> generateViewsList() {
+
+        List<Map<String, String>> mapList = new ArrayList<>();
+        Map<String, String> map;
+
+        map = new HashMap<>();
+        map.put("name", "BindViewsActivity");
+        mapList.add(map);
+
+        return mapList;
+    }
 }
