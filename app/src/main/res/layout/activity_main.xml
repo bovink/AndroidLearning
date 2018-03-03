@@ -6,6 +6,11 @@
         <variable
             name="user"
             type="com.bovink.androidlearning.User" />
+
+        <variable
+            name="handler"
+            type="com.bovink.androidlearning.EventHandler" />
+
     </data>
 
     <LinearLayout
@@ -15,8 +20,10 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#66ccff"
+            android:onClick="@{handler::onClickHappen}"
             android:text="@{user.name}" />
 
         <TextView

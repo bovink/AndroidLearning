@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         User user = new User("lilei", "23");
         binding.setUser(user);
+        binding.setHandler(new EventHandler());
 
     }
 }
