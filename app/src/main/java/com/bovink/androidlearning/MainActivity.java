@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         if (type == 1) {// 绑定资源
 
             mapList = generateResourceList();
-            mPackageName = "com.bovink.butterknifesample.butterknife.bindresource.";
+            mPackageName = "com.bovink.androidlearning.databinding.layoutbinding.";
         } else if (type == 2) {// 绑定事件
 
             mapList = generateEventList();
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         Map<String, String> map;
 
         map = new HashMap<>();
-        map.put("name", "BindAnimActivity");
+        map.put("name", "LayoutBindActivity");
         mapList.add(map);
         map = new HashMap<>();
         map.put("name", "BindArrayActivity");
