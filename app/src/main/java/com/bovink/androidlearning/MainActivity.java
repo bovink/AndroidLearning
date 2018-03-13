@@ -128,6 +128,9 @@ public class MainActivity extends AppCompatActivity {
         map = new HashMap<>();
         map.put("name", "LayoutBindActivity");
         mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "EventHandlerActivity");
+        mapList.add(map);
 
         return mapList;
     }
