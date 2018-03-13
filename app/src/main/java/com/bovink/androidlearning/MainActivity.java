@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (type == 2) {// 绑定事件
 
             mapList = generateEventList();
-            mPackageName = "com.bovink.butterknifesample.butterknife.bindevent.";
+            mPackageName = "com.bovink.androidlearning.databinding.layoutdetails.";
         } else if (type == 3) {// 绑定单个视图
 
             mapList = generateViewList();
@@ -102,10 +102,10 @@ public class MainActivity extends AppCompatActivity {
         Map<String, String> map;
 
         map = new HashMap<>();
-        map.put("name", "MainActivity.BindResource");
+        map.put("name", "MainActivity.LayoutBinding");
         mapList.add(map);
         map = new HashMap<>();
-        map.put("name", "MainActivity.BindEvent");
+        map.put("name", "MainActivity.LayoutDetails");
         mapList.add(map);
         map = new HashMap<>();
         map.put("name", "MainActivity.BindView");
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
         Map<String, String> map;
 
         map = new HashMap<>();
-        map.put("name", "OnCheckedChangedActivity");
+        map.put("name", "ImportActivity");
         mapList.add(map);
 
         return mapList;

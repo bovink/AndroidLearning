@@ -13,6 +13,7 @@ public class Person extends BaseObservable {
 
     private String name;
     private String sex;
+    private boolean isAdult;
 
     public String getName() {
         return name;
@@ -28,5 +29,13 @@ public class Person extends BaseObservable {
 
     public void setSex(String sex) {
         this.sex = sex;
+    }
+
+    public boolean isAdult() {
+        return isAdult;
+    }
+
+    public void setAdult(boolean adult) {
+        isAdult = adult;
     }
 }
