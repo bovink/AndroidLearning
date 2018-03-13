@@ -5,9 +5,20 @@
 
         <import type="android.view.View" />
 
+        <import type="com.bovink.androidlearning.model.Person" />
+
+        <import type="java.util.List" />
+
+        <!--引入静态方法-->
+        <import type="com.bovink.androidlearning.utils.StringUtils" />
+
         <variable
             name="person"
-            type="com.bovink.androidlearning.model.Person" />
+            type="Person" />
+
+        <variable
+            name="personList"
+            type="List&lt;Person&gt;" />
     </data>
 
     <LinearLayout
@@ -19,7 +30,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{person.name}"
+            android:text="@{StringUtils.format(person.name)}"
             android:visibility="@{person.adult ? View.VISIBLE : View.GONE}" />
     </LinearLayout>
 </layout>

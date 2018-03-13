@@ -23,7 +23,7 @@ public class ImportActivity extends AppCompatActivity{
 
         Person person = new Person();
         person.setName("lilei");
-        person.setAdult(false);
+        person.setAdult(true);
 
         binding.setPerson(person);
     }
