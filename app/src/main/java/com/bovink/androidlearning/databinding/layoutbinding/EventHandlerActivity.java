@@ -38,6 +38,9 @@ public class EventHandlerActivity extends AppCompatActivity {
         binding.setBinding(listenerBinding);
     }
 
+    /**
+     * 必须与要绑定的接口的回调方法的签名一致
+     */
     public class MethodReference {
 
         public void methodDoSomething(View view) {
@@ -46,9 +49,12 @@ public class EventHandlerActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * 只需要与要绑定接口的回调方法的返回值一致
+     */
     public class ListenerBinding {
 
-        public void listenerDoSomething(View view) {
+        public void listenerDoSomething() {
 
             System.out.println("ListenerBinding.listenerDoSomething");
         }

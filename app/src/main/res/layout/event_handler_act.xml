@@ -44,6 +44,6 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{(view) -> binding.listenerDoSomething(view)}" />
+            android:onClick="@{(view) -> binding.listenerDoSomething()}" />
     </LinearLayout>
 </layout>
