@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.bovink.androidlearning.databinding.ObservableCollectionActBinding;
 
+
 /**
  * @author fox
  * @since 2018/03/14
@@ -30,7 +31,7 @@ public class ObservableCollectionActivity extends AppCompatActivity {
         user.put("hobby", "hero");
         user.put("age", 35);
 
-        binding.setUser(user);
+        binding.setUser1(user);
 
         EventHandler handler = new EventHandler();
         binding.setHandler(handler);
@@ -44,7 +45,7 @@ public class ObservableCollectionActivity extends AppCompatActivity {
 
     public class EventHandler {
 
-        public void changeContent() {
+        public void changeUser1() {
 
             user.put("hobby", "make money");
             user.put("age", 38);

@@ -10,7 +10,7 @@
         <import type="com.bovink.androidlearning.Fields" />
 
         <variable
-            name="user"
+            name="user1"
             type="ObservableMap&lt;String, Object&gt;" />
 
         <variable
@@ -31,22 +31,22 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{user[`name`]}" />
+            android:text="@{user1[`name`]}" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{user[`hobby`]}" />
+            android:text="@{user1[`hobby`]}" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{String.valueOf(1+ (Integer)user[`age`])}" />
+            android:text="@{String.valueOf(1+ (Integer)user1[`age`])}" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{() -> handler.changeContent()}"
+            android:onClick="@{() -> handler.changeUser1()}"
             android:text="change" />
 
         <TextView
