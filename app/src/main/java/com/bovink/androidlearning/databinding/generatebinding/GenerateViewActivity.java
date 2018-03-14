@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.bovink.androidlearning.databinding.GenerateViewActBinding;
+import com.bovink.androidlearning.model.Person;
 
 /**
  * @author fox
@@ -22,6 +23,10 @@ public class GenerateViewActivity extends AppCompatActivity {
 
         binding = GenerateViewActBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        Person person = new Person();
+        binding.setPerson(person);
+        person = binding.getPerson();
 
         binding.changeBtn.setOnClickListener(new View.OnClickListener() {
             @Override

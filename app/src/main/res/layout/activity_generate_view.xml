@@ -3,6 +3,9 @@
 
     <data class="GenerateViewActBinding">
 
+        <variable
+            name="person"
+            type="com.bovink.androidlearning.model.Person"/>
     </data>
 
     <LinearLayout
