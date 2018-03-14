@@ -148,6 +148,10 @@ public class MainActivity extends AppCompatActivity {
         mapList.add(map);
 
         map = new HashMap<>();
+        map.put("name", "CustomBindActivity");
+        mapList.add(map);
+
+        map = new HashMap<>();
         map.put("name", "IncludeActivity");
         mapList.add(map);
 
