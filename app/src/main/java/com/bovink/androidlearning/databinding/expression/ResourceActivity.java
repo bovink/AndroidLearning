@@ -12,7 +12,7 @@ import com.bovink.androidlearning.model.Person;
  * @since 2018/03/14
  */
 
-public class ResourceActivity extends AppCompatActivity{
+public class ResourceActivity extends AppCompatActivity {
 
 
     @Override
@@ -23,6 +23,8 @@ public class ResourceActivity extends AppCompatActivity{
         setContentView(binding.getRoot());
 
         Person person = new Person();
+        person.setName("jack");
+        person.setSex("man");
         person.setAdult(false);
 
         binding.setPerson(person);

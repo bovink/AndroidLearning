@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">AndroidLearning</string>
-    <string name="adult">成人</string>
-    <string name="child">小孩</string>
+    <string name="adult">adult</string>
+    <string name="child">child</string>
+    <string name="introduction">my name is %1$s, and i am %2$s.</string>
 </resources>

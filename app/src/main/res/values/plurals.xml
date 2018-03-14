@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="books">
+        <item quantity="other">我有%d本书。</item>
+    </plurals>
+</resources>
