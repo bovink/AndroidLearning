@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (type == 4) {// 绑定多个视图
 
             mapList = generateViewsList();
-            mPackageName = "com.bovink.androidlearning.databinding.layoutdetails.";
+            mPackageName = "com.bovink.androidlearning.databinding.observabledata.";
         } else {// 选择绑定资源或是绑定事件
 
             mapList = generateBindList();
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         map.put("name", "MainActivity.Expression");
         mapList.add(map);
         map = new HashMap<>();
-        map.put("name", "MainActivity.BindViews");
+        map.put("name", "MainActivity.Observable");
         mapList.add(map);
 
         return mapList;
@@ -189,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
         Map<String, String> map;
 
         map = new HashMap<>();
-        map.put("name", "BindViewsActivity");
+        map.put("name", "ObservableActivity");
         mapList.add(map);
 
         return mapList;

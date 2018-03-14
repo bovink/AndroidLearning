@@ -1,7 +1,5 @@
 package com.bovink.androidlearning.model;
 
-import android.databinding.BaseObservable;
-
 /**
  * 普通的JSON对象就能满足DataBinding的数据类型要求
  *
@@ -9,7 +7,7 @@ import android.databinding.BaseObservable;
  * @since 2018/03/09
  */
 
-public class Person extends BaseObservable {
+public class Person {
 
     private String name;
     private String nickName;
