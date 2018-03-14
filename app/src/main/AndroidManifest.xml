@@ -25,6 +25,9 @@
         <activity
             android:name=".databinding.layoutdetails.ImportActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".databinding.layoutdetails.IncludeActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

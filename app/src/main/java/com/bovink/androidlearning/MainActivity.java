@@ -147,6 +147,10 @@ public class MainActivity extends AppCompatActivity {
         map.put("name", "ImportActivity");
         mapList.add(map);
 
+        map = new HashMap<>();
+        map.put("name", "IncludeActivity");
+        mapList.add(map);
+
         return mapList;
     }
 
