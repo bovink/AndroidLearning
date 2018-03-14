@@ -27,6 +27,7 @@ public class ObservableActivity extends AppCompatActivity {
         student.setName("kyotaga");
         student.setClassName("class d");
         student.setTeacher("chyabashi");
+        student.age.set("13");
 
         binding.setStudent(student);
 
@@ -41,6 +42,7 @@ public class ObservableActivity extends AppCompatActivity {
 
             student.setClassName("class b");
             student.setTeacher("hoshi");
+            student.age.set("14");
         }
     }
 }

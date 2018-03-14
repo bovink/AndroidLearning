@@ -2,6 +2,7 @@ package com.bovink.androidlearning.model;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
+import android.databinding.ObservableField;
 
 import com.bovink.androidlearning.BR;
 
@@ -11,6 +12,8 @@ import com.bovink.androidlearning.BR;
  */
 
 public class Student extends BaseObservable {
+
+    public final ObservableField<String> age = new ObservableField<>();
 
     private String name;
     private String className;

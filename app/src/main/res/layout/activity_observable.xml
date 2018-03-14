@@ -33,6 +33,11 @@
             android:layout_height="wrap_content"
             android:text="@{student.teacher}" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{student.age}" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
