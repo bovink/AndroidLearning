@@ -50,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
 
             mapList = generateViewsList();
             mPackageName = "com.bovink.androidlearning.databinding.observabledata.";
+        } else if (type == 5) {// 绑定多个视图
+
+            mapList = generateViews2List();
+            mPackageName = "com.bovink.androidlearning.databinding.generatebinding.";
         } else {// 选择绑定资源或是绑定事件
 
             mapList = generateBindList();
@@ -112,6 +116,9 @@ public class MainActivity extends AppCompatActivity {
         mapList.add(map);
         map = new HashMap<>();
         map.put("name", "MainActivity.Observable");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "MainActivity.GenerateBinding");
         mapList.add(map);
 
         return mapList;
@@ -194,6 +201,21 @@ public class MainActivity extends AppCompatActivity {
 
         map = new HashMap<>();
         map.put("name", "ObservableCollectionActivity");
+        mapList.add(map);
+
+        return mapList;
+    }
+
+    /**
+     * 生成绑定多个视图列表
+     */
+    private List<Map<String, String>> generateViews2List() {
+
+        List<Map<String, String>> mapList = new ArrayList<>();
+        Map<String, String> map;
+
+        map = new HashMap<>();
+        map.put("name", "GenerateViewActivity");
         mapList.add(map);
 
         return mapList;
