@@ -170,6 +170,9 @@ public class MainActivity extends AppCompatActivity {
         map.put("name", "ExpressionActivity");
         mapList.add(map);
 
+        map = new HashMap<>();
+        map.put("name", "CollectionActivity");
+        mapList.add(map);
         return mapList;
     }
 
