@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <data class="ConverterActBinding">
+    <data contentPaddingLeft="ViewStubShowBinding">
 
+        <variable
+            name="person"
+            type="com.bovink.androidlearning.model.Person" />
     </data>
 
     <LinearLayout
@@ -14,15 +17,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello"
-            android:textSize="18sp" />
+            android:text="@{person.name}" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="DataBinding"
-            android:textSize="22sp" />
+            android:text="@{person.sex}" />
     </LinearLayout>
-
 </layout>
