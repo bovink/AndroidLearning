@@ -14,7 +14,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ConverterActivity" />
+            android:text="Hello"
+            android:textColor="@{@string/blue}"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="DataBinding"
+            android:textColor="@{@string/red}"
+            android:textSize="22sp" />
     </LinearLayout>
 
 </layout>

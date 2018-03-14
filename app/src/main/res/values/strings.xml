@@ -3,4 +3,6 @@
     <string name="adult">adult</string>
     <string name="child">child</string>
     <string name="introduction">my name is %1$s, and i am %2$s.</string>
+    <string name="blue">#66CCFF</string>
+    <string name="red">#FF0000</string>
 </resources>

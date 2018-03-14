@@ -1,5 +1,7 @@
 package com.bovink.androidlearning.databinding.converter;
 
+import android.databinding.BindingConversion;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -20,5 +22,11 @@ public class ConverterActivity extends AppCompatActivity {
         ConverterActBinding binding = ConverterActBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+    }
+
+    @BindingConversion
+    public static int convertStringToColor(String color) {
+
+        return Color.parseColor(color);
     }
 }
