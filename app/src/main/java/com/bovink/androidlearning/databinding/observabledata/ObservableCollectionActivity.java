@@ -1,5 +1,6 @@
 package com.bovink.androidlearning.databinding.observabledata;
 
+import android.databinding.ObservableArrayList;
 import android.databinding.ObservableArrayMap;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -16,6 +17,8 @@ public class ObservableCollectionActivity extends AppCompatActivity {
 
     ObservableArrayMap<String, Object> user = new ObservableArrayMap<>();
 
+    ObservableArrayList<Object> user2 = new ObservableArrayList<>();
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +34,12 @@ public class ObservableCollectionActivity extends AppCompatActivity {
 
         EventHandler handler = new EventHandler();
         binding.setHandler(handler);
+
+        user2.add("lilei");
+        user2.add("actor");
+        user2.add(23);
+        binding.setUser2(user2);
+
     }
 
     public class EventHandler {
@@ -39,6 +48,14 @@ public class ObservableCollectionActivity extends AppCompatActivity {
 
             user.put("hobby", "make money");
             user.put("age", 38);
+        }
+
+        public void changeUser2() {
+
+            user2.remove(1);
+            user2.remove(1);
+            user2.add("writer");
+            user2.add(25);
         }
     }
 }

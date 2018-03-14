@@ -5,9 +5,17 @@
 
         <import type="android.databinding.ObservableMap" />
 
+        <import type="android.databinding.ObservableList" />
+
+        <import type="com.bovink.androidlearning.Fields" />
+
         <variable
             name="user"
             type="ObservableMap&lt;String, Object&gt;" />
+
+        <variable
+            name="user2"
+            type="ObservableList&lt;Object&gt;" />
 
         <variable
             name="handler"
@@ -40,5 +48,26 @@
             android:layout_height="wrap_content"
             android:onClick="@{() -> handler.changeContent()}"
             android:text="change" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user2[Fields.NAME]}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user2[Fields.HOBBY]}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(1 + (Integer)user2[Fields.AGE])}" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> handler.changeUser2()}"
+            android:text="change user2" />
     </LinearLayout>
 </layout>
