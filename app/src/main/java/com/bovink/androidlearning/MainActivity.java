@@ -192,6 +192,10 @@ public class MainActivity extends AppCompatActivity {
         map.put("name", "ObservableActivity");
         mapList.add(map);
 
+        map = new HashMap<>();
+        map.put("name", "ObservableCollectionActivity");
+        mapList.add(map);
+
         return mapList;
     }
 }

@@ -43,6 +43,9 @@
         <activity
             android:name=".databinding.observabledata.ObservableActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".databinding.observabledata.ObservableCollectionActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
