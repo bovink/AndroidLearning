@@ -12,6 +12,7 @@ import android.databinding.BaseObservable;
 public class Person extends BaseObservable {
 
     private String name;
+    private String nickName;
     private String sex;
     private boolean isAdult;
 
@@ -37,5 +38,13 @@ public class Person extends BaseObservable {
 
     public void setAdult(boolean adult) {
         isAdult = adult;
+    }
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 }

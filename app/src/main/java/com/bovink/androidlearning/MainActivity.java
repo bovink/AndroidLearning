@@ -45,11 +45,11 @@ public class MainActivity extends AppCompatActivity {
         } else if (type == 3) {// 绑定单个视图
 
             mapList = generateViewList();
-            mPackageName = "com.bovink.butterknifesample.butterknife.bindview.";
+            mPackageName = "com.bovink.androidlearning.databinding.expression.";
         } else if (type == 4) {// 绑定多个视图
 
             mapList = generateViewsList();
-            mPackageName = "com.bovink.butterknifesample.butterknife.bindviews.";
+            mPackageName = "com.bovink.androidlearning.databinding.layoutdetails.";
         } else {// 选择绑定资源或是绑定事件
 
             mapList = generateBindList();
@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         map.put("name", "MainActivity.LayoutDetails");
         mapList.add(map);
         map = new HashMap<>();
-        map.put("name", "MainActivity.BindView");
+        map.put("name", "MainActivity.Expression");
         mapList.add(map);
         map = new HashMap<>();
         map.put("name", "MainActivity.BindViews");
@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
         Map<String, String> map;
 
         map = new HashMap<>();
-        map.put("name", "BindViewActivity");
+        map.put("name", "ExpressionActivity");
         mapList.add(map);
 
         return mapList;

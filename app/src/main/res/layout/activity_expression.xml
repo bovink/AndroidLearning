@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="ExpressionActBinding">
+
+        <variable
+            name="person1"
+            type="com.bovink.androidlearning.model.Person" />
+
+        <variable
+            name="person2"
+            type="com.bovink.androidlearning.model.Person" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{person1.nickName ?? person1.name}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{person2.nickName ?? person2.name}" />
+
+    </LinearLayout>
+</layout>
