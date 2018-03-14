@@ -49,6 +49,11 @@
         <activity
             android:name=".databinding.generatebinding.GenerateViewActivity"
             android:screenOrientation="portrait" />
+
+        <!--Converters-->
+        <activity
+            android:name=".databinding.converter.ConverterActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

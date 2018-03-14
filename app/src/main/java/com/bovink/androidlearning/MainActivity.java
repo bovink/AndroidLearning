@@ -54,6 +54,10 @@ public class MainActivity extends AppCompatActivity {
 
             mapList = generateViews2List();
             mPackageName = "com.bovink.androidlearning.databinding.generatebinding.";
+        } else if (type == 6) {// 绑定多个视图
+
+            mapList = generateViews3List();
+            mPackageName = "com.bovink.androidlearning.databinding.converter.";
         } else {// 选择绑定资源或是绑定事件
 
             mapList = generateBindList();
@@ -119,6 +123,9 @@ public class MainActivity extends AppCompatActivity {
         mapList.add(map);
         map = new HashMap<>();
         map.put("name", "MainActivity.GenerateBinding");
+        mapList.add(map);
+        map = new HashMap<>();
+        map.put("name", "MainActivity.Converter");
         mapList.add(map);
 
         return mapList;
@@ -216,6 +223,21 @@ public class MainActivity extends AppCompatActivity {
 
         map = new HashMap<>();
         map.put("name", "GenerateViewActivity");
+        mapList.add(map);
+
+        return mapList;
+    }
+
+    /**
+     * 生成绑定多个视图列表
+     */
+    private List<Map<String, String>> generateViews3List() {
+
+        List<Map<String, String>> mapList = new ArrayList<>();
+        Map<String, String> map;
+
+        map = new HashMap<>();
+        map.put("name", "ConverterActivity");
         mapList.add(map);
 
         return mapList;
