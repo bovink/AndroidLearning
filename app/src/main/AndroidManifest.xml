@@ -37,6 +37,9 @@
         <activity
             android:name=".databinding.expression.CollectionActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".databinding.expression.ResourceActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

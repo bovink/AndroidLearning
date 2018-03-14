@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidLearning</string>
+    <string name="adult">成人</string>
+    <string name="child">小孩</string>
 </resources>
