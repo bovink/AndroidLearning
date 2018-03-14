@@ -12,8 +12,15 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/introduceTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="generatebinding" />
+
+        <Button
+            android:id="@+id/changeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="change" />
     </LinearLayout>
 </layout>
