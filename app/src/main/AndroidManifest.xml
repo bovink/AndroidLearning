@@ -56,7 +56,7 @@
             android:screenOrientation="portrait" />
         <!--Custom Setters-->
         <activity
-            android:name=".databinding.attributesetters.CustomSettersActivity"
+            android:name=".databinding.attributesetters.AutomaticSettersActivity"
             android:screenOrientation="portrait" />
     </application>
 

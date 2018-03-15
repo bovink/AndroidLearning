@@ -256,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
         Map<String, String> map;
 
         map = new HashMap<>();
-        map.put("name", "CustomSettersActivity");
+        map.put("name", "AutomaticSettersActivity");
         mapList.add(map);
 
         return mapList;
