@@ -58,6 +58,9 @@
         <activity
             android:name=".databinding.attributesetters.AutomaticSettersActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".databinding.attributesetters.RenamedSettersActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
