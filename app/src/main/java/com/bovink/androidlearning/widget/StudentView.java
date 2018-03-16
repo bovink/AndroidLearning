@@ -47,6 +47,20 @@ public class StudentView extends AppCompatTextView {
         view.setPersonInfo(view.getName(), age);
     }
 
+    @BindingAdapter("age")
+    public static void setAge(StudentView view, String oldAge, String age) {
+        System.out.println("StudentView.setAge");
+        if (oldAge != null && !oldAge.equals(age)) {
+
+            view.age = age;
+            view.setPersonInfo(view.getName(), age + " different age");
+        } else {
+
+            view.age = age;
+            view.setPersonInfo(view.getName(), age + " same age");
+        }
+    }
+
     @BindingAdapter({"name", "age"})
     public static void setPersonInfoText(StudentView view, String name, String age) {
 

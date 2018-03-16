@@ -1,5 +1,10 @@
 package com.bovink.androidlearning.model;
 
+import android.databinding.BaseObservable;
+import android.databinding.Bindable;
+
+import com.bovink.androidlearning.BR;
+
 /**
  * 普通的JSON对象就能满足DataBinding的数据类型要求
  *
@@ -7,7 +12,7 @@ package com.bovink.androidlearning.model;
  * @since 2018/03/09
  */
 
-public class Person {
+public class Person extends BaseObservable {
 
     private String name;
     private String age;
@@ -23,12 +28,14 @@ public class Person {
         this.name = name;
     }
 
+    @Bindable
     public String getAge() {
         return age;
     }
 
     public void setAge(String age) {
         this.age = age;
+        notifyPropertyChanged(BR.age);
     }
 
     public String getNickName() {

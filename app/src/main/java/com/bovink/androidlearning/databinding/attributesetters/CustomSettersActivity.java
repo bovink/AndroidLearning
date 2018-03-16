@@ -14,11 +14,13 @@ import com.bovink.androidlearning.model.Person;
 
 public class CustomSettersActivity extends AppCompatActivity {
 
+    CustomSettersActBinding binding;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        CustomSettersActBinding binding = CustomSettersActBinding.inflate(getLayoutInflater());
+        binding = CustomSettersActBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         Person person = new Person();
@@ -27,5 +29,16 @@ public class CustomSettersActivity extends AppCompatActivity {
 
         binding.setPerson(person);
 
+        EventHandler handler = new EventHandler();
+        binding.setHandler(handler);
+    }
+
+    public class EventHandler {
+
+        public void changeAge() {
+
+            Person person = binding.getPerson();
+            person.setAge("18");
+        }
     }
 }
