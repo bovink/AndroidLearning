@@ -18,7 +18,7 @@
         <com.bovink.androidlearning.widget.StudentView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:personAge="@{person.age}"
-            app:personName="@{person.name}" />
+            app:age="@{person.age}"
+            app:name="@{person.name}" />
     </LinearLayout>
 </layout>

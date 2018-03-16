@@ -27,13 +27,21 @@ public class StudentView extends AppCompatTextView {
         super(context, attrs, defStyleAttr);
     }
 
-    @BindingAdapter("personName")
+    public void setName(String name) {
+        System.out.println("default");
+        // will override if BindingAdapter("name") exist.
+        this.name = name;
+        setText(name);
+    }
+
+    @BindingAdapter("name")
     public static void setName(StudentView view, String name) {
+        System.out.println("adapter");
         view.name = name;
         view.setPersonInfo(name, view.getAge());
     }
 
-    @BindingAdapter("personAge")
+    @BindingAdapter("age")
     public static void setAge(StudentView view, String age) {
         view.age = age;
         view.setPersonInfo(view.getName(), age);
