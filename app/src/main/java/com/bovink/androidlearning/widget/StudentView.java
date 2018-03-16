@@ -47,6 +47,14 @@ public class StudentView extends AppCompatTextView {
         view.setPersonInfo(view.getName(), age);
     }
 
+    @BindingAdapter({"name", "age"})
+    public static void setPersonInfoText(StudentView view, String name, String age) {
+
+        view.name = name;
+        view.age = age;
+        view.setPersonInfo(name, age + "it's from multiple parameter");
+    }
+
     public String getName() {
         return name;
     }
