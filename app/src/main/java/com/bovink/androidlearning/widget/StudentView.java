@@ -14,6 +14,7 @@ public class StudentView extends AppCompatTextView {
 
     private String name = "null";
     private String age = "null";
+    private String grade = "null";
 
     public StudentView(Context context) {
         super(context);
@@ -27,38 +28,22 @@ public class StudentView extends AppCompatTextView {
         super(context, attrs, defStyleAttr);
     }
 
-    public void setName(String name) {
-        System.out.println("default");
-        // will override if BindingAdapter("name") exist.
-        this.name = name;
-        setText(name);
-    }
-
     @BindingAdapter("name")
     public static void setName(StudentView view, String name) {
-        System.out.println("adapter");
         view.name = name;
         view.setPersonInfo(name, view.getAge());
+    }
+
+    public void setAge(String age) {
+        // will override if BindingAdapter("name") exist.
+        this.age = age;
+        setText(age);
     }
 
     @BindingAdapter("age")
     public static void setAge(StudentView view, String age) {
         view.age = age;
         view.setPersonInfo(view.getName(), age);
-    }
-
-    @BindingAdapter("age")
-    public static void setAge(StudentView view, String oldAge, String age) {
-        System.out.println("StudentView.setAge");
-        if (oldAge != null && !oldAge.equals(age)) {
-
-            view.age = age;
-            view.setPersonInfo(view.getName(), age + " different age");
-        } else {
-
-            view.age = age;
-            view.setPersonInfo(view.getName(), age + " same age");
-        }
     }
 
     @BindingAdapter({"name", "age"})
@@ -68,6 +53,21 @@ public class StudentView extends AppCompatTextView {
         view.age = age;
         view.setPersonInfo(name, age + " it's from multiple parameter");
     }
+
+    @BindingAdapter("grade")
+    public static void setGrade(StudentView view, String oldGrade, String newGrade) {
+        System.out.println("StudentView.setGrade");
+        if (oldGrade != null && !oldGrade.equals(newGrade)) {
+
+            view.grade = newGrade;
+            view.setGradeInfo(newGrade + " different grade");
+        } else {
+
+            view.grade = newGrade;
+            view.setGradeInfo(newGrade + " same grade");
+        }
+    }
+
 
     public String getName() {
         return name;
@@ -81,6 +81,12 @@ public class StudentView extends AppCompatTextView {
     public void setPersonInfo(String name, String age) {
 
         String content = "my name is " + name + " and i'm " + age;
+        setText(content);
+    }
+
+    public void setGradeInfo(String grade) {
+
+        String content = "my name is " + this.name + " and i'm " + this.age + " and i'm " + grade;
         setText(content);
     }
 }
