@@ -27,7 +27,17 @@ public class CustomSettersActivity extends AppCompatActivity {
         person1.setName("lilei");
         person1.setAge("16");
 
+        Person person2 = new Person();
+        person2.setName("lilei");
+        person2.setAge("16");
+
+        Person person3 = new Person();
+        person3.setName("lilei");
+        person3.setAge("16");
+
         binding.setPerson1(person1);
+        binding.setPerson2(person2);
+        binding.setPerson3(person3);
 
         EventHandler handler = new EventHandler();
         binding.setHandler(handler);
@@ -37,8 +47,6 @@ public class CustomSettersActivity extends AppCompatActivity {
 
         public void changeAge() {
 
-            Person person1 = binding.getPerson1();
-            person1.setAge("18");
         }
     }
 }

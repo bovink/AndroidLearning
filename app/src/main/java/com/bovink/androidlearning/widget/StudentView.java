@@ -66,7 +66,7 @@ public class StudentView extends AppCompatTextView {
 
         view.name = name;
         view.age = age;
-        view.setPersonInfo(name, age + "it's from multiple parameter");
+        view.setPersonInfo(name, age + " it's from multiple parameter");
     }
 
     public String getName() {

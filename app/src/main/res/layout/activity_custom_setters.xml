@@ -9,6 +9,14 @@
             type="com.bovink.androidlearning.model.Person" />
 
         <variable
+            name="person2"
+            type="com.bovink.androidlearning.model.Person" />
+
+        <variable
+            name="person3"
+            type="com.bovink.androidlearning.model.Person" />
+
+        <variable
             name="handler"
             type="com.bovink.androidlearning.databinding.attributesetters.CustomSettersActivity.EventHandler" />
     </data>
@@ -22,8 +30,18 @@
         <com.bovink.androidlearning.widget.StudentView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:age="@{person1.age}"
-            app:name="@{person1.name}" />
+            app:age="@{person1.age}" />
+
+        <com.bovink.androidlearning.widget.StudentView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:name="@{person2.name}" />
+
+        <com.bovink.androidlearning.widget.StudentView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:age="@{person3.age}"
+            app:name="@{person3.name}" />
 
         <Button
             android:layout_width="wrap_content"
