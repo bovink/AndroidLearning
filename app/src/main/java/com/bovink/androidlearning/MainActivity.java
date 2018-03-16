@@ -258,8 +258,13 @@ public class MainActivity extends AppCompatActivity {
         map = new HashMap<>();
         map.put("name", "AutomaticSettersActivity");
         mapList.add(map);
+
         map = new HashMap<>();
         map.put("name", "RenamedSettersActivity");
+        mapList.add(map);
+
+        map = new HashMap<>();
+        map.put("name", "CustomSettersActivity");
         mapList.add(map);
 
         return mapList;
