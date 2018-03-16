@@ -10,6 +10,7 @@ package com.bovink.androidlearning.model;
 public class Person {
 
     private String name;
+    private String age;
     private String nickName;
     private String sex;
     private boolean isAdult;
@@ -20,6 +21,22 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
     public String getSex() {
@@ -36,13 +53,5 @@ public class Person {
 
     public void setAdult(boolean adult) {
         isAdult = adult;
-    }
-
-    public String getNickName() {
-        return nickName;
-    }
-
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
     }
 }

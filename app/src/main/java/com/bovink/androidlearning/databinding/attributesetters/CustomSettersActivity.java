@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.bovink.androidlearning.databinding.CustomSettersActBinding;
+import com.bovink.androidlearning.model.Person;
 
 /**
  * @author fox
@@ -19,6 +20,12 @@ public class CustomSettersActivity extends AppCompatActivity {
 
         CustomSettersActBinding binding = CustomSettersActBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        Person person = new Person();
+        person.setName("lilei");
+        person.setAge("16");
+
+        binding.setPerson(person);
 
     }
 }
