@@ -54,6 +54,13 @@
         <activity
             android:name=".databinding.converter.ConverterActivity"
             android:screenOrientation="portrait" />
+        <!--Custom Setters-->
+        <activity
+            android:name=".databinding.attributesetters.AutomaticSettersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".databinding.attributesetters.RenamedSettersActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
