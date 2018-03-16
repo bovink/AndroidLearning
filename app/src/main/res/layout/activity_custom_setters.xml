@@ -5,7 +5,7 @@
     <data class="CustomSettersActBinding">
 
         <variable
-            name="person"
+            name="person1"
             type="com.bovink.androidlearning.model.Person" />
 
         <variable
@@ -22,8 +22,8 @@
         <com.bovink.androidlearning.widget.StudentView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:age="@{person.age}"
-            app:name="@{person.name}" />
+            app:age="@{person1.age}"
+            app:name="@{person1.name}" />
 
         <Button
             android:layout_width="wrap_content"

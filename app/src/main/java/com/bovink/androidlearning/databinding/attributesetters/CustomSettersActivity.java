@@ -23,11 +23,11 @@ public class CustomSettersActivity extends AppCompatActivity {
         binding = CustomSettersActBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Person person = new Person();
-        person.setName("lilei");
-        person.setAge("16");
+        Person person1 = new Person();
+        person1.setName("lilei");
+        person1.setAge("16");
 
-        binding.setPerson(person);
+        binding.setPerson1(person1);
 
         EventHandler handler = new EventHandler();
         binding.setHandler(handler);
@@ -37,8 +37,8 @@ public class CustomSettersActivity extends AppCompatActivity {
 
         public void changeAge() {
 
-            Person person = binding.getPerson();
-            person.setAge("18");
+            Person person1 = binding.getPerson1();
+            person1.setAge("18");
         }
     }
 }
