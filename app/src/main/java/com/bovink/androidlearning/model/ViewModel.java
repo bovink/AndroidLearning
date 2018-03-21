@@ -9,5 +9,6 @@ import android.databinding.ObservableField;
 
 public class ViewModel {
 
-    public final ObservableField<String> despction = new ObservableField<>();
+    public final ObservableField<String> description = new ObservableField<>();
+
 }
