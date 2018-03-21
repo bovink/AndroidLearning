@@ -11,4 +11,6 @@ public class ViewModel {
 
     public final ObservableField<String> description = new ObservableField<>();
 
+    public final ObservableField<Time> time = new ObservableField<>();
+
 }
