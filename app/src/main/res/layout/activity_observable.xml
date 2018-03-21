@@ -4,10 +4,6 @@
     <data class="ObservableActBinding">
 
         <variable
-            name="student"
-            type="com.bovink.androidlearning.model.Student" />
-
-        <variable
             name="handler"
             type="com.bovink.androidlearning.databinding.observabledata.ObservableActivity.EventHandler" />
     </data>
@@ -18,31 +14,5 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{student.name}" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{student.className}" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{student.teacher}" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{student.age}" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:onClick="@{() -> handler.changeClass()}"
-            android:text="change" />
     </LinearLayout>
 </layout>

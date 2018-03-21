@@ -6,4 +6,14 @@ package com.bovink.androidlearning.model;
  */
 
 public class Time {
+
+    private String hour;
+
+    public String getHour() {
+        return hour;
+    }
+
+    public void setHour(String hour) {
+        this.hour = hour;
+    }
 }
