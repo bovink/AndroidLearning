@@ -30,6 +30,10 @@ public class ObservableActivity extends AppCompatActivity {
         Time time = new Time();
         time.setHour("99");
         viewModel.time.set(time);
+
+        Time anotherTime = new Time();
+        anotherTime.setHour("23");
+        viewModel.setAnotherTime(anotherTime);
         binding.setViewModel(viewModel);
 
         EventHandler handler = new EventHandler();
@@ -47,6 +51,8 @@ public class ObservableActivity extends AppCompatActivity {
             Time time = new Time();
             time.setHour("88");
             viewModel.time.set(time);
+            // 测试可观察对象的属性
+            viewModel.setAnotherTimeString("1988");
         }
     }
 }
