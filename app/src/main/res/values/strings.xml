@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidLearning</string>
+    <string name="text_student_name">名字</string>
+    <string name="text_student_age">年龄</string>
 </resources>
