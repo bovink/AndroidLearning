@@ -9,9 +9,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.bovink.androidlearning.databinding.FragmentMainBinding;
+import com.bovink.androidlearning.databinding.ItemStudentBinding;
 import com.bovink.androidlearning.model.Student;
 
 import java.util.ArrayList;
@@ -56,14 +56,16 @@ public class MainFragment extends Fragment {
 
         @Override
         public StudentViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            return new StudentViewHolder(LayoutInflater.from(mContext).inflate(R.layout.item_student, parent, false));
+            ItemStudentBinding binding = ItemStudentBinding.inflate(LayoutInflater.from(mContext),parent,false);
+            return new StudentViewHolder(binding);
         }
 
         @Override
         public void onBindViewHolder(StudentViewHolder holder, int position) {
 
-            holder.nameTextView.setText(students.get(position).getName());
-            holder.ageTextView.setText(students.get(position).getAge());
+            MainViewModel viewModel = new MainViewModel();
+            viewModel.setStudentObservable(students.get(position));
+            holder.bind(viewModel);
         }
 
         @Override
@@ -73,13 +75,16 @@ public class MainFragment extends Fragment {
 
         public class StudentViewHolder extends RecyclerView.ViewHolder {
 
-            TextView nameTextView;
-            TextView ageTextView;
+            private ItemStudentBinding binding;
 
-            public StudentViewHolder(View itemView) {
-                super(itemView);
-                nameTextView = itemView.findViewById(R.id.tv_name);
-                ageTextView = itemView.findViewById(R.id.tv_age);
+            public StudentViewHolder(ItemStudentBinding binding) {
+                super(binding.getRoot());
+                this.binding = binding;
+            }
+
+            public void bind(MainViewModel viewModel) {
+                binding.setViewModel(viewModel);
+                binding.executePendingBindings();
             }
         }
     }
