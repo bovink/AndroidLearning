@@ -1,6 +1,10 @@
 package com.bovink.androidlearning.di.module;
 
+import android.app.Application;
+import android.content.Context;
+
 import dagger.Module;
+import dagger.Provides;
 
 /**
  * @author fox
@@ -9,5 +13,9 @@ import dagger.Module;
 @Module
 public class ApplicationModule {
 
+    @Provides
+    Context providesContext(Application application) {
+        return application.getApplicationContext();
+    }
 
 }
