@@ -16,13 +16,13 @@ import javax.inject.Inject;
  * @since 2018/04/02
  */
 
-public class SecondFragment extends Fragment implements SecondContract.View {
+public class MultiFragFragment extends Fragment implements MultiFragContract.View {
 
     @Inject
-    SecondContract.Presenter mPresenter;
+    MultiFragContract.Presenter mPresenter;
 
     @Inject
-    public SecondFragment() {
+    public MultiFragFragment() {
     }
 
     @Nullable

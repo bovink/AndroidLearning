@@ -6,11 +6,11 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class SecondModule {
+public class MultiFragModule {
 
     @ActivityScoped
     @Provides
-    SecondContract.Presenter providesPresenter(SecondPresenter presenter) {
+    MultiFragContract.Presenter providesPresenter(MultiFragPresenter presenter) {
         return presenter;
     }
 }

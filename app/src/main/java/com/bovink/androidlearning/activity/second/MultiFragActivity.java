@@ -9,13 +9,13 @@ import javax.inject.Inject;
 
 import dagger.android.support.DaggerAppCompatActivity;
 
-public class SecondActivity extends DaggerAppCompatActivity {
+public class MultiFragActivity extends DaggerAppCompatActivity {
 
     @Inject
-    SecondFragment mFragment;
+    MultiFragFragment mFragment;
 
     @Inject
-    SecondPresenter mPresenter;
+    MultiFragPresenter mPresenter;
 
     @Inject
     Context mContext;

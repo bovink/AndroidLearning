@@ -8,7 +8,7 @@ import com.bovink.androidlearning.mvp.BaseView;
  * @since 2018/04/02
  */
 
-interface SecondContract {
+interface MultiFragContract {
 
     interface View extends BaseView {
 
