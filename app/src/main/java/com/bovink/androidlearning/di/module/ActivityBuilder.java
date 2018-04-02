@@ -2,8 +2,8 @@ package com.bovink.androidlearning.di.module;
 
 
 import com.bovink.androidlearning.di.ActivityScoped;
-import com.bovink.androidlearning.main.MainActivity;
-import com.bovink.androidlearning.main.MainModule;
+import com.bovink.androidlearning.activity.main.MainActivity;
+import com.bovink.androidlearning.activity.main.MainModule;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;

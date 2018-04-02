@@ -1,4 +1,4 @@
-package com.bovink.androidlearning.main;
+package com.bovink.androidlearning.activity.main;
 
 import dagger.Module;
 
