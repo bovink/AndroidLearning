@@ -23,7 +23,7 @@ public class MultiFragActivity extends DaggerAppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.act_main);
 
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fl_main_content, mFragment)
