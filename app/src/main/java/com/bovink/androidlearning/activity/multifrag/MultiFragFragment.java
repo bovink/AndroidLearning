@@ -28,7 +28,7 @@ public class MultiFragFragment extends Fragment implements MultiFragContract.Vie
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.frag_main, container, false);
+        View root = inflater.inflate(R.layout.frag_multi_frag, container, false);
         return root;
     }
 
