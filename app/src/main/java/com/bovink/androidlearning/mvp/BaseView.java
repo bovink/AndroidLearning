@@ -9,18 +9,4 @@ package com.bovink.androidlearning.mvp;
  */
 public interface BaseView {
 
-    /**
-     * 显示进度条
-     */
-    void showProgress(String label);
-
-    /**
-     * 隐藏进度条
-     */
-    void hideProgress();
-
-    /**
-     * 关闭activity
-     */
-    void finish();
 }

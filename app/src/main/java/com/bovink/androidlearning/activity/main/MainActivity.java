@@ -2,7 +2,6 @@ package com.bovink.androidlearning.activity.main;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.bovink.androidlearning.R;
 
@@ -13,6 +12,12 @@ import dagger.android.support.DaggerAppCompatActivity;
 public class MainActivity extends DaggerAppCompatActivity {
 
     @Inject
+    MainFragment mFragment;
+
+    @Inject
+    MainPresenter mPresenter;
+
+    @Inject
     Context mContext;
 
     @Override
@@ -20,6 +25,8 @@ public class MainActivity extends DaggerAppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toast.makeText(mContext, "Hello, Dagger", Toast.LENGTH_LONG).show();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fl_main_content, mFragment)
+                .commit();
     }
 }
