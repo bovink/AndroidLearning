@@ -1,7 +1,12 @@
 package com.bovink.androidlearning.di.module;
 
 
+import com.bovink.androidlearning.di.ActivityScoped;
+import com.bovink.androidlearning.main.MainActivity;
+import com.bovink.androidlearning.main.MainModule;
+
 import dagger.Module;
+import dagger.android.ContributesAndroidInjector;
 
 /**
  * @author fox
@@ -10,4 +15,7 @@ import dagger.Module;
 @Module
 public abstract class ActivityBuilder {
 
+    @ActivityScoped
+    @ContributesAndroidInjector(modules = MainModule.class)
+    abstract MainActivity bindMainActivity();
 }

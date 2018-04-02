@@ -3,6 +3,8 @@ package com.bovink.androidlearning.base;
 import android.app.Activity;
 import android.app.Application;
 
+import com.bovink.androidlearning.di.component.DaggerApplicationComponent;
+
 import javax.inject.Inject;
 
 import dagger.android.AndroidInjector;
