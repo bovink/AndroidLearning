@@ -1,4 +1,4 @@
-package com.bovink.androidlearning.activity.second;
+package com.bovink.androidlearning.activity.multifrag;
 
 import com.bovink.androidlearning.di.ActivityScoped;
 

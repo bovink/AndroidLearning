@@ -3,9 +3,9 @@ package com.bovink.androidlearning.di.module;
 
 import com.bovink.androidlearning.activity.main.MainActivity;
 import com.bovink.androidlearning.activity.main.MainModule;
-import com.bovink.androidlearning.activity.second.MultiFragActivity;
-import com.bovink.androidlearning.activity.second.MultiFragFragmentBuilder;
-import com.bovink.androidlearning.activity.second.MultiFragModule;
+import com.bovink.androidlearning.activity.multifrag.MultiFragActivity;
+import com.bovink.androidlearning.activity.multifrag.MultiFragFragmentBuilder;
+import com.bovink.androidlearning.activity.multifrag.MultiFragModule;
 import com.bovink.androidlearning.di.ActivityScoped;
 
 import dagger.Module;
