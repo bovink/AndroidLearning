@@ -12,6 +12,10 @@ interface MainContract {
 
     interface View extends BaseView {
 
+        /**
+         * 显示包含多个Fragment的Activity
+         */
+        void showMultiFragActivity();
     }
 
     interface Presenter extends BasePresenter<View> {

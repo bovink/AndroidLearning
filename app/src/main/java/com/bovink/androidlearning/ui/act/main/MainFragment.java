@@ -1,5 +1,7 @@
 package com.bovink.androidlearning.ui.act.main;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -8,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bovink.androidlearning.R;
+import com.bovink.androidlearning.ui.act.multifrag.MultiFragActivity;
 
 import javax.inject.Inject;
 
@@ -20,6 +23,9 @@ public class MainFragment extends Fragment implements MainContract.View {
 
     @Inject
     MainContract.Presenter mPresenter;
+
+    @Inject
+    Context mContext;
 
     @Inject
     public MainFragment() {
@@ -38,4 +44,10 @@ public class MainFragment extends Fragment implements MainContract.View {
         mPresenter.bindView(this);
     }
 
+    @Override
+    public void showMultiFragActivity() {
+
+        Intent intent = new Intent(mContext, MultiFragActivity.class);
+        startActivity(intent);
+    }
 }
