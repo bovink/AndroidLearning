@@ -25,6 +25,10 @@ public class TestBFragment extends DaggerFragment {
     @Inject
     TestBPresenter mPresenter;
 
+    public static TestBFragment newInstance() {
+
+        return new TestBFragment();
+    }
 
     @Nullable
     @Override
