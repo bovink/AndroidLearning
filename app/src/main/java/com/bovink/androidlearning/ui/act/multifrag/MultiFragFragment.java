@@ -64,16 +64,16 @@ public class MultiFragFragment extends Fragment implements MultiFragContract.Vie
     @OnClick(R.id.tv_testa)
     void showTestA() {
 
-        showFragment(TESTA);
+        showFragment(TESTA, R.id.fl_frag_content);
     }
 
     @OnClick(R.id.tv_testb)
     void showTestB() {
 
-        showFragment(TESTB);
+        showFragment(TESTB, R.id.fl_frag_content);
     }
 
-    private void showFragment(String tag) {
+    private void showFragment(String tag, int containerViewId) {
 
         FragmentTransaction beginTransaction = getChildFragmentManager().beginTransaction();
 
@@ -88,7 +88,7 @@ public class MultiFragFragment extends Fragment implements MultiFragContract.Vie
         if (fragment == null) {// 如果Fragment不存在
 
             fragment = Fragment.instantiate(mContext, tag);
-            beginTransaction.add(fragment, tag);
+            beginTransaction.add(containerViewId, fragment, tag);
         } else {// 如果Fragment存在
 
             beginTransaction.show(fragment);
