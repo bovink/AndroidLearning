@@ -14,6 +14,9 @@ import com.bovink.androidlearning.ui.act.multifrag.MultiFragActivity;
 
 import javax.inject.Inject;
 
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * @author fox
  * @since 2018/04/02
@@ -35,6 +38,7 @@ public class MainFragment extends Fragment implements MainContract.View {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.frag_main, container, false);
+        ButterKnife.bind(this, root);
         return root;
     }
 
@@ -49,5 +53,11 @@ public class MainFragment extends Fragment implements MainContract.View {
 
         Intent intent = new Intent(mContext, MultiFragActivity.class);
         startActivity(intent);
+    }
+
+    @OnClick(R.id.tv_multifrag)
+    void clickMultiFrag() {
+
+        showMultiFragActivity();
     }
 }
