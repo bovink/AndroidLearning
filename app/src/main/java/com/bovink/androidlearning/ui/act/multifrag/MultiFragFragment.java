@@ -27,9 +27,6 @@ import butterknife.OnClick;
 
 public class MultiFragFragment extends Fragment implements MultiFragContract.View {
 
-//    private TestAFragment testAFragment;
-//
-//    private TestBFragment testBFragment;
 
     private static final String TESTA = TestAFragment.class.getName();
 
@@ -43,8 +40,6 @@ public class MultiFragFragment extends Fragment implements MultiFragContract.Vie
 
     @Inject
     public MultiFragFragment() {
-//        testAFragment = TestAFragment.newInstance();
-//        testBFragment = TestBFragment.newInstance();
     }
 
     @Nullable
