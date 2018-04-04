@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bovink.androidlearning.R;
+
 import javax.inject.Inject;
 
 /**
@@ -26,7 +28,7 @@ public class BookFragViewFragment extends Fragment implements BookFragContract.V
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = null;
+        View root = inflater.inflate(R.layout.frag_book_view, container, false);
         return root;
     }
 

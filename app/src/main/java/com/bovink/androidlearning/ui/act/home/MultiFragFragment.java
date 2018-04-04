@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bovink.androidlearning.R;
+import com.bovink.androidlearning.ui.frag.book.BookFragFragment;
 import com.bovink.androidlearning.ui.frag.main.TestAFragment;
 import com.bovink.androidlearning.ui.frag.mine.TestBFragment;
 
@@ -31,6 +32,8 @@ public class MultiFragFragment extends Fragment implements MultiFragContract.Vie
     private static final String TESTA = TestAFragment.class.getName();
 
     private static final String TESTB = TestBFragment.class.getName();
+
+    private static final String BOOK = BookFragFragment.class.getName();
 
     @Inject
     Context mContext;
@@ -66,6 +69,12 @@ public class MultiFragFragment extends Fragment implements MultiFragContract.Vie
     void showTestB() {
 
         showFragment(TESTB, R.id.fl_frag_content);
+    }
+
+    @OnClick(R.id.tv_book)
+    void showBook() {
+
+        showFragment(BOOK, R.id.fl_frag_content);
     }
 
     private void showFragment(String tag, int containerViewId) {

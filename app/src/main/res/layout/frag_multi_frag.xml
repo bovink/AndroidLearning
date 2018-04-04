@@ -32,5 +32,14 @@
             android:drawableTop="@mipmap/ic_launcher"
             android:gravity="center"
             android:text="B" />
+
+        <TextView
+            android:id="@+id/tv_book"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:gravity="center"
+            android:text="book" />
     </LinearLayout>
 </LinearLayout>
