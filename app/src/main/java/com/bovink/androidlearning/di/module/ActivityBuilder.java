@@ -1,11 +1,11 @@
 package com.bovink.androidlearning.di.module;
 
 
-import com.bovink.androidlearning.ui.act.main.MainActivity;
-import com.bovink.androidlearning.ui.act.main.MainModule;
-import com.bovink.androidlearning.ui.act.multifrag.MultiFragActivity;
-import com.bovink.androidlearning.ui.act.multifrag.MultiFragFragmentBuilder;
-import com.bovink.androidlearning.ui.act.multifrag.MultiFragModule;
+import com.bovink.androidlearning.ui.act.welcome.MainActivity;
+import com.bovink.androidlearning.ui.act.welcome.MainModule;
+import com.bovink.androidlearning.ui.act.home.MultiFragActivity;
+import com.bovink.androidlearning.ui.act.home.MultiFragFragmentBuilder;
+import com.bovink.androidlearning.ui.act.home.MultiFragModule;
 import com.bovink.androidlearning.di.ActivityScoped;
 
 import dagger.Module;
