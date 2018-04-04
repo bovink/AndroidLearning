@@ -26,7 +26,7 @@ import butterknife.OnClick;
  * @since 2018/04/02
  */
 
-public class MultiFragFragment extends Fragment implements MultiFragContract.View {
+public class HomeFragment extends Fragment implements HomeContract.View {
 
 
     private static final String TESTA = TestAFragment.class.getName();
@@ -39,16 +39,16 @@ public class MultiFragFragment extends Fragment implements MultiFragContract.Vie
     Context mContext;
 
     @Inject
-    MultiFragContract.Presenter mPresenter;
+    HomeContract.Presenter mPresenter;
 
     @Inject
-    public MultiFragFragment() {
+    public HomeFragment() {
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.frag_multi_frag, container, false);
+        View root = inflater.inflate(R.layout.frag_home, container, false);
         ButterKnife.bind(this, root);
 
         showFragment(TESTA, R.id.fl_frag_content);

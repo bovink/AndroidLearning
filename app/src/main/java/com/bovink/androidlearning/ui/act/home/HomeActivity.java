@@ -9,13 +9,13 @@ import javax.inject.Inject;
 
 import dagger.android.support.DaggerAppCompatActivity;
 
-public class MultiFragActivity extends DaggerAppCompatActivity {
+public class HomeActivity extends DaggerAppCompatActivity {
 
     @Inject
-    MultiFragFragment mFragment;
+    HomeFragment mFragment;
 
     @Inject
-    MultiFragPresenter mPresenter;
+    HomePresenter mPresenter;
 
     @Inject
     Context mContext;
@@ -23,10 +23,10 @@ public class MultiFragActivity extends DaggerAppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_multi_frag);
+        setContentView(R.layout.act_home);
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fl_multifrag_content, mFragment)
+                .replace(R.id.fl_home_content, mFragment)
                 .commit();
     }
 }

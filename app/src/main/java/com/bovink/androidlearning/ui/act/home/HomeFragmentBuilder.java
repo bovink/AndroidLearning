@@ -18,7 +18,7 @@ import dagger.android.ContributesAndroidInjector;
  */
 
 @Module
-public abstract class MultiFragFragmentBuilder {
+public abstract class HomeFragmentBuilder {
 
     @FragmentScoped
     @ContributesAndroidInjector(modules = TestAModule.class)

@@ -19,7 +19,7 @@
         </activity>
 
         <activity
-            android:name=".ui.act.home.MultiFragActivity"
+            android:name=".ui.act.home.HomeActivity"
             android:screenOrientation="portrait" />
     </application>
 

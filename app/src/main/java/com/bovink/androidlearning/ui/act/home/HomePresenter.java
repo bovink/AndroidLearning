@@ -10,16 +10,16 @@ import javax.inject.Inject;
  */
 
 @ActivityScoped
-public class MultiFragPresenter implements MultiFragContract.Presenter {
+public class HomePresenter implements HomeContract.Presenter {
 
-    private MultiFragContract.View mView;
+    private HomeContract.View mView;
 
     @Inject
-    public MultiFragPresenter() {
+    public HomePresenter() {
     }
 
     @Override
-    public void bindView(MultiFragContract.View view) {
+    public void bindView(HomeContract.View view) {
 
         mView = view;
     }

@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bovink.androidlearning.R;
-import com.bovink.androidlearning.ui.act.home.MultiFragActivity;
+import com.bovink.androidlearning.ui.act.home.HomeActivity;
 
 import javax.inject.Inject;
 
@@ -51,7 +51,7 @@ public class WelcomeFragment extends Fragment implements WelcomeContract.View {
     @Override
     public void showHomeActivity() {
 
-        Intent intent = new Intent(mContext, MultiFragActivity.class);
+        Intent intent = new Intent(mContext, HomeActivity.class);
         startActivity(intent);
     }
 

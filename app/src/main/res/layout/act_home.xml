@@ -8,10 +8,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="multifrag activity" />
+        android:text="home activity" />
 
     <FrameLayout
-        android:id="@+id/fl_multifrag_content"
+        android:id="@+id/fl_home_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>
