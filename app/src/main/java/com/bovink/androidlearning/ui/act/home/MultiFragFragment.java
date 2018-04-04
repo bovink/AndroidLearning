@@ -50,6 +50,8 @@ public class MultiFragFragment extends Fragment implements MultiFragContract.Vie
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.frag_multi_frag, container, false);
         ButterKnife.bind(this, root);
+
+        showFragment(TESTA, R.id.fl_frag_content);
         return root;
     }
 
