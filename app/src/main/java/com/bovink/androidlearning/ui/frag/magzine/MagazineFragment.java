@@ -36,7 +36,7 @@ public class MagazineFragment extends DaggerFragment {
         View root = inflater.inflate(R.layout.frag_magazine, container, false);
 
         getChildFragmentManager().beginTransaction()
-                .replace(R.id.fl_testa_content, mFragment)
+                .replace(R.id.fl_magazine_content, mFragment)
                 .commit();
 
         return root;
