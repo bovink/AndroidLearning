@@ -36,7 +36,12 @@ public class MainFragment extends Fragment implements MainContract.View {
 
     MainContract.Presenter mPresenter;
 
-    public MainFragment() {
+    public static MainFragment newInstance(MainContract.Presenter presenter) {
+
+        MainFragment fragment = new MainFragment();
+        fragment.mPresenter = presenter;
+
+        return fragment;
     }
 
     @Nullable

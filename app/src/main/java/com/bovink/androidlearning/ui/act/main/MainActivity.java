@@ -19,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_main);
 
+        mPresenter = new MainPresenter();
+
+        mFragment = MainFragment.newInstance(mPresenter);
+
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fl_main_content, mFragment)
                 .commit();
