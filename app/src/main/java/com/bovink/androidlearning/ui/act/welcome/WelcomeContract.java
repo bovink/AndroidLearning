@@ -8,14 +8,14 @@ import com.bovink.androidlearning.mvp.BaseView;
  * @since 2018/04/02
  */
 
-interface MainContract {
+interface WelcomeContract {
 
     interface View extends BaseView {
 
         /**
          * 显示包含多个Fragment的Activity
          */
-        void showMultiFragActivity();
+        void showHomeActivity();
     }
 
     interface Presenter extends BasePresenter<View> {

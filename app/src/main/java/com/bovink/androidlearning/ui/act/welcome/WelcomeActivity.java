@@ -9,13 +9,13 @@ import javax.inject.Inject;
 
 import dagger.android.support.DaggerAppCompatActivity;
 
-public class MainActivity extends DaggerAppCompatActivity {
+public class WelcomeActivity extends DaggerAppCompatActivity {
 
     @Inject
-    MainFragment mFragment;
+    WelcomeFragment mFragment;
 
     @Inject
-    MainPresenter mPresenter;
+    WelcomePresenter mPresenter;
 
     @Inject
     Context mContext;
@@ -23,10 +23,10 @@ public class MainActivity extends DaggerAppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_main);
+        setContentView(R.layout.act_welcome);
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fl_main_content, mFragment)
+                .replace(R.id.fl_welcome_content, mFragment)
                 .commit();
     }
 }

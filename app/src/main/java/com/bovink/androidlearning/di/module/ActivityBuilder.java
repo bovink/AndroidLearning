@@ -1,8 +1,8 @@
 package com.bovink.androidlearning.di.module;
 
 
-import com.bovink.androidlearning.ui.act.welcome.MainActivity;
-import com.bovink.androidlearning.ui.act.welcome.MainModule;
+import com.bovink.androidlearning.ui.act.welcome.WelcomeActivity;
+import com.bovink.androidlearning.ui.act.welcome.WelcomeModule;
 import com.bovink.androidlearning.ui.act.home.MultiFragActivity;
 import com.bovink.androidlearning.ui.act.home.MultiFragFragmentBuilder;
 import com.bovink.androidlearning.ui.act.home.MultiFragModule;
@@ -19,8 +19,8 @@ import dagger.android.ContributesAndroidInjector;
 public abstract class ActivityBuilder {
 
     @ActivityScoped
-    @ContributesAndroidInjector(modules = MainModule.class)
-    abstract MainActivity bindMainActivity();
+    @ContributesAndroidInjector(modules = WelcomeModule.class)
+    abstract WelcomeActivity bindMainActivity();
 
     @ActivityScoped
     @ContributesAndroidInjector(modules = {MultiFragModule.class, MultiFragFragmentBuilder.class})

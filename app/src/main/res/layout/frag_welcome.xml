@@ -4,9 +4,9 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tv_multifrag"
+        android:id="@+id/tv_show_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="fragment" />
+        android:text="welcome fragment" />
 </FrameLayout>

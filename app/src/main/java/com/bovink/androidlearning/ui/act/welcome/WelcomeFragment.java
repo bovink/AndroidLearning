@@ -22,22 +22,22 @@ import butterknife.OnClick;
  * @since 2018/04/02
  */
 
-public class MainFragment extends Fragment implements MainContract.View {
+public class WelcomeFragment extends Fragment implements WelcomeContract.View {
 
     @Inject
-    MainContract.Presenter mPresenter;
+    WelcomeContract.Presenter mPresenter;
 
     @Inject
     Context mContext;
 
     @Inject
-    public MainFragment() {
+    public WelcomeFragment() {
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.frag_main, container, false);
+        View root = inflater.inflate(R.layout.frag_welcome, container, false);
         ButterKnife.bind(this, root);
         return root;
     }
@@ -49,15 +49,15 @@ public class MainFragment extends Fragment implements MainContract.View {
     }
 
     @Override
-    public void showMultiFragActivity() {
+    public void showHomeActivity() {
 
         Intent intent = new Intent(mContext, MultiFragActivity.class);
         startActivity(intent);
     }
 
-    @OnClick(R.id.tv_multifrag)
-    void clickMultiFrag() {
+    @OnClick(R.id.tv_show_home)
+    void showHome() {
 
-        showMultiFragActivity();
+        showHomeActivity();
     }
 }

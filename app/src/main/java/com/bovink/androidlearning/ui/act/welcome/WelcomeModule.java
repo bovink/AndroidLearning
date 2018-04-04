@@ -6,11 +6,11 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class MainModule {
+public class WelcomeModule {
 
     @ActivityScoped
     @Provides
-    MainContract.Presenter providesPresenter(MainPresenter presenter) {
+    WelcomeContract.Presenter providesPresenter(WelcomePresenter presenter) {
         return presenter;
     }
 }

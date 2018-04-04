@@ -10,16 +10,16 @@ import javax.inject.Inject;
  */
 
 @ActivityScoped
-public class MainPresenter implements MainContract.Presenter {
+public class WelcomePresenter implements WelcomeContract.Presenter {
 
-    private MainContract.View mView;
+    private WelcomeContract.View mView;
 
     @Inject
-    public MainPresenter() {
+    public WelcomePresenter() {
     }
 
     @Override
-    public void bindView(MainContract.View view) {
+    public void bindView(WelcomeContract.View view) {
 
         mView = view;
     }
