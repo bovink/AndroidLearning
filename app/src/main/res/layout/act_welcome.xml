@@ -6,12 +6,6 @@
     android:orientation="vertical"
     tools:context="com.bovink.androidlearning.ui.act.welcome.WelcomeActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="welcome activity" />
-
     <FrameLayout
         android:id="@+id/fl_welcome_content"
         android:layout_width="match_parent"
