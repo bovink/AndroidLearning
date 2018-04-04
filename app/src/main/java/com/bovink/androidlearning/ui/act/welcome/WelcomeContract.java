@@ -15,7 +15,7 @@ interface WelcomeContract {
         /**
          * 显示包含多个Fragment的Activity
          */
-        void showHomeActivity();
+        void showMainActivity();
     }
 
     interface Presenter extends BasePresenter<View> {

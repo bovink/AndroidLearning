@@ -49,15 +49,15 @@ public class WelcomeFragment extends Fragment implements WelcomeContract.View {
     }
 
     @Override
-    public void showHomeActivity() {
+    public void showMainActivity() {
 
         Intent intent = new Intent(mContext, MainActivity.class);
         startActivity(intent);
     }
 
-    @OnClick(R.id.tv_show_home)
-    void showHome() {
+    @OnClick(R.id.tv_show_main)
+    void showMain() {
 
-        showHomeActivity();
+        showMainActivity();
     }
 }
