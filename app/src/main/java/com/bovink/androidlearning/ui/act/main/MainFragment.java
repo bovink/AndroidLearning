@@ -48,7 +48,7 @@ public class MainFragment extends Fragment implements MainContract.View {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.frag_home, container, false);
+        View root = inflater.inflate(R.layout.frag_main, container, false);
         ButterKnife.bind(this, root);
 
         showFragment(TESTA, R.id.fl_frag_content);

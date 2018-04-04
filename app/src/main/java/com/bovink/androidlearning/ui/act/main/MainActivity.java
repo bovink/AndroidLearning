@@ -23,10 +23,10 @@ public class MainActivity extends DaggerAppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_home);
+        setContentView(R.layout.act_main);
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fl_home_content, mFragment)
+                .replace(R.id.fl_main_content, mFragment)
                 .commit();
     }
 }
