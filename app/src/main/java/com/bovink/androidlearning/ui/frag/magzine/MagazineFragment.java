@@ -1,4 +1,4 @@
-package com.bovink.androidlearning.ui.frag.mine;
+package com.bovink.androidlearning.ui.frag.magzine;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -17,26 +17,26 @@ import dagger.android.support.DaggerFragment;
  * @since 2018/04/02
  */
 
-public class TestBFragment extends DaggerFragment {
+public class MagazineFragment extends DaggerFragment {
 
     @Inject
-    TestBViewFragment mFragment;
+    MagazineViewFragment mFragment;
 
     @Inject
-    TestBPresenter mPresenter;
+    MagazinePresenter mPresenter;
 
-    public static TestBFragment newInstance() {
+    public static MagazineFragment newInstance() {
 
-        return new TestBFragment();
+        return new MagazineFragment();
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.frag_comic, container, false);
+        View root = inflater.inflate(R.layout.frag_magazine, container, false);
 
         getChildFragmentManager().beginTransaction()
-                .replace(R.id.fl_testb_content, mFragment)
+                .replace(R.id.fl_testa_content, mFragment)
                 .commit();
 
         return root;
