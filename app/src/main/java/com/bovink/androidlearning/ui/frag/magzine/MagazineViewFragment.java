@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 
 import com.bovink.androidlearning.R;
 
-import javax.inject.Inject;
-
 /**
  * @author fox
  * @since 2018/04/02
@@ -18,10 +16,8 @@ import javax.inject.Inject;
 
 public class MagazineViewFragment extends Fragment implements MagazineContract.View {
 
-    @Inject
     MagazineContract.Presenter mPresenter;
 
-    @Inject
     public MagazineViewFragment() {
     }
 

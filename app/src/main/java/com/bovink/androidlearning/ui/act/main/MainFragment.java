@@ -16,8 +16,6 @@ import com.bovink.androidlearning.ui.frag.mine.MineFragment;
 
 import java.util.List;
 
-import javax.inject.Inject;
-
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -34,13 +32,10 @@ public class MainFragment extends Fragment implements MainContract.View {
 
     private static final String MINE = MineFragment.class.getName();
 
-    @Inject
     Context mContext;
 
-    @Inject
     MainContract.Presenter mPresenter;
 
-    @Inject
     public MainFragment() {
     }
 

@@ -2,27 +2,22 @@ package com.bovink.androidlearning.ui.frag.mine;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.bovink.androidlearning.R;
 
-import javax.inject.Inject;
-
-import dagger.android.support.DaggerFragment;
-
 /**
  * @author fox
  * @since 2018/04/02
  */
 
-public class MineFragment extends DaggerFragment {
+public class MineFragment extends Fragment {
 
-    @Inject
     MineViewFragment mFragment;
 
-    @Inject
     MinePresenter mPresenter;
 
     public static MineFragment newInstance() {

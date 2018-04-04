@@ -2,27 +2,22 @@ package com.bovink.androidlearning.ui.frag.home;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.bovink.androidlearning.R;
 
-import javax.inject.Inject;
-
-import dagger.android.support.DaggerFragment;
-
 /**
  * @author fox
  * @since 2018/04/02
  */
 
-public class HomeFragment extends DaggerFragment {
+public class HomeFragment extends Fragment {
 
-    @Inject
     HomeViewFragment mFragment;
 
-    @Inject
     HomePresenter mPresenter;
 
     public static HomeFragment newInstance() {

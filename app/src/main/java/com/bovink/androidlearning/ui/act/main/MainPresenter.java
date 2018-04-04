@@ -1,20 +1,14 @@
 package com.bovink.androidlearning.ui.act.main;
 
-import com.bovink.androidlearning.di.ActivityScoped;
-
-import javax.inject.Inject;
-
 /**
  * @author fox
  * @since 2018/04/02
  */
 
-@ActivityScoped
 public class MainPresenter implements MainContract.Presenter {
 
     private MainContract.View mView;
 
-    @Inject
     public MainPresenter() {
     }
 

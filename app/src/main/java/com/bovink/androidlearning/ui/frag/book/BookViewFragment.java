@@ -15,8 +15,6 @@ import com.bovink.androidlearning.ui.frag.magzine.MagazineFragment;
 
 import java.util.List;
 
-import javax.inject.Inject;
-
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -31,13 +29,10 @@ public class BookViewFragment extends Fragment implements BookContract.View {
 
     private static final String COMIC = ComicFragment.class.getName();
 
-    @Inject
     Context mContext;
 
-    @Inject
     BookContract.Presenter mPresenter;
 
-    @Inject
     public BookViewFragment() {
     }
 

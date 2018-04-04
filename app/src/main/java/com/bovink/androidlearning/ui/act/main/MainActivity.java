@@ -2,22 +2,16 @@ package com.bovink.androidlearning.ui.act.main;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.bovink.androidlearning.R;
 
-import javax.inject.Inject;
+public class MainActivity extends AppCompatActivity {
 
-import dagger.android.support.DaggerAppCompatActivity;
-
-public class MainActivity extends DaggerAppCompatActivity {
-
-    @Inject
     MainFragment mFragment;
 
-    @Inject
     MainPresenter mPresenter;
 
-    @Inject
     Context mContext;
 
     @Override

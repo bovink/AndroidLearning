@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 
 import com.bovink.androidlearning.R;
 
-import javax.inject.Inject;
-
 /**
  * @author fox
  * @since 2018/04/02
@@ -18,10 +16,8 @@ import javax.inject.Inject;
 
 public class HomeViewFragment extends Fragment implements HomeContract.View {
 
-    @Inject
     HomeContract.Presenter mPresenter;
 
-    @Inject
     public HomeViewFragment() {
     }
 

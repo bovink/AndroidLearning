@@ -12,8 +12,6 @@ import android.view.ViewGroup;
 import com.bovink.androidlearning.R;
 import com.bovink.androidlearning.ui.act.main.MainActivity;
 
-import javax.inject.Inject;
-
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -24,13 +22,10 @@ import butterknife.OnClick;
 
 public class WelcomeFragment extends Fragment implements WelcomeContract.View {
 
-    @Inject
     WelcomeContract.Presenter mPresenter;
 
-    @Inject
     Context mContext;
 
-    @Inject
     public WelcomeFragment() {
     }
 
