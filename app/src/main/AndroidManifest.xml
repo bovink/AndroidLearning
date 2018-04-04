@@ -19,7 +19,7 @@
         </activity>
 
         <activity
-            android:name=".ui.act.home.HomeActivity"
+            android:name=".ui.act.main.MainActivity"
             android:screenOrientation="portrait" />
     </application>
 

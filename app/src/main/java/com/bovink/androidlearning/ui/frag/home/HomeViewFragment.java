@@ -1,4 +1,4 @@
-package com.bovink.androidlearning.ui.frag.mine;
+package com.bovink.androidlearning.ui.frag.home;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -16,19 +16,19 @@ import javax.inject.Inject;
  * @since 2018/04/02
  */
 
-public class TestBViewFragment extends Fragment implements TestBContract.View {
+public class HomeViewFragment extends Fragment implements HomeContract.View {
 
     @Inject
-    TestBContract.Presenter mPresenter;
+    HomeContract.Presenter mPresenter;
 
     @Inject
-    public TestBViewFragment() {
+    public HomeViewFragment() {
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.frag_testb_view, container, false);
+        View root = inflater.inflate(R.layout.frag_testa_view, container, false);
         return root;
     }
 

@@ -1,13 +1,13 @@
-package com.bovink.androidlearning.ui.act.home;
+package com.bovink.androidlearning.ui.act.main;
 
 import com.bovink.androidlearning.di.FragmentScoped;
 import com.bovink.androidlearning.ui.frag.book.BookFragFragment;
 import com.bovink.androidlearning.ui.frag.book.BookFragFragmentBuilder;
 import com.bovink.androidlearning.ui.frag.book.BookFragModule;
-import com.bovink.androidlearning.ui.frag.main.TestAFragment;
-import com.bovink.androidlearning.ui.frag.main.TestAModule;
-import com.bovink.androidlearning.ui.frag.mine.TestBFragment;
-import com.bovink.androidlearning.ui.frag.mine.TestBModule;
+import com.bovink.androidlearning.ui.frag.home.HomeFragment;
+import com.bovink.androidlearning.ui.frag.home.HomeModule;
+import com.bovink.androidlearning.ui.frag.mine.MineFragment;
+import com.bovink.androidlearning.ui.frag.mine.MineModule;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
@@ -18,15 +18,15 @@ import dagger.android.ContributesAndroidInjector;
  */
 
 @Module
-public abstract class HomeFragmentBuilder {
+public abstract class MainFragmentBuilder {
 
     @FragmentScoped
-    @ContributesAndroidInjector(modules = TestAModule.class)
-    abstract TestAFragment bindTestAFragment();
+    @ContributesAndroidInjector(modules = HomeModule.class)
+    abstract HomeFragment bindTestAFragment();
 
     @FragmentScoped
-    @ContributesAndroidInjector(modules = TestBModule.class)
-    abstract TestBFragment bindTestBFragment();
+    @ContributesAndroidInjector(modules = MineModule.class)
+    abstract MineFragment bindTestBFragment();
 
     @FragmentScoped
     @ContributesAndroidInjector(modules = {BookFragModule.class, BookFragFragmentBuilder.class})

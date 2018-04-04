@@ -10,16 +10,16 @@ import javax.inject.Inject;
  */
 
 @FragmentScoped
-public class TestBPresenter implements TestBContract.Presenter {
+public class MinePresenter implements MineContract.Presenter {
 
-    private TestBContract.View mView;
+    private MineContract.View mView;
 
     @Inject
-    public TestBPresenter() {
+    public MinePresenter() {
     }
 
     @Override
-    public void bindView(TestBContract.View view) {
+    public void bindView(MineContract.View view) {
 
         mView = view;
     }

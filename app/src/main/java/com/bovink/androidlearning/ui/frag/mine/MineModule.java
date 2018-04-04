@@ -11,11 +11,11 @@ import dagger.Provides;
  */
 
 @Module
-public class TestBModule {
+public class MineModule {
 
     @FragmentScoped
     @Provides
-    TestBContract.Presenter providesPresenter(TestBPresenter presenter) {
+    MineContract.Presenter providesPresenter(MinePresenter presenter) {
         return presenter;
     }
 }

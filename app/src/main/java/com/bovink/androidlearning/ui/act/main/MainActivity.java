@@ -1,4 +1,4 @@
-package com.bovink.androidlearning.ui.act.home;
+package com.bovink.androidlearning.ui.act.main;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,13 +9,13 @@ import javax.inject.Inject;
 
 import dagger.android.support.DaggerAppCompatActivity;
 
-public class HomeActivity extends DaggerAppCompatActivity {
+public class MainActivity extends DaggerAppCompatActivity {
 
     @Inject
-    HomeFragment mFragment;
+    MainFragment mFragment;
 
     @Inject
-    HomePresenter mPresenter;
+    MainPresenter mPresenter;
 
     @Inject
     Context mContext;

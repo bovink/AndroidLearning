@@ -1,14 +1,19 @@
-package com.bovink.androidlearning.ui.act.home;
+package com.bovink.androidlearning.ui.frag.home;
 
-import com.bovink.androidlearning.di.ActivityScoped;
+import com.bovink.androidlearning.di.FragmentScoped;
 
 import dagger.Module;
 import dagger.Provides;
 
+/**
+ * @author fox
+ * @since 2018/04/02
+ */
+
 @Module
 public class HomeModule {
-
-    @ActivityScoped
+    
+    @FragmentScoped
     @Provides
     HomeContract.Presenter providesPresenter(HomePresenter presenter) {
         return presenter;

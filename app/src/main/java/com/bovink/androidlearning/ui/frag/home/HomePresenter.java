@@ -1,6 +1,6 @@
-package com.bovink.androidlearning.ui.act.home;
+package com.bovink.androidlearning.ui.frag.home;
 
-import com.bovink.androidlearning.di.ActivityScoped;
+import com.bovink.androidlearning.di.FragmentScoped;
 
 import javax.inject.Inject;
 
@@ -9,7 +9,7 @@ import javax.inject.Inject;
  * @since 2018/04/02
  */
 
-@ActivityScoped
+@FragmentScoped
 public class HomePresenter implements HomeContract.Presenter {
 
     private HomeContract.View mView;

@@ -1,4 +1,4 @@
-package com.bovink.androidlearning.ui.act.home;
+package com.bovink.androidlearning.ui.act.main;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -11,8 +11,8 @@ import android.view.ViewGroup;
 
 import com.bovink.androidlearning.R;
 import com.bovink.androidlearning.ui.frag.book.BookFragFragment;
-import com.bovink.androidlearning.ui.frag.main.TestAFragment;
-import com.bovink.androidlearning.ui.frag.mine.TestBFragment;
+import com.bovink.androidlearning.ui.frag.home.HomeFragment;
+import com.bovink.androidlearning.ui.frag.mine.MineFragment;
 
 import java.util.List;
 
@@ -26,12 +26,12 @@ import butterknife.OnClick;
  * @since 2018/04/02
  */
 
-public class HomeFragment extends Fragment implements HomeContract.View {
+public class MainFragment extends Fragment implements MainContract.View {
 
 
-    private static final String TESTA = TestAFragment.class.getName();
+    private static final String TESTA = HomeFragment.class.getName();
 
-    private static final String TESTB = TestBFragment.class.getName();
+    private static final String TESTB = MineFragment.class.getName();
 
     private static final String BOOK = BookFragFragment.class.getName();
 
@@ -39,10 +39,10 @@ public class HomeFragment extends Fragment implements HomeContract.View {
     Context mContext;
 
     @Inject
-    HomeContract.Presenter mPresenter;
+    MainContract.Presenter mPresenter;
 
     @Inject
-    public HomeFragment() {
+    public MainFragment() {
     }
 
     @Nullable

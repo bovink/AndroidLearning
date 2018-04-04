@@ -1,4 +1,4 @@
-package com.bovink.androidlearning.ui.frag.main;
+package com.bovink.androidlearning.ui.frag.mine;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -16,19 +16,19 @@ import javax.inject.Inject;
  * @since 2018/04/02
  */
 
-public class TestAViewFragment extends Fragment implements TestAContract.View {
+public class MineViewFragment extends Fragment implements MineContract.View {
 
     @Inject
-    TestAContract.Presenter mPresenter;
+    MineContract.Presenter mPresenter;
 
     @Inject
-    public TestAViewFragment() {
+    public MineViewFragment() {
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.frag_testa_view, container, false);
+        View root = inflater.inflate(R.layout.frag_testb_view, container, false);
         return root;
     }
 

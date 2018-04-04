@@ -1,4 +1,4 @@
-package com.bovink.androidlearning.ui.act.home;
+package com.bovink.androidlearning.ui.act.main;
 
 import com.bovink.androidlearning.mvp.BasePresenter;
 import com.bovink.androidlearning.mvp.BaseView;
@@ -8,7 +8,7 @@ import com.bovink.androidlearning.mvp.BaseView;
  * @since 2018/04/02
  */
 
-interface HomeContract {
+interface MainContract {
 
     interface View extends BaseView {
 
