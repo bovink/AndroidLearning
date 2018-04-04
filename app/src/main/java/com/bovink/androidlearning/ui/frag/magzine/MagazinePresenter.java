@@ -1,6 +1,6 @@
 package com.bovink.androidlearning.ui.frag.magzine;
 
-import com.bovink.androidlearning.di.FragmentScoped;
+import com.bovink.androidlearning.di.ViewPagerFragmentScoped;
 
 import javax.inject.Inject;
 
@@ -9,7 +9,7 @@ import javax.inject.Inject;
  * @since 2018/04/02
  */
 
-@FragmentScoped
+@ViewPagerFragmentScoped
 public class MagazinePresenter implements MagazineContract.Presenter {
 
     private MagazineContract.View mView;

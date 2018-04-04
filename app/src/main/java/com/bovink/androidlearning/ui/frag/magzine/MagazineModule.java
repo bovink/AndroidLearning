@@ -1,6 +1,6 @@
 package com.bovink.androidlearning.ui.frag.magzine;
 
-import com.bovink.androidlearning.di.FragmentScoped;
+import com.bovink.androidlearning.di.ViewPagerFragmentScoped;
 
 import dagger.Module;
 import dagger.Provides;
@@ -13,7 +13,7 @@ import dagger.Provides;
 @Module
 public class MagazineModule {
     
-    @FragmentScoped
+    @ViewPagerFragmentScoped
     @Provides
     MagazineContract.Presenter providesPresenter(MagazinePresenter presenter) {
         return presenter;

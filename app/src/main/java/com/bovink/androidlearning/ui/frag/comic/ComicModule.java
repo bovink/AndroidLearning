@@ -1,6 +1,6 @@
 package com.bovink.androidlearning.ui.frag.comic;
 
-import com.bovink.androidlearning.di.FragmentScoped;
+import com.bovink.androidlearning.di.ViewPagerFragmentScoped;
 
 import dagger.Module;
 import dagger.Provides;
@@ -13,7 +13,7 @@ import dagger.Provides;
 @Module
 public class ComicModule {
     
-    @FragmentScoped
+    @ViewPagerFragmentScoped
     @Provides
     ComicContract.Presenter providesPresenter(ComicPresenter presenter) {
         return presenter;

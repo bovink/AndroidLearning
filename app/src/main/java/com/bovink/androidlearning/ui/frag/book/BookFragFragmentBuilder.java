@@ -1,6 +1,13 @@
 package com.bovink.androidlearning.ui.frag.book;
 
+import com.bovink.androidlearning.di.ViewPagerFragmentScoped;
+import com.bovink.androidlearning.ui.frag.comic.ComicFragment;
+import com.bovink.androidlearning.ui.frag.comic.ComicModule;
+import com.bovink.androidlearning.ui.frag.magzine.MagazineFragment;
+import com.bovink.androidlearning.ui.frag.magzine.MagazineModule;
+
 import dagger.Module;
+import dagger.android.ContributesAndroidInjector;
 
 /**
  * @author fox
@@ -9,4 +16,12 @@ import dagger.Module;
 
 @Module
 public abstract class BookFragFragmentBuilder {
+
+    @ViewPagerFragmentScoped
+    @ContributesAndroidInjector(modules = MagazineModule.class)
+    abstract MagazineFragment bindMagazineFragment();
+
+    @ViewPagerFragmentScoped
+    @ContributesAndroidInjector(modules = ComicModule.class)
+    abstract ComicFragment bindComicFragment();
 }

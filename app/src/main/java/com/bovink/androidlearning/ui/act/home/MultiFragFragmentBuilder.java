@@ -2,6 +2,7 @@ package com.bovink.androidlearning.ui.act.home;
 
 import com.bovink.androidlearning.di.FragmentScoped;
 import com.bovink.androidlearning.ui.frag.book.BookFragFragment;
+import com.bovink.androidlearning.ui.frag.book.BookFragFragmentBuilder;
 import com.bovink.androidlearning.ui.frag.book.BookFragModule;
 import com.bovink.androidlearning.ui.frag.main.TestAFragment;
 import com.bovink.androidlearning.ui.frag.main.TestAModule;
@@ -28,6 +29,6 @@ public abstract class MultiFragFragmentBuilder {
     abstract TestBFragment bindTestBFragment();
 
     @FragmentScoped
-    @ContributesAndroidInjector(modules = {BookFragModule.class})
+    @ContributesAndroidInjector(modules = {BookFragModule.class, BookFragFragmentBuilder.class})
     abstract BookFragFragment bindBookFragFragment();
 }
