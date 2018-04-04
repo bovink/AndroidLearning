@@ -25,10 +25,10 @@ public abstract class MainFragmentBuilder {
     abstract HomeFragment bindHomeFragment();
 
     @FragmentScoped
-    @ContributesAndroidInjector(modules = MineModule.class)
-    abstract MineFragment bindMineFragment();
-
-    @FragmentScoped
     @ContributesAndroidInjector(modules = {BookModule.class, BookFragmentBuilder.class})
     abstract BookFragment bindBookFragment();
+
+    @FragmentScoped
+    @ContributesAndroidInjector(modules = MineModule.class)
+    abstract MineFragment bindMineFragment();
 }

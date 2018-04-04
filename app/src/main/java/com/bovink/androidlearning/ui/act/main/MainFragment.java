@@ -28,7 +28,6 @@ import butterknife.OnClick;
 
 public class MainFragment extends Fragment implements MainContract.View {
 
-
     private static final String HOME = HomeFragment.class.getName();
 
     private static final String BOOK = BookFragment.class.getName();

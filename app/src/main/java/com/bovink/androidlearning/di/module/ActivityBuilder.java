@@ -20,9 +20,9 @@ public abstract class ActivityBuilder {
 
     @ActivityScoped
     @ContributesAndroidInjector(modules = WelcomeModule.class)
-    abstract WelcomeActivity bindMainActivity();
+    abstract WelcomeActivity bindWelcomeActivity();
 
     @ActivityScoped
     @ContributesAndroidInjector(modules = {MainModule.class, MainFragmentBuilder.class})
-    abstract MainActivity bindMultiFragActivity();
+    abstract MainActivity bindMainActivity();
 }
