@@ -29,11 +29,11 @@ import butterknife.OnClick;
 public class MainFragment extends Fragment implements MainContract.View {
 
 
-    private static final String TESTA = HomeFragment.class.getName();
-
-    private static final String TESTB = MineFragment.class.getName();
+    private static final String HOME = HomeFragment.class.getName();
 
     private static final String BOOK = BookFragFragment.class.getName();
+
+    private static final String MINE = MineFragment.class.getName();
 
     @Inject
     Context mContext;
@@ -51,7 +51,7 @@ public class MainFragment extends Fragment implements MainContract.View {
         View root = inflater.inflate(R.layout.frag_main, container, false);
         ButterKnife.bind(this, root);
 
-        showFragment(TESTA, R.id.fl_frag_content);
+        showFragment(HOME, R.id.fl_frag_content);
         return root;
     }
 
@@ -61,22 +61,22 @@ public class MainFragment extends Fragment implements MainContract.View {
         mPresenter.bindView(this);
     }
 
-    @OnClick(R.id.tv_testa)
+    @OnClick(R.id.tv_home)
     void showTestA() {
 
-        showFragment(TESTA, R.id.fl_frag_content);
-    }
-
-    @OnClick(R.id.tv_testb)
-    void showTestB() {
-
-        showFragment(TESTB, R.id.fl_frag_content);
+        showFragment(HOME, R.id.fl_frag_content);
     }
 
     @OnClick(R.id.tv_book)
     void showBook() {
 
         showFragment(BOOK, R.id.fl_frag_content);
+    }
+
+    @OnClick(R.id.tv_mine)
+    void showTestB() {
+
+        showFragment(MINE, R.id.fl_frag_content);
     }
 
     private void showFragment(String tag, int containerViewId) {
