@@ -33,10 +33,10 @@ public class HomeFragment extends DaggerFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.frag_testa, container, false);
+        View root = inflater.inflate(R.layout.frag_home, container, false);
 
         getChildFragmentManager().beginTransaction()
-                .replace(R.id.fl_testa_content, mFragment)
+                .replace(R.id.fl_home_content, mFragment)
                 .commit();
 
         return root;

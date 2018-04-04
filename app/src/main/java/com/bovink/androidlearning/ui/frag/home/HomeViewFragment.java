@@ -28,7 +28,7 @@ public class HomeViewFragment extends Fragment implements HomeContract.View {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.frag_testa_view, container, false);
+        View root = inflater.inflate(R.layout.frag_home_view, container, false);
         return root;
     }
 
