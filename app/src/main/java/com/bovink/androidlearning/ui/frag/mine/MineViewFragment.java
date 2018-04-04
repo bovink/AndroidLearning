@@ -28,7 +28,7 @@ public class MineViewFragment extends Fragment implements MineContract.View {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.frag_testb_view, container, false);
+        View root = inflater.inflate(R.layout.frag_mine_view, container, false);
         return root;
     }
 

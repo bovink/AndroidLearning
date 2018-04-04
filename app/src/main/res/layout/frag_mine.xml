@@ -8,10 +8,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="testb fragment" />
+        android:text="mine fragment" />
 
     <FrameLayout
-        android:id="@+id/fl_testb_content"
+        android:id="@+id/fl_mine_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>
