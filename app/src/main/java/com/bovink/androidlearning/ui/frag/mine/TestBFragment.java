@@ -33,7 +33,7 @@ public class TestBFragment extends DaggerFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.frag_comic, container, false);
+        View root = inflater.inflate(R.layout.frag_testb, container, false);
 
         getChildFragmentManager().beginTransaction()
                 .replace(R.id.fl_testb_content, mFragment)
