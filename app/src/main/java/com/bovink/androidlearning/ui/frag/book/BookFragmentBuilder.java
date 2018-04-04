@@ -15,7 +15,7 @@ import dagger.android.ContributesAndroidInjector;
  */
 
 @Module
-public abstract class BookFragFragmentBuilder {
+public abstract class BookFragmentBuilder {
 
     @ViewPagerFragmentScoped
     @ContributesAndroidInjector(modules = MagazineModule.class)

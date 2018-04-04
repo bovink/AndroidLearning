@@ -11,11 +11,11 @@ import dagger.Provides;
  */
 
 @Module
-public class BookFragModule {
+public class BookModule {
 
     @FragmentScoped
     @Provides
-    BookFragContract.Presenter providesPresenter(BookFragPresenter presenter) {
+    BookContract.Presenter providesPresenter(BookPresenter presenter) {
         return presenter;
     }
 }

@@ -1,9 +1,9 @@
 package com.bovink.androidlearning.ui.act.main;
 
 import com.bovink.androidlearning.di.FragmentScoped;
-import com.bovink.androidlearning.ui.frag.book.BookFragFragment;
-import com.bovink.androidlearning.ui.frag.book.BookFragFragmentBuilder;
-import com.bovink.androidlearning.ui.frag.book.BookFragModule;
+import com.bovink.androidlearning.ui.frag.book.BookFragment;
+import com.bovink.androidlearning.ui.frag.book.BookFragmentBuilder;
+import com.bovink.androidlearning.ui.frag.book.BookModule;
 import com.bovink.androidlearning.ui.frag.home.HomeFragment;
 import com.bovink.androidlearning.ui.frag.home.HomeModule;
 import com.bovink.androidlearning.ui.frag.mine.MineFragment;
@@ -22,13 +22,13 @@ public abstract class MainFragmentBuilder {
 
     @FragmentScoped
     @ContributesAndroidInjector(modules = HomeModule.class)
-    abstract HomeFragment bindTestAFragment();
+    abstract HomeFragment bindHomeFragment();
 
     @FragmentScoped
     @ContributesAndroidInjector(modules = MineModule.class)
-    abstract MineFragment bindTestBFragment();
+    abstract MineFragment bindMineFragment();
 
     @FragmentScoped
-    @ContributesAndroidInjector(modules = {BookFragModule.class, BookFragFragmentBuilder.class})
-    abstract BookFragFragment bindBookFragFragment();
+    @ContributesAndroidInjector(modules = {BookModule.class, BookFragmentBuilder.class})
+    abstract BookFragment bindBookFragment();
 }

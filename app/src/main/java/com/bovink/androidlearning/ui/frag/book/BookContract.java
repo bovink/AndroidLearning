@@ -8,7 +8,7 @@ import com.bovink.androidlearning.mvp.BaseView;
  * @since 2018/04/02
  */
 
-interface BookFragContract {
+interface BookContract {
 
     interface View extends BaseView {
 

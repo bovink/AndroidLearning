@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bovink.androidlearning.R;
-import com.bovink.androidlearning.ui.frag.book.BookFragFragment;
+import com.bovink.androidlearning.ui.frag.book.BookFragment;
 import com.bovink.androidlearning.ui.frag.home.HomeFragment;
 import com.bovink.androidlearning.ui.frag.mine.MineFragment;
 
@@ -31,7 +31,7 @@ public class MainFragment extends Fragment implements MainContract.View {
 
     private static final String HOME = HomeFragment.class.getName();
 
-    private static final String BOOK = BookFragFragment.class.getName();
+    private static final String BOOK = BookFragment.class.getName();
 
     private static final String MINE = MineFragment.class.getName();
 
@@ -62,7 +62,7 @@ public class MainFragment extends Fragment implements MainContract.View {
     }
 
     @OnClick(R.id.tv_home)
-    void showTestA() {
+    void showHome() {
 
         showFragment(HOME, R.id.fl_frag_content);
     }
@@ -74,7 +74,7 @@ public class MainFragment extends Fragment implements MainContract.View {
     }
 
     @OnClick(R.id.tv_mine)
-    void showTestB() {
+    void showMine() {
 
         showFragment(MINE, R.id.fl_frag_content);
     }

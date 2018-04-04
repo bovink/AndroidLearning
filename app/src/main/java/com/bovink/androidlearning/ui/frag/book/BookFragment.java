@@ -17,13 +17,13 @@ import dagger.android.support.DaggerFragment;
  * @since 2018/04/02
  */
 
-public class BookFragFragment extends DaggerFragment {
+public class BookFragment extends DaggerFragment {
 
     @Inject
-    BookFragViewFragment mFragment;
+    BookViewFragment mFragment;
 
     @Inject
-    BookFragPresenter mPresenter;
+    BookPresenter mPresenter;
 
     @Nullable
     @Override

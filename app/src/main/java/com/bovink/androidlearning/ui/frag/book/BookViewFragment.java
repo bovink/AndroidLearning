@@ -25,7 +25,7 @@ import butterknife.OnClick;
  * @since 2018/04/02
  */
 
-public class BookFragViewFragment extends Fragment implements BookFragContract.View {
+public class BookViewFragment extends Fragment implements BookContract.View {
 
     private static final String MAGAZINE = MagazineFragment.class.getName();
 
@@ -35,10 +35,10 @@ public class BookFragViewFragment extends Fragment implements BookFragContract.V
     Context mContext;
 
     @Inject
-    BookFragContract.Presenter mPresenter;
+    BookContract.Presenter mPresenter;
 
     @Inject
-    public BookFragViewFragment() {
+    public BookViewFragment() {
     }
 
     @Nullable

@@ -10,16 +10,16 @@ import javax.inject.Inject;
  */
 
 @FragmentScoped
-public class BookFragPresenter implements BookFragContract.Presenter {
+public class BookPresenter implements BookContract.Presenter {
 
-    private BookFragContract.View mView;
+    private BookContract.View mView;
 
     @Inject
-    public BookFragPresenter() {
+    public BookPresenter() {
     }
 
     @Override
-    public void bindView(BookFragContract.View view) {
+    public void bindView(BookContract.View view) {
 
         mView = view;
     }
