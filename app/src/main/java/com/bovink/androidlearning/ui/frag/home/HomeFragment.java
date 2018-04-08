@@ -30,6 +30,9 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.frag_home, container, false);
 
+        mPresenter = new HomePresenter();
+        mFragment = HomeViewFragment.newInstance(mPresenter);
+
         getChildFragmentManager().beginTransaction()
                 .replace(R.id.fl_home_content, mFragment)
                 .commit();

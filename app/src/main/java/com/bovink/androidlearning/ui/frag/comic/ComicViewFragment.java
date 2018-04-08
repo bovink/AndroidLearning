@@ -18,7 +18,12 @@ public class ComicViewFragment extends Fragment implements ComicContract.View {
 
     ComicContract.Presenter mPresenter;
 
-    public ComicViewFragment() {
+    public static ComicViewFragment newInstance(ComicContract.Presenter presenter) {
+
+        ComicViewFragment fragment = new ComicViewFragment();
+        fragment.mPresenter = presenter;
+
+        return fragment;
     }
 
     @Nullable

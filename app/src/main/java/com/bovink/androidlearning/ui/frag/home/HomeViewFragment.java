@@ -18,7 +18,12 @@ public class HomeViewFragment extends Fragment implements HomeContract.View {
 
     HomeContract.Presenter mPresenter;
 
-    public HomeViewFragment() {
+    public static HomeViewFragment newInstance(HomeContract.Presenter presenter) {
+
+        HomeViewFragment fragment = new HomeViewFragment();
+        fragment.mPresenter = presenter;
+
+        return fragment;
     }
 
     @Nullable

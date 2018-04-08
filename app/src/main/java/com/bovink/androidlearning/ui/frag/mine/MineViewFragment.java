@@ -18,7 +18,12 @@ public class MineViewFragment extends Fragment implements MineContract.View {
 
     MineContract.Presenter mPresenter;
 
-    public MineViewFragment() {
+    public static MineViewFragment newInstance(MineContract.Presenter presenter) {
+
+        MineViewFragment fragment = new MineViewFragment();
+        fragment.mPresenter = presenter;
+
+        return fragment;
     }
 
     @Nullable

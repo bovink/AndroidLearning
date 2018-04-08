@@ -50,6 +50,8 @@ public class MainFragment extends Fragment implements MainContract.View {
         View root = inflater.inflate(R.layout.frag_main, container, false);
         ButterKnife.bind(this, root);
 
+        mContext = getContext();
+
         showFragment(HOME, R.id.fl_frag_content);
         return root;
     }

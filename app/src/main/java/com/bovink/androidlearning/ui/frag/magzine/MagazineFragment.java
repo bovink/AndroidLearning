@@ -30,6 +30,9 @@ public class MagazineFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.frag_magazine, container, false);
 
+        mPresenter = new MagazinePresenter();
+        mFragment = MagazineViewFragment.newInstance(mPresenter);
+
         getChildFragmentManager().beginTransaction()
                 .replace(R.id.fl_magazine_content, mFragment)
                 .commit();

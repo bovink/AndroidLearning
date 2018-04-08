@@ -33,7 +33,12 @@ public class BookViewFragment extends Fragment implements BookContract.View {
 
     BookContract.Presenter mPresenter;
 
-    public BookViewFragment() {
+    public static BookViewFragment newInstance(BookContract.Presenter presenter) {
+
+        BookViewFragment fragment = new BookViewFragment();
+        fragment.mPresenter = presenter;
+
+        return fragment;
     }
 
     @Nullable
@@ -41,6 +46,8 @@ public class BookViewFragment extends Fragment implements BookContract.View {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.frag_book_view, container, false);
         ButterKnife.bind(this, root);
+
+        mContext = getContext();
 
         showFragment(MAGAZINE, R.id.fl_content);
         return root;

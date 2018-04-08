@@ -19,6 +19,10 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_welcome);
 
+        mPresenter = new WelcomePresenter();
+
+        mFragment = WelcomeFragment.newInstance(mPresenter);
+
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fl_welcome_content, mFragment)
                 .commit();

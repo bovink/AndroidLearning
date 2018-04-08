@@ -30,6 +30,9 @@ public class ComicFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.frag_comic, container, false);
 
+        mPresenter = new ComicPresenter();
+        mFragment = ComicViewFragment.newInstance(mPresenter);
+
         getChildFragmentManager().beginTransaction()
                 .replace(R.id.fl_comic_content, mFragment)
                 .commit();

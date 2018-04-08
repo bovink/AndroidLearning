@@ -18,7 +18,12 @@ public class MagazineViewFragment extends Fragment implements MagazineContract.V
 
     MagazineContract.Presenter mPresenter;
 
-    public MagazineViewFragment() {
+    public static MagazineViewFragment newInstance(MagazineContract.Presenter presenter) {
+
+        MagazineViewFragment fragment = new MagazineViewFragment();
+        fragment.mPresenter = presenter;
+
+        return fragment;
     }
 
     @Nullable

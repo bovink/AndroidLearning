@@ -30,6 +30,9 @@ public class MineFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.frag_mine, container, false);
 
+        mPresenter = new MinePresenter();
+        mFragment = MineViewFragment.newInstance(mPresenter);
+
         getChildFragmentManager().beginTransaction()
                 .replace(R.id.fl_mine_content, mFragment)
                 .commit();

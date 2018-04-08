@@ -25,6 +25,9 @@ public class BookFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.frag_book, container, false);
 
+        mPresenter = new BookPresenter();
+        mFragment = BookViewFragment.newInstance(mPresenter);
+
         getChildFragmentManager().beginTransaction()
                 .replace(R.id.fl_book_content, mFragment)
                 .commit();

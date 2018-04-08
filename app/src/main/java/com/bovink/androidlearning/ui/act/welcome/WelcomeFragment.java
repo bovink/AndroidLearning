@@ -26,7 +26,12 @@ public class WelcomeFragment extends Fragment implements WelcomeContract.View {
 
     Context mContext;
 
-    public WelcomeFragment() {
+    public static WelcomeFragment newInstance(WelcomeContract.Presenter presenter) {
+
+        WelcomeFragment fragment = new WelcomeFragment();
+        fragment.mPresenter = presenter;
+
+        return fragment;
     }
 
     @Nullable
@@ -34,6 +39,9 @@ public class WelcomeFragment extends Fragment implements WelcomeContract.View {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.frag_welcome, container, false);
         ButterKnife.bind(this, root);
+
+        mContext = getContext();
+
         return root;
     }
 
