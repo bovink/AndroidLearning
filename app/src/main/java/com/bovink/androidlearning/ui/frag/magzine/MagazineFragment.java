@@ -20,11 +20,6 @@ public class MagazineFragment extends Fragment {
 
     MagazinePresenter mPresenter;
 
-    public static MagazineFragment newInstance() {
-
-        return new MagazineFragment();
-    }
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

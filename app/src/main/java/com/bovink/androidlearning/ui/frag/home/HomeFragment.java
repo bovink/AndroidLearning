@@ -20,11 +20,6 @@ public class HomeFragment extends Fragment {
 
     HomePresenter mPresenter;
 
-    public static HomeFragment newInstance() {
-
-        return new HomeFragment();
-    }
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

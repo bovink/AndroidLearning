@@ -20,11 +20,6 @@ public class ComicFragment extends Fragment {
 
     ComicPresenter mPresenter;
 
-    public static ComicFragment newInstance() {
-
-        return new ComicFragment();
-    }
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

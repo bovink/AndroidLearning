@@ -1,6 +1,5 @@
 package com.bovink.androidlearning.ui.act.main;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -12,15 +11,12 @@ public class MainActivity extends AppCompatActivity {
 
     MainPresenter mPresenter;
 
-    Context mContext;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_main);
 
         mPresenter = new MainPresenter();
-
         mFragment = MainFragment.newInstance(mPresenter);
 
         getSupportFragmentManager().beginTransaction()

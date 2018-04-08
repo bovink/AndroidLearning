@@ -20,11 +20,6 @@ public class MineFragment extends Fragment {
 
     MinePresenter mPresenter;
 
-    public static MineFragment newInstance() {
-
-        return new MineFragment();
-    }
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
