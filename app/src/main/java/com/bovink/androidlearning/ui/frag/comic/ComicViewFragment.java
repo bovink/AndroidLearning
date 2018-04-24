@@ -11,6 +11,8 @@ import com.bovink.androidlearning.R;
 
 import javax.inject.Inject;
 
+import butterknife.ButterKnife;
+
 /**
  * @author fox
  * @since 2018/04/02
@@ -29,6 +31,8 @@ public class ComicViewFragment extends Fragment implements ComicContract.View {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.frag_comic_view, container, false);
+        ButterKnife.bind(this, root);
+
         return root;
     }
 

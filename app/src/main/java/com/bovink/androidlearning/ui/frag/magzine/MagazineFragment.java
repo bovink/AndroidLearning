@@ -10,6 +10,7 @@ import com.bovink.androidlearning.R;
 
 import javax.inject.Inject;
 
+import butterknife.ButterKnife;
 import dagger.android.support.DaggerFragment;
 
 /**
@@ -34,6 +35,7 @@ public class MagazineFragment extends DaggerFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.frag_magazine, container, false);
+        ButterKnife.bind(this, root);
 
         getChildFragmentManager().beginTransaction()
                 .replace(R.id.fl_magazine_content, mFragment)

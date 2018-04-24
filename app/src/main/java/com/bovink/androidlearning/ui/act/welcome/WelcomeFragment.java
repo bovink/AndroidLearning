@@ -39,6 +39,7 @@ public class WelcomeFragment extends Fragment implements WelcomeContract.View {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.frag_welcome, container, false);
         ButterKnife.bind(this, root);
+
         return root;
     }
 
