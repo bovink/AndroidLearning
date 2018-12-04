@@ -10,16 +10,16 @@ public class MainActivity extends AppCompatActivity {
     private int flag;
 
     private static int SYSTEM_UI_TYPE;
+    private View view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SYSTEM_UI_TYPE = 4;
+        view = findViewById(R.id.fl_main);
+        SYSTEM_UI_TYPE = 10;
         flag = generateThemeFlag();
-
-        View view = findViewById(R.id.fl_main);
         view.setSystemUiVisibility(flag);
 
         Button btn = findViewById(R.id.btn_click);
@@ -49,19 +49,37 @@ public class MainActivity extends AppCompatActivity {
                 flag = View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
                 break;
             case 4:
-                flag = View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
-                break;
-            case 5:
                 flag = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
                         View.SYSTEM_UI_FLAG_IMMERSIVE;
                 break;
-            case 6:
+            case 5:
                 flag = View.SYSTEM_UI_FLAG_FULLSCREEN |
                         View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
                 break;
-            case 7:
+            case 6:
                 flag = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
                         View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+                break;
+            case 7:
+                flag = View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
+                        View.SYSTEM_UI_FLAG_FULLSCREEN |
+                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+                break;
+            case 8:
+                flag = View.SYSTEM_UI_FLAG_FULLSCREEN |
+                        View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN;
+                break;
+            case 9:
+
+                flag = View.SYSTEM_UI_FLAG_FULLSCREEN |
+                        View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN;
+                view.setFitsSystemWindows(true);
+                break;
+            case 10:
+                flag = View.SYSTEM_UI_FLAG_FULLSCREEN |
+                        View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |
+                        View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+                view.setFitsSystemWindows(true);
                 break;
 
             default:
