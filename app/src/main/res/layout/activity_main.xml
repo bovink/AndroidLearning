@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context="com.bovink.androidlearning.MainActivity">
+    tools:context="com.bovink.androidlearning.first.MainActivity">
 
     <FrameLayout
         android:id="@+id/fl_first"

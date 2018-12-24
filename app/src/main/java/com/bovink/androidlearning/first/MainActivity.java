@@ -1,11 +1,10 @@
-package com.bovink.androidlearning;
+package com.bovink.androidlearning.first;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 
-import com.bovink.androidlearning.frag.FirstFragment;
-import com.bovink.androidlearning.frag.SecondFragment;
+import com.bovink.androidlearning.R;
 
 public class MainActivity extends AppCompatActivity {
 

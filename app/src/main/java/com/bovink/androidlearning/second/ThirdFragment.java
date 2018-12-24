@@ -1,4 +1,4 @@
-package com.bovink.androidlearning;
+package com.bovink.androidlearning.second;
 
 /**
  * @author bovink
