@@ -1,7 +1,13 @@
 package com.bovink.androidlearning
 
+import android.content.res.TypedArray
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import java.lang.NumberFormatException
 
 class MainActivity : AppCompatActivity() {
     lateinit var textView: TextView
