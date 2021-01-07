@@ -7,6 +7,50 @@
     android:layout_height="match_parent"
     tools:context="com.bovink.androidlearning.MainActivity">
 
+    <Button
+        android:id="@+id/button_click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Roll"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_dice"
+        app:layout_constraintVertical_bias="0.298" />
+
+    <Button
+        android:id="@+id/btn_count_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Count Up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_click" />
+
+    <ImageView
+        android:id="@+id/iv_dice"
+        android:layout_width="329dp"
+        android:layout_height="208dp"
+        app:layout_constraintBottom_toTopOf="@+id/iv_dice2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/iv_dice2"
+        android:layout_width="326dp"
+        android:layout_height="223dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_dice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/empty_dice" />
+
     <TextView
         android:id="@+id/textView_dice"
         android:layout_width="wrap_content"
@@ -17,37 +61,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.387" />
-
-    <Button
-        android:id="@+id/button_click"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Roll"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_dice"
-        app:layout_constraintVertical_bias="0.061" />
-
-    <Button
-        android:id="@+id/btn_count_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Count Up"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_click" />
-
-    <ImageView
-        android:id="@+id/iv_dice"
-        android:layout_width="409dp"
-        android:layout_height="283dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_click"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/empty_dice" />
+        app:layout_constraintVertical_bias="0.726" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
