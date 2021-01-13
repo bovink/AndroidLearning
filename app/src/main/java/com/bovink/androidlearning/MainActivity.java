@@ -1,6 +1,10 @@
 package com.bovink.androidlearning;
 
+import android.arch.core.util.Function;
+import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.Transformations;
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -17,11 +21,46 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btn_click;
 
     private MyViewModel vm;
-
+    private StockLiveData liveData;
+    MutableLiveData<Integer> integerLiveData;
+    LiveData<String> stringLiveData;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        liveData = new StockLiveData();
+        liveData.observe(this, new Observer<Integer>() {
+            @Override
+            public void onChanged(@Nullable Integer integer) {
+
+                System.out.println("MainActivity.onChanged");
+            }
+        });
+
+         integerLiveData = new MutableLiveData<>();
+         stringLiveData =  Transformations.switchMap(integerLiveData,
+                 new Function<Integer, LiveData<String>>() {
+                     @Override
+                     public LiveData<String> apply(Integer input) {
+                         MutableLiveData<String> a =new MutableLiveData<>();
+                         a.setValue(input + " hello1");
+                         return a;
+                     }
+                 }
+
+         );
+        integerLiveData.observe(this, new Observer<Integer>() {
+            @Override
+            public void onChanged(@Nullable Integer integer) {
+                System.out.println("integer = " + integer);
+            }
+        });
+        stringLiveData.observe(this, new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String s) {
+                System.out.println("s = " + s);
+            }
+        });
 
 
         Log.e(TAG, "onCreate");
@@ -48,6 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     @Override
     public void onClick(View v) {
-        vm.startThread();
+//        vm.startThread();
+        integerLiveData.setValue(10);
     }
 }
