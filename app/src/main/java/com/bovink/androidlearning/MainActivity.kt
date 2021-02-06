@@ -1,5 +1,6 @@
 package com.bovink.androidlearning
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
@@ -70,11 +71,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun rollDice() {
 
-        Toast.makeText(this, "button click", Toast.LENGTH_SHORT).show()
-        val dice1 = getRandomDiceImage()
-        ivDice1.setImageResource(dice1)
+//        Toast.makeText(this, "button click", Toast.LENGTH_SHORT).show()
+//        val dice1 = getRandomDiceImage()
+//        ivDice1.setImageResource(dice1)
+//
+//        val dice2 = getRandomDiceImage()
+//        ivDice2.setImageResource(dice2)
 
-        val dice2 = getRandomDiceImage()
-        ivDice2.setImageResource(dice2)
+        startActivity(Intent(this,ShowAlertActivity::class.java));
     }
 }
