@@ -81,11 +81,12 @@ class MainActivity : AppCompatActivity() {
 
 //        startActivity(Intent(this,ShowAlertActivity::class.java));
 
-        val intent = Intent(this, ShowAlertActivity::class.java)
+        val intent = Intent(this, ShowFragmentActivity::class.java)
         startActivityForResult(intent, 2)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
         when (requestCode) {
             1 ->
                 if (resultCode == Activity.RESULT_OK) {
