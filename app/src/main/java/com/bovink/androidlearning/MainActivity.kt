@@ -1,5 +1,6 @@
 package com.bovink.androidlearning
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -78,6 +79,25 @@ class MainActivity : AppCompatActivity() {
 //        val dice2 = getRandomDiceImage()
 //        ivDice2.setImageResource(dice2)
 
-        startActivity(Intent(this,ShowAlertActivity::class.java));
+//        startActivity(Intent(this,ShowAlertActivity::class.java));
+
+        val intent = Intent(this, ShowAlertActivity::class.java)
+        startActivityForResult(intent, 2)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        when (requestCode) {
+            1 ->
+                if (resultCode == Activity.RESULT_OK) {
+                    Toast.makeText(this, "11111", Toast.LENGTH_LONG).show()
+                }
+            2 ->
+                when (resultCode) {
+                    Activity.RESULT_OK ->
+                        Toast.makeText(this, "22222", Toast.LENGTH_LONG).show()
+                    Activity.RESULT_CANCELED ->
+                        Toast.makeText(this, "33333", Toast.LENGTH_LONG).show()
+                }
+        }
     }
 }
