@@ -15,12 +15,5 @@ class ShowFragmentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_fragment)
 
-        supportFragmentManager.commit {
-
-            val fragment = TwoFragment(Person("ll"))
-            add(R.id.any_id_for_fragment,fragment)
-            setReorderingAllowed(false)
-            addToBackStack("")
-        }
     }
 }

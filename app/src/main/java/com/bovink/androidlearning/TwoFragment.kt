@@ -13,25 +13,16 @@ import androidx.fragment.app.commit
  * @author bovink
  * @since 2021/2/13
  */
-class TwoFragment(val p: Person) : Fragment() {
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.frag_two,container,false)
-    }
+class TwoFragment(val p: Person) : Fragment(R.layout.frag_two) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val btn = view.findViewById<Button>(R.id.button)
-        btn?.setText(p.getName())
-        btn?.setOnClickListener {
+        btn.setText(p.getName())
+        btn.setOnClickListener {
             Toast.makeText(context, "two", Toast.LENGTH_SHORT).show()
-
-            parentFragmentManager.popBackStack()
 
         }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 }
