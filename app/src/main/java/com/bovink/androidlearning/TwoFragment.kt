@@ -1,11 +1,14 @@
 package com.bovink.androidlearning
 
+import android.os.Build
 import android.os.Bundle
+import android.transition.TransitionInflater
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 
@@ -24,5 +27,20 @@ class TwoFragment(val p: Person) : Fragment(R.layout.frag_two) {
 
         }
     }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            useTransition()
+        }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.KITKAT)
+    fun useTransition() {
+        val inflater = TransitionInflater.from(context)
+        enterTransition = inflater.inflateTransition(R.transition.slder_right)
+
+    }
+
 
 }
