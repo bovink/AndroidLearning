@@ -6,6 +6,7 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
 
 /**
  * @author bovink
@@ -29,5 +30,6 @@ class MainFragment : Fragment(R.layout.frag_main) {
 
             nav.navigate(R.id.action_mainFragment3_to_wordLibFragment)
         }
+
     }
 }
