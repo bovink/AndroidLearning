@@ -8,5 +8,21 @@
         android:id="@+id/mainFragment3"
         android:name="com.bovink.androidlearning.MainFragment"
         tools:layout="@layout/frag_main"
-        android:label="MainFragment" />
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment3_to_wordDetailActivity2"
+            app:destination="@id/wordDetailActivity" />
+        <action
+            android:id="@+id/action_mainFragment3_to_wordLibFragment"
+            app:destination="@id/wordLibFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/wordDetailActivity"
+        tools:layout="@layout/activity_word_detail"
+        android:name="com.bovink.androidlearning.WordDetailActivity"
+        android:label="WordDetailActivity" />
+    <fragment
+        android:id="@+id/wordLibFragment"
+        android:name="com.bovink.androidlearning.WordLibFragment"
+        android:label="WordLibFragment" />
 </navigation>
