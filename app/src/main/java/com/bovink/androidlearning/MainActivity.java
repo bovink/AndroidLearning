@@ -10,8 +10,8 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     //    private SimpleWorker worker;
-    private Worker worker;
-//    private LooperWorker worker;
+//    private Worker worker;
+    private LooperWorker worker;
 
     private TextView tvMessage;
     private final Handler handler = new Handler(Looper.getMainLooper()) {
@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        worker = new SimpleWorker();
-        worker = new Worker();
-//        worker = new LooperWorker();
+//        worker = new Worker();
+        worker = new LooperWorker();
         tvMessage = findViewById(R.id.tv_message);
 
         worker.execute(new Runnable() {
