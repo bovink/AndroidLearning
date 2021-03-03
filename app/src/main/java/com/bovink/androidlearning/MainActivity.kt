@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.button2).setOnClickListener(){
 
             val intent = Intent()
-            intent.action = Intent.ACTION_SEND
+            intent.action = Intent.ACTION_DIAL
             startActivity(intent)
         }
     }
