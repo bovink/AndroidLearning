@@ -21,6 +21,12 @@ public class ExampleActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i(TAG, "==============================onSaveInstanceState");
+    }
+
+    @Override
     protected void onStart() {
         super.onStart();
         Log.i(TAG, "==============================onStart");
