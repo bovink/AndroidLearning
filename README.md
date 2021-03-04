@@ -28,4 +28,11 @@ B.onPause->A.onRestart->A.onStart->A.onResume->B.onStop->B.onDestroy
 
 ## ActivityA to ActivityB，ActivityB是小窗口
 
+A.onPause->A.onStop
+
 ## ActivityA在横竖屏变化的时候
+
+竖->横
+onPause->onStop->onDestroy->onCreate->onStart->onResume
+横->竖
+onPause->onStop->onDestroy->onCreate->onStart->onResume
