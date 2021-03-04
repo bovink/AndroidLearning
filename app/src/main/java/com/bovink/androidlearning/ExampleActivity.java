@@ -1,30 +1,23 @@
 package com.bovink.androidlearning;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * @author bovink
+ * @since 2021/3/4
+ */
+public class ExampleActivity extends AppCompatActivity {
 
-    private static final String TAG = MainActivity.class.getName();
+    private static final String TAG = ExampleActivity.class.getName();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.i(TAG, "==============================onCreate");
-        setContentView(R.layout.activity_main);
-
-        Button button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ExampleActivity.class);
-                startActivity(intent);
-            }
-        });
+        setContentView(R.layout.activity_example);
     }
 
     @Override

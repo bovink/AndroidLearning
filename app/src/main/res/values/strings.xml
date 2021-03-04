@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidLearning</string>
+    <string name="example_title">Example</string>
 </resources>
