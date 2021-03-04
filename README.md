@@ -22,7 +22,7 @@ onRestart->onStart->onResume
 
 A.onPause->B.onCreate->B.onStart->B.onResume->A.onStop->onSaveInstanceState
 
-## ActivityA to ActivityB 然后按Back
+### 然后按Back
 
 B.onPause->A.onRestart->A.onStart->A.onResume->B.onStop->B.onDestroy
 
@@ -30,7 +30,7 @@ B.onPause->A.onRestart->A.onStart->A.onResume->B.onStop->B.onDestroy
 
 A.onPause->B.onCreate
 
-## ActivityA to ActivityB，ActivityB是小窗口 然后按Back
+### 然后按Back
 
 A.onResume
 
