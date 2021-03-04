@@ -38,5 +38,6 @@ A.onResume
 
 竖->横
 onPause->onStop->onSaveInstanceState->onDestroy->onCreate->onStart->onResume
+
 横->竖
 onPause->onStop->onSaveInstanceState->onDestroy->onCreate->onStart->onResume
