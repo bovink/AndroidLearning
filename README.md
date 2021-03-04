@@ -41,3 +41,8 @@ onPause->onStop->onSaveInstanceState->onDestroy->onCreate->onStart->onResume
 
 横->竖
 onPause->onStop->onSaveInstanceState->onDestroy->onCreate->onStart->onResume
+
+
+## 什么时候会出现调用onDestroy但是没有调用onPause和onStop
+
+在onCreate中调用finish()方法的时候。
