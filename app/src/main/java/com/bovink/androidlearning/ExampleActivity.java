@@ -17,7 +17,7 @@ public class ExampleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_example);
 
 //        SimpleWork simpleWork = SimpleWork.getInstance();
-        Intent intent = new Intent(this, SimpleWork.class);
+        Intent intent = new Intent(getApplicationContext(), SimpleWork.class);
         startService(intent);
     }
 }
