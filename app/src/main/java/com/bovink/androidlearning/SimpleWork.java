@@ -6,6 +6,8 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+import java.util.concurrent.atomic.AtomicBoolean;
+
 /**
  * @author bovink
  * @since 2021/3/4
@@ -14,6 +16,7 @@ public class SimpleWork extends Service {
 
     private static SimpleWork mInstance = null;
     private static final String TAG = SimpleWork.class.getName();
+    private AtomicBoolean isAlive = new AtomicBoolean(false);
 
     public SimpleWork() {
 
@@ -45,12 +48,13 @@ public class SimpleWork extends Service {
     public void onCreate() {
         super.onCreate();
         Log.i(TAG, "onCreate");
+        isAlive.set(true);
 
         new Thread(new Runnable() {
             @Override
             public void run() {
 
-                for (; ; ) {
+                while (isAlive.get()) {
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {
@@ -58,6 +62,7 @@ public class SimpleWork extends Service {
                     }
                     System.out.println("服务运行中");
                 }
+                System.out.println("线程服务结束");
             }
         }).start();
     }
@@ -65,6 +70,7 @@ public class SimpleWork extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        isAlive.set(false);
         Log.i(TAG, "onDestroy");
     }
 }
