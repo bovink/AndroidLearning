@@ -19,6 +19,9 @@
         <activity android:name=".ExampleActivity" />
 
         <service android:name=".SimpleWork" />
+
+        <activity android:name=".BindServiceActivity"/>
+        <service android:name=".LongWork"/>
     </application>
 
 </manifest>

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AndroidLearning</string>
+    <string name="activity_bind_service">Go To Bind</string>
+    <string name="btn_start">Start Service</string>
+    <string name="btn_stop">Stop Service</string>
+    <string name="btn_bind">Bind Service</string>
+    <string name="btn_unbind">Unbind Service</string>
 </resources>

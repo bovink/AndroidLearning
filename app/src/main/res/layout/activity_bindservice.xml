@@ -2,32 +2,28 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.bovink.androidlearning.MainActivity">
+    android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_bind"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="StartActivity"
+        android:text="@string/btn_bind"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.401" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="137dp"
+        android:id="@+id/btn_unbind"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/activity_bind_service"
+        android:text="@string/btn_unbind"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.182" />
-
+        app:layout_constraintTop_toBottomOf="@+id/btn_bind"
+        app:layout_constraintVertical_bias="0.065" />
 </android.support.constraint.ConstraintLayout>

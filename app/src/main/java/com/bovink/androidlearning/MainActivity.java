@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(MainActivity.this, SimpleWork.class);
-                stopService(i);
+                Intent i = new Intent(MainActivity.this, BindServiceActivity.class);
+                startActivity(i);
             }
         });
 
