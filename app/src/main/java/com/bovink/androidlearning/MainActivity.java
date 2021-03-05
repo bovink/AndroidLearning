@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(MainActivity.this,ExampleActivity.class);
+                Intent i = new Intent(MainActivity.this, ExampleActivity.class);
                 startActivity(i);
             }
         });
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(getApplicationContext(),SimpleWork.class);
+                Intent i = new Intent(MainActivity.this, SimpleWork.class);
                 stopService(i);
             }
         });

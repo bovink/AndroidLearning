@@ -14,21 +14,12 @@ import java.util.concurrent.atomic.AtomicBoolean;
  */
 public class SimpleWork extends Service {
 
-    private static SimpleWork mInstance = null;
     private static final String TAG = SimpleWork.class.getName();
     private AtomicBoolean isAlive = new AtomicBoolean(false);
 
     public SimpleWork() {
 
     }
-
-    public static SimpleWork getInstance() {
-        if (mInstance == null) {
-            mInstance = new SimpleWork();
-        }
-        return mInstance;
-    }
-
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {

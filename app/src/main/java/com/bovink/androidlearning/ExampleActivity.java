@@ -17,14 +17,13 @@ public class ExampleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_example);
 
-//        SimpleWork simpleWork = SimpleWork.getInstance();
         Intent intent = new Intent(getApplicationContext(), SimpleWork.class);
         startService(intent);
         findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(), SimpleWork.class);
+                Intent intent = new Intent(ExampleActivity.this, SimpleWork.class);
                 stopService(intent);
             }
         });
