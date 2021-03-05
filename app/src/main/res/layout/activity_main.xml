@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.401" />
+        app:layout_constraintVertical_bias="0.27" />
 
     <Button
         android:id="@+id/button2"
@@ -29,5 +29,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
         app:layout_constraintVertical_bias="0.182" />
+
+    <Button
+        android:id="@+id/btn_service_thread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start_service_thread"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintVertical_bias="0.237" />
+
+    <Button
+        android:id="@+id/btn_normal_thread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start_normal_thread"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_service_thread"
+        app:layout_constraintVertical_bias="0.297" />
 
 </android.support.constraint.ConstraintLayout>

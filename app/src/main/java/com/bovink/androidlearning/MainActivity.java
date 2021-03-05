@@ -3,10 +3,15 @@ package com.bovink.androidlearning;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
+
+import com.bovink.androidlearning.service.NormalService;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    private static final String TAG = MainActivity.class.getName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,5 +36,35 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.btn_service_thread).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(MainActivity.this, NormalService.class);
+                startService(i);
+            }
+        });
+
+        findViewById(R.id.btn_normal_thread).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        while (true) {
+
+                            try {
+                                Thread.sleep(1000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            Log.i(TAG, "服务线程运行中");
+                        }
+
+                    }
+                }).start();
+            }
+        });
     }
 }
