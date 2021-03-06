@@ -23,6 +23,7 @@
         <activity android:name=".BindServiceActivity"/>
         <service android:name=".LongWork"/>
         <service android:name=".service.NormalService"/>
+        <service android:name=".service.HelloIntentService"/>
     </application>
 
 </manifest>

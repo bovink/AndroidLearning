@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
+import com.bovink.androidlearning.service.HelloIntentService;
 import com.bovink.androidlearning.service.NormalService;
 
 public class MainActivity extends AppCompatActivity {
@@ -66,5 +67,27 @@ public class MainActivity extends AppCompatActivity {
                 }).start();
             }
         });
+
+        findViewById(R.id.btn_intent).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(MainActivity.this, HelloIntentService.class);
+                startService(i);
+            }
+        });
+        findViewById(R.id.btn_click).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent i = new Intent(MainActivity.this, HelloIntentService.class);
+                i.setAction(HelloIntentService.START_ACTION);
+                startService(i);
+                Log.i(TAG,"click");
+            }
+        });
+
+        Log.i(TAG, "当前主线程："+Thread.currentThread().getId());
     }
 }
