@@ -11,8 +11,8 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getName();
-    private JavaWorker worker;
-//    private AndroidWorker worker;
+//    private JavaWorker worker;
+    private AndroidWorker worker;
 //    private AndroidHighWorker worker;
 
     private TextView tvMessage;
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void handleMessage(Message msg) {
+            Log.i(TAG, "修改UI 所在线程:" + Thread.currentThread().getId());
             super.handleMessage(msg);
             tvMessage.setText((String) msg.obj);
         }
@@ -30,13 +31,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        worker = new JavaWorker();
-//        worker = new AndroidWorker();
+//        worker = new JavaWorker();
+        worker = new AndroidWorker();
 //        worker = new AndroidHighWorker();
         worker.start();
         tvMessage = findViewById(R.id.tv_message);
 
-        Log.i(TAG, "" + Thread.currentThread().getId());
+        Log.i(TAG, "所在线程:" + Thread.currentThread().getId());
     }
 
     @Override
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         worker.execute(new Runnable() {
             @Override
             public void run() {
+                Log.i(TAG, "Runnable 所在线程:" + Thread.currentThread().getId());
 
                 try {
                     Thread.sleep(500);
@@ -59,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         }).execute(new Runnable() {
             @Override
             public void run() {
+                Log.i(TAG, "Runnable 所在线程:" + Thread.currentThread().getId());
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
@@ -72,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         }).execute(new Runnable() {
             @Override
             public void run() {
+                Log.i(TAG, "Runnable 所在线程:" + Thread.currentThread().getId());
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {

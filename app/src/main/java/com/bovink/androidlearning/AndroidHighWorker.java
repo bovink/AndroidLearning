@@ -18,14 +18,14 @@ public class AndroidHighWorker extends HandlerThread {
     }
 
     public AndroidHighWorker execute(Runnable task) {
-        Log.i(TAG, "" + Thread.currentThread().getId());
+        Log.i(TAG, "所在线程:" + Thread.currentThread().getId());
         handler.post(task);
         return this;
     }
 
     @Override
     protected void onLooperPrepared() {
-        Log.i(TAG, "" + Thread.currentThread().getId());
+        Log.i(TAG, "所在线程:" + Thread.currentThread().getId());
         super.onLooperPrepared();
         handler = new Handler(getLooper());
     }

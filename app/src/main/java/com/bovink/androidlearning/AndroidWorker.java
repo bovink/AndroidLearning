@@ -19,17 +19,17 @@ public class AndroidWorker extends Thread {
 
     @Override
     public void run() {
-        Log.i(TAG, "" + Thread.currentThread().getId());
+        Log.i(TAG, "所在线程:" + Thread.currentThread().getId());
         Looper.prepare();
 
         handler = new Handler(Looper.myLooper());
 
         Looper.loop();
-        Log.i(TAG, "LooperWorker Terminate");
+        Log.i(TAG, "Terminate");
     }
 
     public AndroidWorker execute(Runnable task) {
-        Log.i(TAG, "" + Thread.currentThread().getId());
+        Log.i(TAG, "所在线程:" + Thread.currentThread().getId());
         handler.post(task);
         return this;
     }

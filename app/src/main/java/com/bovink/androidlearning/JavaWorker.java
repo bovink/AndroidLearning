@@ -21,16 +21,18 @@ public class JavaWorker extends Thread {
 
     @Override
     public void run() {
+        Log.i(TAG, "所在线程:" + Thread.currentThread().getId());
         while (alive.get()) {
             Runnable task = taskQueue.poll();
             if (task != null) {
                 task.run();
             }
         }
-        Log.i(TAG, "SimpleWorker Terminate");
+        Log.i(TAG, "Terminate");
     }
 
     public JavaWorker execute(Runnable task) {
+        Log.i(TAG, "所在线程:" + Thread.currentThread().getId());
         taskQueue.add(task);
         return this;
     }
