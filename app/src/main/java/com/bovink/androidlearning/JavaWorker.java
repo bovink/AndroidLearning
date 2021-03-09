@@ -9,13 +9,13 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * @author bovink
  * @since 2021/2/28
  */
-public class SimpleWorker extends Thread {
+public class JavaWorker extends Thread {
 
-    private static final String TAG = SimpleWorker.class.getName();
+    private static final String TAG = JavaWorker.class.getName();
     private AtomicBoolean alive = new AtomicBoolean(true);
     private ConcurrentLinkedQueue<Runnable> taskQueue = new ConcurrentLinkedQueue<>();
 
-    public SimpleWorker() {
+    public JavaWorker() {
         super(TAG);
     }
 
@@ -26,12 +26,11 @@ public class SimpleWorker extends Thread {
             if (task != null) {
                 task.run();
             }
-
         }
         Log.i(TAG, "SimpleWorker Terminate");
     }
 
-    public SimpleWorker execute(Runnable task) {
+    public JavaWorker execute(Runnable task) {
         taskQueue.add(task);
         return this;
     }

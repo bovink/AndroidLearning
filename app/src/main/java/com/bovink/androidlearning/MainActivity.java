@@ -11,9 +11,9 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getName();
-            private SimpleWorker worker;
-//    private Worker worker;
-//    private LooperWorker worker;
+    private JavaWorker worker;
+//    private AndroidWorker worker;
+//    private AndroidHighWorker worker;
 
     private TextView tvMessage;
 
@@ -30,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        worker = new SimpleWorker();
-//        worker = new Worker();
-//        worker = new LooperWorker();
+        worker = new JavaWorker();
+//        worker = new AndroidWorker();
+//        worker = new AndroidHighWorker();
         worker.start();
         tvMessage = findViewById(R.id.tv_message);
 

@@ -8,12 +8,12 @@ import android.util.Log;
  * @author bovink
  * @since 2021/2/28
  */
-public class LooperWorker extends Thread {
+public class AndroidWorker extends Thread {
 
-    private static final String TAG = LooperWorker.class.getName();
+    private static final String TAG = AndroidWorker.class.getName();
     public Handler handler;
 
-    public LooperWorker() {
+    public AndroidWorker() {
         super(TAG);
     }
 
@@ -28,7 +28,7 @@ public class LooperWorker extends Thread {
         Log.i(TAG, "LooperWorker Terminate");
     }
 
-    public LooperWorker execute(Runnable task) {
+    public AndroidWorker execute(Runnable task) {
         Log.i(TAG, "" + Thread.currentThread().getId());
         handler.post(task);
         return this;
