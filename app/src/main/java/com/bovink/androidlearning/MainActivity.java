@@ -5,15 +5,18 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    //    private SimpleWorker worker;
-    private Worker worker;
+    private static final String TAG = MainActivity.class.getName();
+            private SimpleWorker worker;
+//    private Worker worker;
 //    private LooperWorker worker;
 
     private TextView tvMessage;
+
     private final Handler handler = new Handler(Looper.getMainLooper()) {
 
         @Override
@@ -27,17 +30,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        worker = new SimpleWorker();
-        worker = new Worker();
+        worker = new SimpleWorker();
+//        worker = new Worker();
 //        worker = new LooperWorker();
         worker.start();
         tvMessage = findViewById(R.id.tv_message);
 
+        Log.i(TAG, "" + Thread.currentThread().getId());
     }
 
     @Override
     protected void onStart() {
         super.onStart();
+
         worker.execute(new Runnable() {
             @Override
             public void run() {

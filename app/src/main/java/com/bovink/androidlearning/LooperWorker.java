@@ -12,51 +12,30 @@ public class LooperWorker extends Thread {
 
     private static final String TAG = LooperWorker.class.getName();
     public Handler handler;
-    private Looper looper;
 
     public LooperWorker() {
         super(TAG);
-        start();
-        handler = new Handler(getLooper());
     }
-
-    public Looper getLooper() {
-        if (!isAlive()) {
-            return null;
-        }
-
-        // If the thread has been started, wait until the looper has been created.
-        synchronized (this) {
-            while (isAlive() && looper == null) {
-                try {
-                    wait();
-                } catch (InterruptedException e) {
-                }
-            }
-        }
-        return looper;
-    }
-
 
     @Override
     public void run() {
+        Log.i(TAG, "" + Thread.currentThread().getId());
         Looper.prepare();
-        synchronized (this) {
-            looper = Looper.myLooper();
-            notifyAll();
-        }
+
+        handler = new Handler(Looper.myLooper());
 
         Looper.loop();
         Log.i(TAG, "LooperWorker Terminate");
     }
 
     public LooperWorker execute(Runnable task) {
+        Log.i(TAG, "" + Thread.currentThread().getId());
         handler.post(task);
         return this;
     }
 
     public void quit() {
-        Looper looper = Looper.myLooper();
+        Looper looper = handler.getLooper();
         if (looper != null) {
             looper.quit();
         }

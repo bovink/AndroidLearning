@@ -11,13 +11,12 @@ import java.util.concurrent.atomic.AtomicBoolean;
  */
 public class SimpleWorker extends Thread {
 
-    private AtomicBoolean alive = new AtomicBoolean(true);
     private static final String TAG = SimpleWorker.class.getName();
+    private AtomicBoolean alive = new AtomicBoolean(true);
     private ConcurrentLinkedQueue<Runnable> taskQueue = new ConcurrentLinkedQueue<>();
 
     public SimpleWorker() {
         super(TAG);
-        start();
     }
 
     @Override
