@@ -5,85 +5,48 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.bovink.androidlearning.MainActivity">
+    tools:context="com.bovink.androidlearning.activity.MainActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="StartActivity"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.27" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="137dp"
-        android:layout_height="wrap_content"
-        android:text="@string/activity_bind_service"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.182" />
+        <Button
+            android:id="@+id/btn_service_thread"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="test normal service" />
 
-    <Button
-        android:id="@+id/btn_service_thread"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="start_service_thread"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.237" />
+        <Button
+            android:id="@+id/btn_normal_thread"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="start_normal_thread" />
 
-    <Button
-        android:id="@+id/btn_normal_thread"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="start_normal_thread"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_service_thread"
-        app:layout_constraintVertical_bias="0.297" />
+        <Button
+            android:id="@+id/btn_click"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button_click" />
 
-    <Button
-        android:id="@+id/btn_intent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="85dp"
-        android:layout_marginEnd="237dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="237dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:text="handlerService"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/btn_intent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="handlerService" />
 
-    <Button
-        android:id="@+id/btn_click"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="84dp"
-        android:layout_marginEnd="111dp"
-        android:layout_marginLeft="38dp"
-        android:layout_marginRight="111dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="17dp"
-        android:text="Button_click"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_intent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="StartActivity" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_bind_service" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

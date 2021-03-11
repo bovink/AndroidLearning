@@ -9,19 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ExampleActivity" />
+        <activity android:name=".activity.ExampleActivity" />
+        <activity android:name=".activity.NormalServiceActivity"
+            android:label="Normal Service"/>
 
-        <service android:name=".SimpleWork" />
+        <service android:name=".service.SimpleWork" />
 
-        <activity android:name=".BindServiceActivity"/>
-        <service android:name=".LongWork"/>
+        <activity android:name=".activity.BindServiceActivity"/>
+        <service android:name=".service.LongWork"/>
         <service android:name=".service.NormalService"/>
         <service android:name=".service.HelloIntentService"/>
     </application>

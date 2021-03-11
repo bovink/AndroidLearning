@@ -1,4 +1,4 @@
-package com.bovink.androidlearning;
+package com.bovink.androidlearning.service;
 
 import android.app.Service;
 import android.content.Intent;

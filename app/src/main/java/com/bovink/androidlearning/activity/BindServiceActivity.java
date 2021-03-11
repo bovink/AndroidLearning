@@ -1,4 +1,4 @@
-package com.bovink.androidlearning;
+package com.bovink.androidlearning.activity;
 
 import android.content.ComponentName;
 import android.content.Intent;
@@ -9,6 +9,9 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+
+import com.bovink.androidlearning.service.LongWork;
+import com.bovink.androidlearning.R;
 
 /**
  * @author bovink

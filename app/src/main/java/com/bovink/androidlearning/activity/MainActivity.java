@@ -1,4 +1,4 @@
-package com.bovink.androidlearning;
+package com.bovink.androidlearning.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
+import com.bovink.androidlearning.R;
 import com.bovink.androidlearning.service.HelloIntentService;
-import com.bovink.androidlearning.service.NormalService;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(MainActivity.this, NormalService.class);
-                startService(i);
+                Intent i = new Intent(MainActivity.this, NormalServiceActivity.class);
+                startActivity(i);
             }
         });
 
