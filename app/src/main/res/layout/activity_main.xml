@@ -19,6 +19,12 @@
             android:text="test normal service" />
 
         <Button
+            android:id="@+id/btn_intent_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="StartActivity" />
+
+        <Button
             android:id="@+id/btn_normal_thread"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,12 +41,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="handlerService" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="StartActivity" />
 
         <Button
             android:id="@+id/button2"

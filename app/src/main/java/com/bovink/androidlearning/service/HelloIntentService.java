@@ -25,7 +25,6 @@ public class HelloIntentService extends IntentService {
 
 
             Log.i(TAG, "当前服务线程："+Thread.currentThread().getId());
-            Log.i(TAG, "startTask");
             try {
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
