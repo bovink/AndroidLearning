@@ -7,7 +7,6 @@ import android.util.Log;
 import android.view.View;
 
 import com.bovink.androidlearning.R;
-import com.bovink.androidlearning.service.HelloIntentService;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,7 +18,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.btn_intent_service).setOnClickListener(new View.OnClickListener() {
+        Log.i(TAG, "当前主线程：" + Thread.currentThread().getId());
+    }
+
+    private void bindBtnClickListeners() {
+
+        findViewById(R.id.btn_goto_intentservice_act).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -28,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_goto_bind_act).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -37,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.btn_service_thread).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_goto_normalservice_act).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -46,48 +50,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.btn_normal_thread).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        while (true) {
-
-                            try {
-                                Thread.sleep(1000);
-                            } catch (InterruptedException e) {
-                                e.printStackTrace();
-                            }
-                            Log.i(TAG, "服务线程运行中");
-                        }
-
-                    }
-                }).start();
-            }
-        });
-
-        findViewById(R.id.btn_intent).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent i = new Intent(MainActivity.this, HelloIntentService.class);
-                startService(i);
-            }
-        });
-        findViewById(R.id.btn_click).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                Intent i = new Intent(MainActivity.this, HelloIntentService.class);
-                i.setAction(HelloIntentService.START_ACTION);
-                startService(i);
-                Log.i(TAG,"click");
-            }
-        });
-
-        Log.i(TAG, "当前主线程："+Thread.currentThread().getId());
     }
 }

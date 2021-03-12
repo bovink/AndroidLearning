@@ -13,40 +13,23 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btn_service_thread"
+            android:id="@+id/btn_goto_normalservice_act"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="test normal service" />
+            android:text="@string/activity_normal_service" />
 
         <Button
-            android:id="@+id/btn_intent_service"
+            android:id="@+id/btn_goto_intentservice_act"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="StartActivity" />
+            android:text="@string/activity_intent_service" />
 
         <Button
-            android:id="@+id/btn_normal_thread"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="start_normal_thread" />
-
-        <Button
-            android:id="@+id/btn_click"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button_click" />
-
-        <Button
-            android:id="@+id/btn_intent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="handlerService" />
-
-        <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_goto_bind_act"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/activity_bind_service" />
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
