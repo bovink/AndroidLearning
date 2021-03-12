@@ -7,7 +7,7 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.Random;
 
 /**
  * @author bovink
@@ -16,38 +16,20 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class LongWork extends Service {
 
     private static final String TAG = LongWork.class.getName();
-    private AtomicBoolean isAlive = new AtomicBoolean(false);
-    private MyBinder binder;
+    private final MyBinder binder = new MyBinder();
+    private final Random mGenerator = new Random();
 
     public class MyBinder extends Binder {
 
-    }
-
-    public LongWork() {
-
+        public LongWork getService() {
+            return LongWork.this;
+        }
     }
 
     @Override
     public void onCreate() {
-        super.onCreate();
         Log.i(TAG, "onCreate");
-        isAlive.set(true);
-
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-
-                while (isAlive.get()) {
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    System.out.println("服务运行中");
-                }
-                System.out.println("线程服务结束");
-            }
-        }).start();
+        super.onCreate();
     }
 
     @Override
@@ -66,9 +48,11 @@ public class LongWork extends Service {
 
     @Override
     public void onDestroy() {
-        super.onDestroy();
-        isAlive.set(false);
         Log.i(TAG, "onDestroy");
+        super.onDestroy();
     }
 
+    public int getRandomNumber() {
+        return mGenerator.nextInt(100);
+    }
 }

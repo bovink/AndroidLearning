@@ -6,24 +6,14 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/btn_bind"
+        android:id="@+id/btn_caculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btn_bind"
+        android:onClick="onBtnClick"
+        android:text="caculate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_unbind"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_unbind"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_bind"
-        app:layout_constraintVertical_bias="0.065" />
 </android.support.constraint.ConstraintLayout>

@@ -1,6 +1,7 @@
 package com.bovink.androidlearning.activity;
 
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
@@ -9,9 +10,10 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
-import com.bovink.androidlearning.service.LongWork;
 import com.bovink.androidlearning.R;
+import com.bovink.androidlearning.service.LongWork;
 
 /**
  * @author bovink
@@ -20,20 +22,26 @@ import com.bovink.androidlearning.R;
 public class BindServiceActivity extends AppCompatActivity {
 
     private static final String TAG = BindServiceActivity.class.getName();
+    private LongWork longWork;
+    private boolean mBound;
     /*
      *   也许考虑单独弄一个单例类。
      */
-    private ServiceConnection conn = new ServiceConnection() {
+    private ServiceConnection connection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
 
             Log.i(TAG, "onStartCommand");
+            LongWork.MyBinder binder = (LongWork.MyBinder) service;
+            longWork = binder.getService();
+            mBound = true;
 
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
             Log.i(TAG, "onStartCommand");
+            mBound = false;
 
         }
     };
@@ -42,22 +50,31 @@ public class BindServiceActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bindservice);
-
-        findViewById(R.id.btn_bind).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent i = new Intent(getBaseContext(), LongWork.class);
-                bindService(i, conn, BIND_AUTO_CREATE);
-            }
-        });
-
-        findViewById(R.id.btn_unbind).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                unbindService(conn);
-            }
-        });
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Intent intent = new Intent(this, LongWork.class);
+        bindService(intent, connection, Context.BIND_AUTO_CREATE);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        unbindService(connection);
+        mBound = false;
+    }
+
+    public void onBtnClick(View v) {
+        if (mBound) {
+
+            int result = longWork.getRandomNumber();
+            Toast.makeText(this, "number: " + result, Toast.LENGTH_SHORT).show();
+
+        }
+
+    }
+
+
 }

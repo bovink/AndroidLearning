@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Log.i(TAG, "当前主线程：" + Thread.currentThread().getId());
+        bindBtnClickListeners();
     }
 
     private void bindBtnClickListeners() {
