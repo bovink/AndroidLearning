@@ -16,16 +16,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.IntentServiceActivity" />
-        <activity android:name=".activity.NormalServiceActivity"
-            android:label="Normal Service"/>
+        <activity
+            android:name=".activity.NormalServiceActivity"
+            android:label="Normal Service" />
+        <activity
+            android:name=".activity.IntentServiceActivity"
+            android:label="Intent Service" />
+        <activity
+            android:name=".activity.BindServiceActivity"
+            android:label="Bind Service" />
+        <activity
+            android:name=".activity.ForegroundServiceActivity"
+            android:label="Foreground Service" />
 
         <service android:name=".service.SimpleWork" />
-
-        <activity android:name=".activity.BindServiceActivity"/>
-        <service android:name=".service.LongWork"/>
-        <service android:name=".service.NormalService"/>
-        <service android:name=".service.HelloIntentService"/>
+        <service android:name=".service.NormalService" />
+        <service android:name=".service.HelloIntentService" />
+        <service android:name=".service.LongWork" />
+        <service android:name=".service.ForegroundService" />
     </application>
 
 </manifest>

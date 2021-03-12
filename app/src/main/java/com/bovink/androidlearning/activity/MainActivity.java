@@ -53,4 +53,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    public void enterForegroundService(View v) {
+
+        Intent i = new Intent(MainActivity.this, ForegroundServiceActivity.class);
+        startActivity(i);
+    }
 }

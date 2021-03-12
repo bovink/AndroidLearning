@@ -3,6 +3,7 @@
     <string name="activity_normal_service">Go to NormalService Act</string>
     <string name="activity_intent_service">Go to IntentService Act</string>
     <string name="activity_bind_service">Go to BindService Act</string>
+    <string name="activity_foreground_service">Go to ForeGroundService Act</string>
     <string name="btn_start">Start Service</string>
     <string name="btn_stop">Stop Service</string>
     <string name="btn_bind">Bind Service</string>

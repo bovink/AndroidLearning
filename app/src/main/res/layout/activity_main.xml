@@ -30,6 +30,13 @@
             android:layout_height="wrap_content"
             android:text="@string/activity_bind_service" />
 
+        <Button
+            android:id="@+id/btn_goto_foreground_act"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="enterForegroundService"
+            android:text="@string/activity_foreground_service" />
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
