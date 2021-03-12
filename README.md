@@ -7,7 +7,13 @@
 
 ## 普通服务
 
+服务只有第一次启动的时候会调用onCreate方法。
+
+
+## Intent服务
+
 ## 绑定服务
+
 # IntentService
 
 每次启动服务只会处理一个Intent。之后发送的Intent会顺序执行。
