@@ -19,12 +19,18 @@ public class HelloIntentService extends IntentService {
     }
 
     @Override
+    public void onCreate() {
+        super.onCreate();
+        Log.i(TAG, "onCreate");
+    }
+
+    @Override
     protected void onHandleIntent(@Nullable Intent intent) {
 
-        if (intent.getAction() != null &&intent.getAction().equals(START_ACTION)) {
+        if (intent.getAction() != null && intent.getAction().equals(START_ACTION)) {
 
 
-            Log.i(TAG, "当前服务线程："+Thread.currentThread().getId());
+            Log.i(TAG, "当前服务线程：" + Thread.currentThread().getId());
             try {
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
