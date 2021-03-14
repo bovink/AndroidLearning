@@ -16,6 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".NormalSlideActivity"
+            android:label="Normal Slide" />
+        <activity
+            android:name=".TabSlideActivity"
+            android:label="Tab Slide" />
     </application>
 
 </manifest>

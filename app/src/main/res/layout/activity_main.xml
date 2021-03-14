@@ -7,13 +7,25 @@
     android:layout_height="match_parent"
     tools:context="com.bovink.androidlearning.MainActivity">
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/btn_normal_slide"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="gotoNormal"
+        android:text="goto normal slide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_tab_slide"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="gotoTab"
+        android:text="goto tab slide"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_normal_slide" />
 </androidx.constraintlayout.widget.ConstraintLayout>
