@@ -1,5 +1,6 @@
 package com.bovink.androidlearning
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -22,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         R.id.action_settings -> {
 
             println("settings")
+            val intent = Intent(this, NormalActivity::class.java)
+            startActivity(intent)
             true
         }
         R.id.action_favorite -> {
