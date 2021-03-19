@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         R.id.action_settings -> {
 
             println("settings")
-            val intent = Intent(this, NormalActivity::class.java)
+            val intent = Intent(this, AddActivity::class.java)
             startActivity(intent)
             true
         }
