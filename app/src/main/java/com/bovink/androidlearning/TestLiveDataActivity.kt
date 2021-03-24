@@ -26,8 +26,8 @@ class TestLiveDataActivity : AppCompatActivity() {
         println("Main Thread ${Thread.currentThread().id}")
 
         val numObserver = Observer<Int> { newInt ->
-            println("Thread ${Thread.currentThread().id} LiveData Print $newInt")
-            liveDataText?.post { liveDataText?.text = newInt.toString() }
+            println("LiveData Thread ${Thread.currentThread().id} LiveData Print $newInt")
+            liveDataText?.post { liveDataText?.text = "LiveData : ${newInt}" }
         }
 
         liveData.observe(this, numObserver)
@@ -38,8 +38,8 @@ class TestLiveDataActivity : AppCompatActivity() {
                 Thread.sleep(1000)
                 liveData.postValue(i)
                 normalData = i
-                println("Thread ${Thread.currentThread().id} Normal print $normalData")
-                normalDataText?.post { normalDataText?.text = normalData.toString() }
+                println("Normal Thread ${Thread.currentThread().id} Normal print $normalData")
+                normalDataText?.post { normalDataText?.text = "NormalData : ${normalData}" }
             }
             println("Thread Terminated")
         }
