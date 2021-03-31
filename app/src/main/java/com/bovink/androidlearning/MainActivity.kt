@@ -22,4 +22,11 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, ViewModelActivity::class.java)
         startActivity(intent)
     }
+
+    fun gotoPersonInfo(v: View) {
+
+        val intent = Intent(this, PersonInfoActivity::class.java)
+        startActivity(intent)
+    }
+
 }
