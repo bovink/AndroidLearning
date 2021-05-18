@@ -1,6 +1,7 @@
 package com.bovink.androidlearning.activity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -27,14 +28,16 @@ public class ForegroundServiceActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         Intent i = new Intent(this, ForegroundService.class);
-        startService(i);
+        stopService(i);
 
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Intent i = new Intent(this, ForegroundService.class);
-        stopService(i);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            Intent i = new Intent(this, ForegroundService.class);
+            startForegroundService(i);
+        }
     }
 }
