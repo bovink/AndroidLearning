@@ -31,7 +31,7 @@ public class BindServiceActivity extends AppCompatActivity {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
 
-            Log.i(TAG, "onStartCommand");
+            Log.i(TAG, "onServiceConnected");
             LongWork.MyBinder binder = (LongWork.MyBinder) service;
             longWork = binder.getService();
             mBound = true;
@@ -40,7 +40,7 @@ public class BindServiceActivity extends AppCompatActivity {
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            Log.i(TAG, "onStartCommand");
+            Log.i(TAG, "onServiceDisconnected");
             mBound = false;
 
         }
@@ -64,6 +64,13 @@ public class BindServiceActivity extends AppCompatActivity {
         super.onStop();
         unbindService(connection);
         mBound = false;
+    }
+
+    public void onEnterAct(View v) {
+
+        Intent i = new Intent(this, BindServiceActivity.class);
+        startActivity(i);
+
     }
 
     public void onBtnClick(View v) {
