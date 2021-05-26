@@ -39,6 +39,12 @@ public class BindServiceActivity extends AppCompatActivity {
         }
 
         @Override
+        public void onBindingDied(ComponentName name) {
+
+            Log.i(TAG, "onBindingDied");
+        }
+
+        @Override
         public void onServiceDisconnected(ComponentName name) {
             Log.i(TAG, "onServiceDisconnected");
             mBound = false;
