@@ -27,7 +27,7 @@ class MainFragment : Fragment() {
 
         val btn = view.findViewById<Button>(R.id.button)
         btn.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_wordDetailFragment2)
+            findNavController().navigate(R.id.action_mainFragment_to_wordDetailActivity2)
         }
     }
 }

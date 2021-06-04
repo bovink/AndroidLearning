@@ -10,12 +10,12 @@
         android:label="frag_main"
         tools:layout="@layout/frag_main" >
         <action
-            android:id="@+id/action_mainFragment_to_wordDetailFragment2"
-            app:destination="@id/wordDetailFragment2" />
+            android:id="@+id/action_mainFragment_to_wordDetailActivity2"
+            app:destination="@id/wordDetailActivity2" />
     </fragment>
-    <fragment
-        android:id="@+id/wordDetailFragment2"
-        android:name="com.bovink.androidlearning.WordDetailFragment"
-        android:label="fragment_word_lib"
-        tools:layout="@layout/fragment_word_lib" />
+    <activity
+        android:id="@+id/wordDetailActivity2"
+        android:name="com.bovink.androidlearning.WordDetailActivity"
+        android:label="activity_word_detail"
+        tools:layout="@layout/activity_word_detail" />
 </navigation>
