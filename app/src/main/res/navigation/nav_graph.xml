@@ -7,14 +7,15 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.bovink.androidlearning.MainFragment"
-        android:layout="@layout/frag_main"
-        android:label="MainFragment" >
+        android:label="frag_main"
+        tools:layout="@layout/frag_main" >
         <action
-            android:id="@+id/action_mainFragment_to_wordDetailActivity"
-            app:destination="@id/wordDetailActivity" />
+            android:id="@+id/action_mainFragment_to_wordDetailFragment2"
+            app:destination="@id/wordDetailFragment2" />
     </fragment>
-    <activity
-        android:id="@+id/wordDetailActivity"
-        android:name="com.bovink.androidlearning.WordDetailActivity"
-        android:label="WordDetailActivity" />
+    <fragment
+        android:id="@+id/wordDetailFragment2"
+        android:name="com.bovink.androidlearning.WordDetailFragment"
+        android:label="fragment_word_lib"
+        tools:layout="@layout/fragment_word_lib" />
 </navigation>
