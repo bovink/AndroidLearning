@@ -11,7 +11,7 @@ import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
     private lateinit var db: AppDatabase
-    private  var userDao: UserDao? = null
+    private var userDao: UserDao? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,40 +20,32 @@ class MainActivity : AppCompatActivity() {
         GlobalScope.launch {
             initDatabase()
 
-            insertUser(User("meimei","han"))
+            insertUser(User("meimei", "han"))
             queryUsers()
         }
     }
 
-    suspend fun initDatabase() {
-        withContext(Dispatchers.IO) {
+    fun initDatabase() {
 
-            db = Room.databaseBuilder(
-                    applicationContext,
-                    AppDatabase::class.java, AppDatabase.dabase_name
-            ).build()
-            userDao = db.userDao()
-        }
-
+        db = Room.databaseBuilder(
+                applicationContext,
+                AppDatabase::class.java, AppDatabase.dabase_name
+        ).build()
+        userDao = db.userDao()
     }
 
     suspend fun insertUser(vararg users: User) {
-        withContext(Dispatchers.IO) {
 
-            for (user in users) {
-
-                userDao?.insertAll(user)
-            }
+        for (user in users) {
+            userDao?.insertAll(user)
         }
     }
 
     suspend fun queryUsers() {
 
-        withContext(Dispatchers.IO) {
-            val users:List<User>? = userDao?.getAll()
-            for (user in users!!) {
-                println("${user.uid}:${user.firstName}--${user.lastName}")
-            }
+        val users: List<User>? = userDao?.getAll()
+        for (user in users!!) {
+            println("${user.uid}:${user.firstName}--${user.lastName}")
         }
     }
 }
